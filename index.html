@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <h1 class="text-hide">아이디어스 홈페이지</h1>
+  <!-- 상단의 첫 구매 광고 배너 -->
+  <!-- btn-closeAd 가상요소로 이미지 만들고 텍스트는 숨기기 onclick event 하면 display: none으로 지정 -->
+  <div class="advertisement">
+    <img src="https://image.idus.com/static/signup/web_benefit_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
+    <button class="btn-closeAd">광고 닫기</button>
+  </div>
+  <!-- // 상단의 첫 구매 광고 배너 -->
+  <!-- header area -->
+  <header class="main-header">
+    <!-- 회원 관리 목록 -->
+      <!-- link-info, link-install-app hover 적용으로 detail 추가하기 -->
+    <section class="top-navigation">
+      <h2 class="text-hide">회원 관리 항목</h2>
+      <div class="inner-top-nav">
+        <div class="ui-dropdown btn-nav">
+          <button type="button" class="btn-dropdown">아이디어스 앱 설치하기</button>
+        </div>
+        <div class="register-wrap">
+          <a href="#none" class="btn-nav">로그인</a>
+          <a href="#none" class="btn-nav">회원가입</a>
+          <div class="ui-dropdown btn-nav">
+            <button type="button" class="btn-dropdown">고객센터</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // 회원 관리 목록 -->
+
+    <!-- 상품 검색 및 내 정보 확인 -->
+      <!-- link-class 가상요소 처리(애니메이션 +), ranking-product hover 적용시 detail 추가하기 -->
+      <!-- link-profile, myBasket -> 이미지는 가상요소의 background-image로 처리, 장바구니 위의 숫자도 가상요소로 -->
+    <section class="search-header">
+      <div class="inner-top-search">
+        <h2 class="company-title"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></h2>
+        <nav class="wrap-serviceNav">
+          <a href="#none" class="link-product">작품</a>
+          <a href="#none" class="link-class">클래스</a>
+        </nav>
+        <form method="get" class="search-form">
+          <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+          <label for="search-item">
+            <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+          </label>
+        </form>
+        <div class="ui-dropdown">
+          <ol class="ranking-product">
+            <li class="ranking-item">
+              <a href="#none" class="link-item"><em>1</em>꾸덕쿠키</a>
+            </li>
+          </ol>
+        </div>
+        <nav class="wrap-profile">
+          <a href="#none" class="link-profile">내 정보</a>
+          <a href="#none" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+        </nav>
+      </div>
+    </section>
+    <!-- // 상품 검색 및 내정보 확인 -->
+
+    <!-- 상품 관련 모든 카테고리 link 탭 -->
+      <!-- 각 li or a hover 적용하기, 하단의 box-shadow 적용하기, fixed or sticky 적용하기 -->
+    <section class="gnb"> <!-- global navigation bar -->
+      <h2 class="text-hide">전역 네비게이션</h2>
+      <nav>
+        <ul class="nav-wrap">
+          <li><a href="#none" class="btn-gnb">카테고리</a></li>
+          <li class="on"><a href="#none" class="btn-gnb">홈</a></li>
+          <li><a href="#none" class="btn-gnb">오늘의 작품</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 구매</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 후기</a></li>
+          <li><a href="#none" class="btn-gnb">작가님 추천</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 추천</a></li>
+          <li><a href="#none" class="btn-gnb">인기 작품</a></li>
+          <li><a href="#none" class="btn-gnb">스토리</a></li>
+          <li><a href="#none" class="btn-gnb">최신 작품</a></li>
+          <li><a href="#none" class="btn-gnb">인기작가</a></li>
+          <li><a href="#none" class="btn-gnb">소담상회</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- // 상품 관련 모든 카테고리 link 탭 -->
+  </header>
+  <!-- // header area -->
+  <main>
+    <!-- 메인 슬라이드 배너 -->
+    <section class="container-banner">
+    <h2 class="text-hide">메인 슬라이드 배너</h2>
+      <ul class="banner-wrap">
+        <!-- hover 시 배너 이동 없음, 배너 이동 구현 -->
+        <li class="showroom-banner list-item">
+          <a href="#none" class="link-banner">
+            <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+          </a>
+        </li>
+        <li class="showroom-banner">
+          <a href="#none" class="link-banner">
+            <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+          </a>
+        </li>
+      </ul>
+      <fieldset class="ui-control">
+        <!-- 버튼들은 가상 요소로 만들고 텍스트는 숨기기 -->
+        <button class="btn-slice prev">이전 슬라이드</button>
+        <div class="slice-numbers">
+          <span class="current-number">1</span>/11
+        </div>
+        <button class="btn-slice next">다음 슬라이드</button>
+      </fieldset>
+    </section>
+    <!-- // 메인 슬라이드 배너 -->
+  </main>
+</body>
+</html>
