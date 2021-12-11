@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section, main {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 blockquote, q {
@@ -49,12 +49,21 @@ table {
 a {
 	text-decoration: none;
 }
-li {
-	list-style: none;
+* {
+	box-sizing: border-box;
 }
 img {
-	display: block;
 	width: 100%;
+	vertical-align: top;
+}
+button {
+	background: inherit; 
+	border: none; 
+	box-shadow: none; 
+	border-radius: 0; 
+	padding: 0; 
+	overflow: visible; 
+	cursor: pointer
 }
 .text-hide {
     overflow: hidden;
@@ -63,6 +72,4 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
-    padding: 0;
 }
