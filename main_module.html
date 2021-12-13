@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/sass/font.css">
+  <link rel="stylesheet" href="./src/sass/reset.css">
+  <link rel="stylesheet" href="./src/sass/style_module_main.css">
+  <script defer src="https://kit.fontawesome.com/fa4967e6b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- header module -->
+  <header class="product-list__header">
+    <h2 class="text-hide">상품목록 헤더</h2>
+    <a href="#none" class="product-list__title">
+      첫구매, 인기작품 100원부터
+    </a>
+    <div class="product-list__control">
+      <div class="product-list__location">
+        <span class="current">1</span>
+        /
+        <span class="total">5</span>
+      </div>
+      <button class="product-list__arrowBtn product-list__arrowBtn--prev" type="button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="product-list__arrowBtn product-list__arrowBtn--next" type="button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- item module -->
+  <li class="item">
+    <h2 class="text-hide">웰컴딜 상품</h2>
+    <a href="#none" target="_blank">
+      <div class="item__thumb">
+        <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+        <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+        <button class="item__heart" type="button">
+        </button>
+      </div>
+      <div class="item__info">
+        <div class="item__maker-name">
+          버들골
+        </div>
+        <div class="item__name">
+          [웰컴딜]버들골 수제약과
+        </div>
+        <div class="item__price">
+          <span class="sale-rate">90%</span>
+          <span class="price-sale">100원</span>
+          <div class="price-origin">
+            <del>7500원</del>
+          </div>
+        </div>
+        <div class="item__badges">
+          <div class="item__badge badge--food">안전식품</div>
+          <div class="item__badge badge--new">NEW</div>
+        </div>
+        <div class="item__review">
+          <div class="review-rating">
+            <span class="review-stars">
+              <i class="fas fa-star icon-star"></i>
+              <i class="fas fa-star icon-star"></i>
+              <i class="fas fa-star icon-star"></i>
+              <i class="fas fa-star icon-star"></i>
+              <i class="fas fa-star icon-star"></i>
+            </span>
+            <span class="review-count">(75)</span>
+          </div>
+          <div class="review-comment">
+            <div class="review-comment__badge">후기</div>
+            <div class="review-comment__content">
+              대박!작가님 진짜맛있어요
+              맛있다고해도 개인차있겠지 기다안했는데
+              진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+              진짜맛있어요 진짜 짱....👍👍👍👍👍
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+  
+  <li class="item item--sm">
+    <h2 class="text-hide">상품</h2>
+    <a href="#none" target="_blank">
+      <div class="item__thumb">
+        <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+        <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+        <button class="item__heart" type="button">
+        </button>
+      </div>
+      <div class="item__info">
+        <div class="item__maker-name">
+          선물정육점(고기셰프 윤주민과청년들)
+        </div>
+        <div class="item__name">
+          [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+        </div>
+      </div>
+      <div class="item__review">
+        <div class="review-rating">
+          <span class="review-stars">
+            <i class="fas fa-star icon-star"></i>
+            <i class="fas fa-star icon-star"></i>
+            <i class="fas fa-star icon-star"></i>
+            <i class="fas fa-star icon-star"></i>
+            <i class="fas fa-star icon-star"></i>
+          </span>
+        </div>
+        <div class="review-comment">
+          맛있게먹었어요..부들부들해요
+        </div>
+      </div>
+    </a>
+  </li>
+  
+  <!-- button -->
+  <a href="#none" class="product-list__showMoreBtn">
+    첫구매 작품 더보기
+  </a>
+</body>
+</html>

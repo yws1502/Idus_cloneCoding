@@ -11,3 +11,8 @@
     border-radius: $radius;
   }
 }
+
+@mixin focus-outline {
+  outline: 2px solid #015ECC;
+  z-index: 10;
+}

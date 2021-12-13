@@ -1,0 +1,18 @@
+.product-list {
+  width: 1056px;
+  margin: 0 auto;
+  &.product-list__welcome-deal {
+    .item-list {
+      display: grid;
+      grid: repeat(2, 1fr) / repeat(4, 1fr);
+      gap: 15px;
+    }
+  }
+  &.product-list__relate-product {
+    .item-list {
+      display: grid;
+      grid: repeat(2, 1fr) / repeat(5, 1fr);
+      gap: 15px;
+    }
+  }
+}
