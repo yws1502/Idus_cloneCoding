@@ -1,7 +1,6 @@
 // common
 * {
   box-sizing: border-box;
-  // font-family: $my-font;
 }
 
 body{
@@ -67,7 +66,10 @@ button {
 .company-title {
   display: inline-block;
   padding: 0 27px;
-  .company-logo {width: 73px;}
+  .company-logo {
+    width: 73px;
+    vertical-align: baseline;
+  }
 }
 
 // 서비스 모음
@@ -109,7 +111,7 @@ button {
       right: 3px;
       display: inline-block;
       content: "";
-      background-image: url(../images/search_icon.svg);
+      background-image: url(../images/icons/search_icon.svg);
       background-repeat: no-repeat;
       background-size: cover;
       width: 30px;
@@ -145,7 +147,7 @@ button {
   }
   [class^="link"]::before {
     position: absolute;
-    top: -30px;
+    top: -32px;
     display: block;
     content: "";
     background-size: cover;
@@ -154,22 +156,21 @@ button {
     height: 33px;
   }
   .link-profile::before {
-    background-image: url(../images/person_icon.svg);
+    background-image: url(../images/icons/person_icon.svg);
     left: 0;
   }
   .link-myBasket::before {
-    background-image: url(../images/shopping_basket_icon.svg);
+    background-image: url(../images/icons/shopping_basket_icon.svg);
     right: 23px;
   }
   .basket-count {
-    @include font-module(12px, $color:#fff);
+    @include font-module(12px, $height:20px, $color:#fff);
     position: absolute;
     top: -31px;
     right: 15px;
     display: block;
     background-color: $orange-font;
     text-align: center;
-    line-height: 16px;
     width: 18px;
     height: 18px;
     border-radius: 100%;
@@ -248,12 +249,12 @@ button {
     width: 25px;
     height: 25px;
     &.prev {
-      background-image: url(../images/prev_icon.svg);
+      background-image: url(../images/icons/prev_icon.svg);
       left: 5%;
       // transform: translateX(-50%);
     }
     &.next {
-      background-image: url(../images/next_icon.svg);
+      background-image: url(../images/icons/next_icon.svg);
       right: 5%;
       // transform: translateX(-50%);
     }
