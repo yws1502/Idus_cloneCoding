@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <h1 class="text-hide">아이디어스 홈페이지</h1>
+  <!-- 상단의 첫 구매 광고 배너 -->
+  <!-- btn-closeAd 가상요소로 이미지 만들고 텍스트는 숨기기 onclick event 하면 display: none으로 지정 -->
+  <div class="advertisement">
+    <img src="https://image.idus.com/static/signup/web_benefit_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
+    <button class="btn-closeAd">광고 닫기</button>
+  </div>
+  <!-- // 상단의 첫 구매 광고 배너 -->
+  <!-- header area -->
+  <header class="main-header">
+    <!-- 회원 관리 목록 -->
+      <!-- link-info, link-install-app hover 적용으로 detail 추가하기 -->
+    <section class="top-navigation">
+      <h2 class="text-hide">회원 관리 항목</h2>
+      <div class="inner-top-nav">
+        <div class="ui-dropdown btn-nav">
+          <button type="button" class="btn-dropdown">아이디어스 앱 설치하기</button>
+        </div>
+        <div class="register-wrap">
+          <a href="#none" class="btn-nav">로그인</a>
+          <a href="#none" class="btn-nav">회원가입</a>
+          <div class="ui-dropdown btn-nav">
+            <button type="button" class="btn-dropdown">고객센터</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // 회원 관리 목록 -->
+
+    <!-- 상품 검색 및 내 정보 확인 -->
+      <!-- link-class 가상요소 처리(애니메이션 +), ranking-product hover 적용시 detail 추가하기 -->
+      <!-- link-profile, myBasket -> 이미지는 가상요소의 background-image로 처리, 장바구니 위의 숫자도 가상요소로 -->
+    <section class="search-header">
+      <div class="inner-top-search">
+        <h2 class="company-title"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></h2>
+        <nav class="wrap-serviceNav">
+          <a href="#none" class="link-product">작품</a>
+          <a href="#none" class="link-class">클래스</a>
+        </nav>
+        <form method="get" class="search-form">
+          <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+          <label for="search-item">
+            <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+          </label>
+        </form>
+        <div class="ui-dropdown">
+          <ol class="ranking-product">
+            <li class="ranking-item">
+              <a href="#none" class="link-item"><em>1</em>꾸덕쿠키</a>
+            </li>
+          </ol>
+        </div>
+        <nav class="wrap-profile">
+          <a href="#none" class="link-profile">내 정보</a>
+          <a href="#none" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+        </nav>
+      </div>
+    </section>
+    <!-- // 상품 검색 및 내정보 확인 -->
+
+    <!-- 상품 관련 모든 카테고리 link 탭 -->
+      <!-- 각 li or a hover 적용하기, 하단의 box-shadow 적용하기, fixed or sticky 적용하기 -->
+    <section class="gnb"> <!-- global navigation bar -->
+      <h2 class="text-hide">전역 네비게이션</h2>
+      <nav>
+        <ul class="nav-wrap">
+          <li><a href="#none" class="btn-gnb">카테고리</a></li>
+          <li class="on"><a href="#none" class="btn-gnb">홈</a></li>
+          <li><a href="#none" class="btn-gnb">오늘의 작품</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 구매</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 후기</a></li>
+          <li><a href="#none" class="btn-gnb">작가님 추천</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 추천</a></li>
+          <li><a href="#none" class="btn-gnb">인기 작품</a></li>
+          <li><a href="#none" class="btn-gnb">스토리</a></li>
+          <li><a href="#none" class="btn-gnb">최신 작품</a></li>
+          <li><a href="#none" class="btn-gnb">인기작가</a></li>
+          <li><a href="#none" class="btn-gnb">소담상회</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- // 상품 관련 모든 카테고리 link 탭 -->
+  </header>
+  <!-- // header area -->
+  <main>
+    <!-- 메인 슬라이드 배너 -->
+    <section class="container-banner">
+    <h2 class="text-hide">메인 슬라이드 배너</h2>
+      <ul class="banner-wrap">
+        <!-- hover 시 배너 이동 없음, 배너 이동 구현 -->
+        <li class="showroom-banner list-item">
+          <a href="#none" class="link-banner">
+            <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+          </a>
+        </li>
+        <li class="showroom-banner">
+          <a href="#none" class="link-banner">
+            <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+          </a>
+        </li>
+      </ul>
+      <fieldset class="ui-control">
+        <!-- 버튼들은 가상 요소로 만들고 텍스트는 숨기기 -->
+        <button class="btn-slice prev">이전 슬라이드</button>
+        <div class="slice-numbers">
+          <span class="current-number">1</span>/11
+        </div>
+        <button class="btn-slice next">다음 슬라이드</button>
+      </fieldset>
+    </section>
+    <!-- // 메인 슬라이드 배너 -->
+    <section class="product-list product-list__welcome-deal">
+      <header class="product-list__header">
+        <a href="#none" class="product-list__title">
+          첫구매, 인기작품 100원부터
+        </a>
+        <div class="product-list__control">
+          <div class="product-list__location">
+            <span class="current">1</span>
+            /
+            <span class="total">5</span>
+          </div>
+          <button class="product-list__arrowBtn product-list__arrowBtn--prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="product-list__arrowBtn product-list__arrowBtn--next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </header>
+      <ul class="content-slider">
+        <li class="content">
+          <ul class="item-list">
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    버들골
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜]버들골 수제약과
+                  </div>
+                  <div class="item__price">
+                    <span class="sale-rate">90%</span>
+                    <span class="price-sale">100원</span>
+                    <div class="price-origin">
+                      <del>7500원</del>
+                    </div>
+                  </div>
+                  <div class="item__badges">
+                    <div class="item__badge badge--food">안전식품</div>
+                    <div class="item__badge badge--new">NEW</div>
+                  </div>
+                  <div class="item__review">
+                    <div class="review-rating">
+                      <span class="review-stars">
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                        <i class="fas fa-star icon-star"></i>
+                      </span>
+                      <span class="review-count">(75)</span>
+                    </div>
+                    <div class="review-comment">
+                      <div class="review-comment__badge">후기</div>
+                      <div class="review-comment__content">
+                        대박!작가님 진짜맛있어요
+                        맛있다고해도 개인차있겠지 기다안했는데
+                        진짜 대박 솔직히 이거 한통 혼자다먹을듯...정신줄잡고먹었어요
+                        진짜맛있어요 진짜 짱....👍👍👍👍👍
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#none" class="product-list__showMoreBtn">
+        첫구매 작품 더보기
+      </a>
+    </section>
+  
+    <section class="product-list product-list__relate-product">
+      <header class="product-list__header">
+        <a href="#none" class="product-list__title">
+          첫구매, 인기작품 100원부터
+        </a>
+        <div class="product-list__control">
+          <div class="product-list__location">
+            <span class="current">1</span>
+            /
+            <span class="total">5</span>
+          </div>
+          <button class="product-list__arrowBtn product-list__arrowBtn--prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="product-list__arrowBtn product-list__arrowBtn--next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </header>
+      <ul class="content-slider">
+        <li class="content">
+          <ul class="item-list">
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="item item--sm">
+              <h2 class="text-hide">상품</h2>
+              <a href="#none" target="_blank">
+                <div class="item__thumb">
+                  <img src="./src/img/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
+                  <img src="./src/img/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <button class="item__heart" type="button">
+                  </button>
+                </div>
+                <div class="item__info">
+                  <div class="item__maker-name">
+                    선물정육점(고기셰프 윤주민과청년들)
+                  </div>
+                  <div class="item__name">
+                    [웰컴딜] 48시간우려낸! 1+등급 한우사골국
+                  </div>
+                </div>
+                <div class="item__review">
+                  <div class="review-rating">
+                    <span class="review-stars">
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                      <i class="fas fa-star icon-star"></i>
+                    </span>
+                  </div>
+                  <div class="review-comment">
+                    맛있게먹었어요..부들부들해요
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a href="#none" class="product-list__showMoreBtn">
+        첫구매 작품 더보기
+      </a>
+    </section>
+    <!-- main product 끝 -->
+      <!-- 실시간 후기  -->
+      <section class="review">
+        <div class="section-tit">
+          <a href="https://www.idus.com/w/review" class="review-tit-txt">
+            실시간 후기
+          </a>
+          <!-- 메뉴 슬라이더 js 구현 -->
+          <div class="ui-pagination">
+            <div class="current-page-num">
+              <span class="current-page">1</span>/5
+            </div>
+            <button type="button" class="btn-prev" aria-label="이전"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" class="btn-next" aria-label="다음"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <!-- 후기 이미지카드 -->
+        <ul class="review main-outer">
+          <li class="main-outer-li ">
+            <ul class="review main-inner">
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/a8ba7f26-62d1-4eda-9f76-6a98279f2278"
+                  aria-label="설렘가득 [1+2] 랜덤박스 귀걸이(귀찌), 반지" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/e17fe5a3ad7443d5a6a6cee2b9af855c_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/a8ba7f26-62d1-4eda-9f76-6a98279f2278" class="content-tit">
+                    ❤️설렘가득 [1+2] 랜덤박스 귀걸이(귀찌), 반지❤
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">75%</strong>
+                    <strong class="content-price">8,900원</strong>
+                    <del>35,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    포장이나 이런 부분은 굉장히 정성스럽고 편지도 감사하지만 요청사항에 최대한 화려한걸로 부탁드렸는데 전혀 화려하지 않고 제 취향이 아니라서 많이 여러모로 아쉽네요 😭
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star "></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>세나</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/e4c31482-8b54-4d09-bdb6-68cc5f34ceaa"
+                  aria-label="(배송지연) 아삭한 미니오이, 스낵오이 1kg" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/992de4ae04a14876be14e0a3766c8d1d_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/e4c31482-8b54-4d09-bdb6-68cc5f34ceaa" class="content-tit">
+                    (배송지연) 아삭한 미니오이, 스낵오이 1kg
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">9%</strong>
+                    <strong class="content-price">5,000원</strong>
+                    <del>5,500원</del>
+                  </div>
+                  <p class="content-txt">
+                    먹기 간편하고 과일처럼 먹게되요 ㅎㅎ 12월 중순 오기 전에 실컷 시켜먹을거에요 ! 주변 사람들도 너무 좋아해서... 점점 주문 횟수와 양이 많아지고 있어요 ^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>이은지</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/7a3971b4-9dc3-4a58-b0cf-ba9df6260d88" aria-label="러블리 트위드 파우치"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/942922d2e43549f096ca1932841292a4_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/7a3971b4-9dc3-4a58-b0cf-ba9df6260d88" class="content-tit">
+                    러블리 트위드 파우치
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">15,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    배송이 많이 느렸지만 너무 맘에 드네요.실물이
+                    훨씬 이쁘네요.잘쓸게요.
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>김지혜</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/3f1c5dcb-d120-4b4a-918f-e553c5ed1ca5"
+                  aria-label="[레터링 머니건] 부모님 용돈 선물 생신 이벤트 머니건" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/1875ac64f5cc427cb4bad0ca790eb28d_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/3f1c5dcb-d120-4b4a-918f-e553c5ed1ca5" class="content-tit">
+                    [레터링 머니건] 부모님 용돈 선물 생신 이벤트 머니건
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">52%</strong>
+                    <strong class="content-price">16,900원</strong>
+                    <del>35,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    아직 사용법이 익숙하지 않아서 열심히 연습중이에요
+                    연습중인데도 기분이 좋네요:)
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>용용이</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/a48df4fe-f223-4c4d-8afb-9a1d7cb20edb"
+                  aria-label="[개업선물] 미니 간판 무드등 헤어샵 네일샵 개업선물" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/d0dc43b986344c3eadf6961bc48acd1b_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/a48df4fe-f223-4c4d-8afb-9a1d7cb20edb" class="content-tit">
+                    [개업선물] 미니 간판 무드등 헤어샵 네일샵 개업선물
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">24%</strong>
+                    <strong class="content-price">34,000원</strong>
+                    <del>45,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    친구가 넘넘넘 좋아해요ㅠㅠ 감사합니다
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>꼬부기</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/94ed4e66-ae99-4271-bca0-fa51954a63b3"
+                  aria-label="[1+1]에어프라이어 순살로스트치킨 600g+600g " target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/166efa7ce54c43b6923e670f6d67c74f_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/94ed4e66-ae99-4271-bca0-fa51954a63b3" class="content-tit">
+                    [1+1]에어프라이어 순살로스트치킨 600g+600g
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">14,900원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    냄새 하나도 안나고 맛있어요 7살 아들도 엄청 잘 먹었습니다
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>박주부</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="main-outer-li display-off">
+            <ul class="review main-inner">
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/83c27a0d-0a85-4c1f-bfcb-83a82e1cd99c"
+                  aria-label="[예약할인]🎅크리스마스 트리비누🎄포장포함🎁" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/69db1c8d459443f7a9fbe512b3cffabd_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/83c27a0d-0a85-4c1f-bfcb-83a82e1cd99c" class="content-tit">
+                    [예약할인]🎅크리스마스 트리비누🎄포장포함🎁
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">25%</strong>
+                    <strong class="content-price">4,500원</strong>
+                    <del>6,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    엄청 빨리 보내주셨어요 ㅎㅎ
+                    크리스마스때 가볍게 선물할만한걸 찾고있다가 이거다 싶어서 주문했는데
+                    너무 예쁘네요
+                    받는분들도 좋아하실거같아요 ^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>예린맘(박혜연)</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/61339b8a-b1d4-4698-ab17-9462e3bfe466"
+                  aria-label="새우 완자탕 쿠킹박스 밀키트 2인분 중식 술안주 야식" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/e171e500610647afada9cce429a8ff1c_720.png" alt="제품 이미지">
+                  <div class="content-info">
+                    <a href="https://www.idus.com/w/product/61339b8a-b1d4-4698-ab17-9462e3bfe466" class="content-tit">
+                      새우 완자탕 쿠킹박스 밀키트 2인분 중식 술안주 야식
+                    </a>
+                    <div class="content-price-box">
+                      <strong class="content-sale-num">10%</strong>
+                      <strong class="content-price">8,900원</strong>
+                      <del>9,900원</del>
+                    </div>
+                    <p class="content-txt">
+                      세일때 더살걸 그랬어요ㅎㅎ 야채랑 고기를 더추가해서 먹었는데 맛이 좋습니다. 쌀국수도 어울립니다.
+                    </p>
+                    <div class="item-rating">
+                      <div class="rationg-star">
+                        <i class="fas fa-star" data-state="active"></i>
+                        <i class="fas fa-star" data-state="active"></i>
+                        <i class="fas fa-star" data-state="active"></i>
+                        <i class="fas fa-star" data-state="active"></i>
+                        <i class="fas fa-star" data-state="active"></i>
+                      </div>
+                      <span>베이비투</span>
+                    </div>
+                  </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/d417c30a-ed4a-4999-bbfc-c2954f497bfe"
+                  aria-label="🔥제철음식🔥시원한 맛! 새콤달콤 국물 오이무침" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/08d39b8997fe4da0b49b62cafee9c4b4_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/d417c30a-ed4a-4999-bbfc-c2954f497bfe" class="content-tit">
+                    🔥제철음식🔥시원한 맛! 새콤달콤 국물 오이무침
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">7%</strong>
+                    <strong class="content-price">3,980원</strong>
+                    <del>4,260원</del>
+                  </div>
+                  <p class="content-txt">
+                    맛있게 밥한공기 뚝딱했네요
+                    새콤달콤~ 국물도많아서
+                    밥비벼먹기도좋고 맛있게먹었어요 ♡
+                    서비스반찬은 아쉽게도 먹지못하는음식이라 ㅜㅠ 좀 아깝네요 ㅠ
+                    두팩사길 잘했어요~ 맛있어요
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>박정환</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/ed17c6ab-982e-4152-94d4-3a204189f73b""
+                      aria-label=" 연핑크장미 비누꽃다발 기념일꽃다발 생일 졸업식꽃다발" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/f096b087df1e479a809189d069975793_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <strong class="content-tit">
+                    연핑크장미 비누꽃다발 기념일꽃다발 생일 졸업식꽃다발
+                  </strong>
+                  <p class="content-txt">
+                    졸업전시회 선물로 주는 거라고 했더니 문구까지 센스있게 달아서 보내주셨네요~!! 꽃도 너무 예뻐요!!! 생화가 아니라서 일부러 여유있게 주문해뒀는데 집안에 잠깐 두는 것도 예쁘네요
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <!-- fontaswome icon star - 5 -->
+                    </div>
+                    <span>송민진</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/dd4fb9aa-4367-462c-8751-9ccc2064ddf5"
+                  aria-label="💊기관지건강필수템💊💛배약도라지대추청🤎" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/fa3c8256f0d8491390af2b467f57ab2d_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/dd4fb9aa-4367-462c-8751-9ccc2064ddf5" class="content-tit">
+                    💊기관지건강필수템💊💛배약도라지대추청🤎
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">53%</strong>
+                    <strong class="content-price">18,900원</strong>
+                    <del>40,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    선물용 으로 보냈어요! 잘 받았다고 연락왔어요.
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>김현태</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/e8070b62-14f8-4dcd-8902-cebc14ce9033" aria-label="[원두 200g] 과테말라 안티구아"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="http://image.idus.com/image/files/4c6652a15d634f66ba825bc42db5505b_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/e8070b62-14f8-4dcd-8902-cebc14ce9033" class="content-tit">
+                    [원두 200g] 과테말라 안티구아
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">8,500원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    오자마자 먹었는데 너무 맛있어요~
+                    손편지도 감사합니다~^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>돠</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="main-outer-li display-off">
+            <ul class="review main-inner">
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/add7dcff-8c71-4916-8789-702e4798ec50"
+                  aria-label="오랑제트🍊🍫 초콜릿을 입은 캔디드 오렌지 빼빼로" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/4edcf01910e94950b0d47b9edd93725a_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/add7dcff-8c71-4916-8789-702e4798ec50" class="content-tit">
+                    오랑제트🍊🍫 초콜릿을 입은 캔디드 오렌지 빼빼로
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">6,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    너무 고급지고 맛있어요. 남자도 좋아하더라구요~!! 자주 먹기에는 다소 부담스럽지만 좋은날 다시 주문할게요^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>나는나</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/856cafd9-5778-4a57-beac-96ea6f1aec15" aria-label="2mm탄생석,실버)나의탄생석반지"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/4855afbf7ace4d57ba383624071d0c0e_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/856cafd9-5778-4a57-beac-96ea6f1aec15" class="content-tit">
+                    2mm탄생석,실버)나의탄생석반지
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">25,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    나에게 주는 생일선물로 샀는데 너무 만족스러워요~각인도 예쁘게 잘 됐고,
+                    서비스로 주신 실반지도 이 반지랑 너무 잘 어울리네요!
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>우빈</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/6411de24-d05a-40d1-a98d-1c546ae5a9d8"
+                  aria-label="✨8col 유리 시스루 헤어 스크런치✨" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/0894baf0799a448eb0a6db92d7d29a2c_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/6411de24-d05a-40d1-a98d-1c546ae5a9d8" class="content-tit">
+                    ✨8col 유리 시스루 헤어 스크런치✨
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">3,500원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    금액 맞추려고 하나 더 산건데 편하고 이뿌네욜 ㅎㅎ
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>ㅇㄹ</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/1057a71b-ed01-4d14-a74c-ec8207871254" aria-label="🌾들깨 강정"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/5c325e493ba648759e894dc3d2ec3d0b_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/1057a71b-ed01-4d14-a74c-ec8207871254" class="content-tit">
+                    🌾들깨 강정
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">18%</strong>
+                    <strong class="content-price">8,900원</strong>
+                    <del>10,900원</del>
+                  </div>
+                  <p class="content-txt">
+                    들깨강정을 좋아해서 바로 주문했는데, 들깨 맛보단 땅콩맛이 더 강해서 좀 섭섭했어요.
+                    양을 좀 줄이더라도 들깨로만 된거 먹고싶네요
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span>세상 어디에도 없는 피오나</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/0c63ad4c-c05c-4e44-8a22-7fcdab8a9957"
+                  aria-label="925실버 Diana the huntress ring " target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/28c6562e501f4a43b9d6b7508008d3de_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/0c63ad4c-c05c-4e44-8a22-7fcdab8a9957" class="content-tit">
+                    925실버 Diana the huntress ring
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">23%</strong>
+                    <strong class="content-price">50,000원</strong>
+                    <del>65,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    받는 분이 매우 좋아하였습니다..!
+                    만족스러운 선물이었어요👍
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>아이러빗수제</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/8ce95cfb-568e-46ab-8678-1a76c37f0f50"
+                  aria-label="보카시 니트 사각 자동핀 10cm 7colors" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/80de98285cc24c7db600564643f817ba_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/8ce95cfb-568e-46ab-8678-1a76c37f0f50" class="content-tit">
+                    보카시 니트 사각 자동핀 10cm 7colors
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">4,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    생각보다 크고 맘에듭니다! 심플하고 고급지고 튼튼해요
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>ㅇㄹ</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="main-outer-li display-off">
+            <ul class="review main-inner">
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/bf7f365f-db85-4044-a365-140e4ec51dc8" aria-label="Best💙아네모네 파우치💙"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="http://image.idus.com/image/files/8fbf39a8c9844a0b8835ccff54458a2d_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/bf7f365f-db85-4044-a365-140e4ec51dc8" class="content-tit">
+                    Best💙아네모네 파우치💙
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">6,500원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    블프 완전 칭찬해👏👏👏
+                    정말 잘산 것 같아요 태슬도 너무 귀엽😍
+                    동전카드지갑도 깔맞춤 했어야했.....😞
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>Hmm</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/7bc2b520-68d1-4449-8e24-dee1fb654ba0"
+                  aria-label="[심플 드로잉](생일선물,커플,크리스마스)" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/4494f5452f6e41cb8e2af09e68afe6b0_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/7bc2b520-68d1-4449-8e24-dee1fb654ba0" class="content-tit">
+                    [심플 드로잉](생일선물,커플,크리스마스)
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">34%</strong>
+                    <strong class="content-price">1,900원</strong>
+                    <del>2,900원</del>
+                  </div>
+                  <p class="content-txt">
+                    너무너무 예쁘고 귀엽게 그려주신 작가님🥰🥰
+                    첫 드로잉이었는데 좋은 말씀과
+                    친절함에 친구네 커플 드로잉까지 함께
+                    맡기게 되었어요👍🏻👍🏻
+                    너무너무 감사드립니다^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>찬</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/e6d9160d-8ee1-4f71-bdc8-9dc33cd5adc9" aria-label="오벌 코어 실버링"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/92d9b1f7e4be4b7bbb5cbeca23fcb220_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/e6d9160d-8ee1-4f71-bdc8-9dc33cd5adc9" class="content-tit">
+                    오벌 코어 실버링
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">13%</strong>
+                    <strong class="content-price">95,000원</strong>
+                    <del>109,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    제가 구매했던 미휴작가님 반지들 중 큐빅이 젤 큰 반지입니당
+                    요만큼 큐빅이 큰 반지를 구매해본적이 없어서 크기때문에 사실 조금 망설이긴했지만(ㅎㅎ) 포인트가 될거같아서 구매했어용!
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>모디</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/14ee7868-646e-42b6-8cf4-768c997b4062" aria-label="포슬,꾸덕 스쿱쿠키 답례품 선물세트"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/0fd02eca46524e858137359a1242bc20_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/14ee7868-646e-42b6-8cf4-768c997b4062" class="content-tit">
+                    포슬,꾸덕 스쿱쿠키 답례품 선물세트
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">33%</strong>
+                    <strong class="content-price">1,000원</strong>
+                    <del>1,500원</del>
+                  </div>
+                  <p class="content-txt">
+                    모든 맛이 다 맛있었어요!
+                    특히 초코맛이 찐한 초콜릿 맛이 나서 좋았습니다!
+                    또 제가 민초아이스크림을 좋아해서인지 민초맛도 나쁘지 않았어요
+                    차가워야 할 것 같은 느낌?
+                    그리구 서비
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>한주희</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/919a7441-9a6a-4ffc-85b0-10b175b598d4" aria-label="[여성청결제]  약산성 시크릿클렌져"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="http://image.idus.com/image/files/68c92f0e6d4141f1b8e0673cd09d418e_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/919a7441-9a6a-4ffc-85b0-10b175b598d4" class="content-tit">
+                    [여성청결제] 약산성 시크릿클렌져
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">22,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    지금까지 이것저것 청결제를 사용해봤는데 다른청결제는 제가 씻는곳에서 하수구까지 거품이 그대로 내려가는데 이제품은 하수구까지 거리가 멀지도않는데 물닿고 하수구로 떠내려가는사이 거품이
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>김지연</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/23c8cb1d-49ba-4cd9-91b6-0c2174e60c52"
+                  aria-label="심플아트 ❤️ 폰케이스 생일선물 커플기념일 아이폰13" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/c3c5c9a3460d402189703dc014daeabc_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/23c8cb1d-49ba-4cd9-91b6-0c2174e60c52" class="content-tit">
+                    심플아트 ❤️ 폰케이스 생일선물 커플기념일 아이폰13
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">52%</strong>
+                    <strong class="content-price">9,000원</strong>
+                    <del>18,900원</del>
+                  </div>
+                  <p class="content-txt">
+                    너무이뻐요❤️색깔 너무이쁘네요ㅜㅜ감사합니다
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>갱이</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="main-outer-li display-off">
+            <ul class="review main-inner">
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/31359296-d1a8-4031-8f0c-d5d04b2f76a2"
+                  aria-label="10colors 샤무드 태슬(3cm)" target="_blank" class="contetn-linkimg">
+                  <img src="http://image.idus.com/image/files/e21c5608dbcc4bad9d529ef25f454e8b_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/31359296-d1a8-4031-8f0c-d5d04b2f76a2" class="content-tit">
+                    10colors 샤무드 태슬(3cm)
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">22%</strong>
+                    <strong class="content-price">1,800원</strong>
+                    <del>2,300원</del>
+                  </div>
+                  <p class="content-txt">
+                    파우치에 찰떡이네요ㅋㅋ 작고 귀여워요~
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>Hmm</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/32ab328d-97fd-4f6a-8e4a-70edf88bc4e1" aria-label="크리스마스 펠트 벽트리 "
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/f41b6dfb8a474c7386882c1e9dfec284_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/32ab328d-97fd-4f6a-8e4a-70edf88bc4e1" class="content-tit">
+                    크리스마스 펠트 벽트리
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">50%</strong>
+                    <strong class="content-price">8,000원</strong>
+                    <del>16,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    설치도 간편하고 아주 예쁩니다 만족 만족 대만족👍👍👍👍👍
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>zzandal99</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/7844ad4c-2920-4307-96c6-4ba5e67672ab"
+                  aria-label="실버)천연석 2mmonebyone반지" target="_blank" class="contetn-linkimg">
+                  <img src="http://image.idus.com/image/files/9a6307a82cb546899324ccd67c4c4bf4_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/7844ad4c-2920-4307-96c6-4ba5e67672ab" class="content-tit">
+                    실버)천연석 2mmonebyone반지
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">56,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    반지 잘 받았습니다 정말 너무너무 예뻐요 감사합니다~
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>노은경</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/d454d66f-c785-4116-acbf-85c6e96cc583" aria-label="버섯요정과 다람쥐 메모지"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/41b75470a5ef47ffb2408b073247727b_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/d454d66f-c785-4116-acbf-85c6e96cc583" class="content-tit">
+                    버섯요정과 다람쥐 메모지
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">25%</strong>
+                    <strong class="content-price">1,500원</strong>
+                    <del>2,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    이쁜 메모지와 스티커 정말 감사합니다ㅎㅎ 제가 좋아하는 다람쥐ㅎㅎ 보고 있으니 기분이 엄청 좋아요ㅎㅎ
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>안희정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/c1e99695-4052-4768-b380-f7d1d08f90b5"
+                  aria-label="부모님.연인.연말선물 🍇오미자&amp;매실" target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/2d40f7334ea14bfea528166d5e690bb3_720.png" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/c1e99695-4052-4768-b380-f7d1d08f90b5" class="content-tit">
+                    부모님.연인.연말선물 🍇오미자&amp;매실
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num">18%</strong>
+                    <strong class="content-price">32,900원</strong>
+                    <del>40,000원</del>
+                  </div>
+                  <p class="content-txt">
+                    오미자와 매실은 두고 먹으면 넘 좋죠~^^
+                    잘 받았고 잘 먹고 있습니다.^^
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>세상 어디에도 없는 피오나</span>
+                  </div>
+                </div>
+              </li>
+              <li class="content-card">
+                <a href="https://www.idus.com/w/product/8c341cf0-a381-403d-8fe5-e3bbd21eef9c" aria-label="오필리아_크리스마스 왕관머리띠"
+                  target="_blank" class="contetn-linkimg">
+                  <img src="https://image.idus.com/image/files/871b67d144cc43c9b2323149f96a38b3_720.jpg" alt="제품 이미지">
+                </a>
+                <div class="content-info">
+                  <a href="https://www.idus.com/w/product/8c341cf0-a381-403d-8fe5-e3bbd21eef9c" class="content-tit">
+                    오필리아_크리스마스 왕관머리띠
+                  </a>
+                  <div class="content-price-box">
+                    <strong class="content-sale-num"></strong>
+                    <strong class="content-price">12,000원</strong>
+                    <del></del>
+                  </div>
+                  <p class="content-txt">
+                    큰아이 4학년인데 진작에 이제라도 둘째 왕관사주니 너무 좋네요
+                    조금더 일찍 알았으면...
+                    유치원서 아이들 시샘을 한몸에 받았나봐요. 보내주신 삔도 너무 이뻐요. 감사드립니다.
+                  </p>
+                  <div class="item-rating">
+                    <div class="rationg-star">
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                      <i class="fas fa-star" data-state="active"></i>
+                    </div>
+                    <span>장수영</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 실시간 후기 더보기 -->
+        <a href="https://www.idus.com/w/review" class="review-moretxt">실시간 후기 더보기</a>
+      </section>
+      <!-- 메인 리뷰 끝 -->
+  </main>
+  <footer>
+    <div class="f-cont">
+      <a class="f-1" href="#">이용약관</a>
+      <a class="f-2" href="#">개인정보 처리방침</a>
+      <a class="f-3" href="#">공지사항</a>
+      <a class="f-4" href="#">자주 묻는 질문</a>
+      <a class="f-5" href="#">이벤트</a>
+      <a class="f-6" href="#">입점문의</a>
+      <a class="f-7" href="#">About idus</a>
+      <a class="f-8" href="#">인재 영입</a>
+    </div>
+    <div class="f-grid">
+      <div class="f-grid-1">
+        image
+      </div>
+      <div class="f-grid-2">
+        <strong>(주) 백패커</strong>
+        <p>대표이사 : 김동환</p>
+        <p>서울특별시 마포구 동교로 19길 12</p>
+        <p>사업자 등록번호 : 107-87-83297 
+          <button>사업자 정보확인</button>
+        </p>
+        <p>통신판매업신고 : 2015-서울마포-0440</p>
+        <p>아이디어스는 통신판매중개자이며 통신판매의 당사자가 아닙니다.</p>
+        <p>따라서 아이디어스는 상품 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+        <p>Copyright © 2021 Backpackr All right reserved.</p>
+      </div>
+      <div class="f-grid-3">
+        <strong>고객센터</strong><span>(주 7일 오전 10시 ~ 저녁 10시까지)</span>
+        <ul>
+          <li><span>카카오톡</span><a>아이디어스</a></li>
+          <li><span>대표번호</span>1668-3651</li>
+          <li><span>메일</span>support@backpac.kr</li>
+          <li><span>제휴문의</span>biz@backpac.kr</li>
+        </ul>
+        <p>아이디어스 이용 중 궁금하신 점이 있으신가요?</p>
+        <p>메일 또는 플러스친구 `아이디어스`로 연락해주세요.</p>
+        <p>최선을 다해 도와드리겠습니다.</p>
+      </div>
+      <div class="f-grid-4">
+        <strong>Follow Us</strong>
+        <div>SNS images </div>  
+        <div>etc images</div>  
+      </div>
+      <div class="f-grid-5">
+        <div>가상요소 float left</div>
+        <p>[인증범위] 온라인 마켓 플랫폼 운영(아이디어스)</p>
+        <p>[유효기간] 2020.11.18 - 2023.11.17</p>
+      </div>
+      <div class="f-grid-6">
+        <div>가상요소 float left</div>    
+        <p>고객님은 현금 등으로 결제시 당사에서 가입한</p>
+        <p>구매안전서비스를 이용하실 수 있습니다.</p>
+        <button>가입사실확인</button>
+      </div>
+      <div class="f-grid-7"></div>
+    </div>
+    <div class="bottom-fixed"> img1 / img2 / img3 / img4 / img5</div>
+  </footer>
+  <a class="move-top" href="#" ></a>
+
+
+</body>
+</html>
