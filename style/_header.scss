@@ -1,7 +1,13 @@
 // common
 * {
   box-sizing: border-box;
-  font-family: $my-font;
+  // font-family: $my-font;
+}
+
+body{
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: 'NanumBarunGothic', sans-serif;
 }
 
 button {
