@@ -106,6 +106,7 @@ button {
 
 .company-title .company-logo {
   width: 73px;
+  vertical-align: baseline;
 }
 
 .wrap-serviceNav {
@@ -167,7 +168,7 @@ button {
   right: 3px;
   display: inline-block;
   content: "";
-  background-image: url(../images/search_icon.svg);
+  background-image: url(../images/icons/search_icon.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
@@ -208,7 +209,7 @@ button {
 
 .wrap-profile [class^="link"]::before {
   position: absolute;
-  top: -30px;
+  top: -32px;
   display: block;
   content: "";
   background-size: cover;
@@ -218,19 +219,19 @@ button {
 }
 
 .wrap-profile .link-profile::before {
-  background-image: url(../images/person_icon.svg);
+  background-image: url(../images/icons/person_icon.svg);
   left: 0;
 }
 
 .wrap-profile .link-myBasket::before {
-  background-image: url(../images/shopping_basket_icon.svg);
+  background-image: url(../images/icons/shopping_basket_icon.svg);
   right: 23px;
 }
 
 .wrap-profile .basket-count {
   font-size: 12px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 20px;
   color: #fff;
   position: absolute;
   top: -31px;
@@ -238,7 +239,6 @@ button {
   display: block;
   background-color: #FF7B30;
   text-align: center;
-  line-height: 16px;
   width: 18px;
   height: 18px;
   border-radius: 100%;
@@ -328,12 +328,12 @@ button {
 }
 
 .ui-control .btn-slice.prev {
-  background-image: url(../images/prev_icon.svg);
+  background-image: url(../images/icons/prev_icon.svg);
   left: 5%;
 }
 
 .ui-control .btn-slice.next {
-  background-image: url(../images/next_icon.svg);
+  background-image: url(../images/icons/next_icon.svg);
   right: 5%;
 }
 
@@ -763,7 +763,8 @@ a {
 .review.main-inner {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
@@ -928,8 +929,7 @@ a {
   display: grid;
   width: 970px;
   margin: 0px auto 50px;
-      grid-template-areas: 'grid1 grid2 grid3 grid4'
- 'grid1 grid5 grid6 grid7';
+      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
   -ms-grid-columns: 150px 300px 300px 220px;
       grid-template-columns: 150px 300px 300px 220px;
   -ms-grid-rows: 240px 120px;
@@ -988,89 +988,6 @@ a {
   border: rgba(0, 0, 0, 0.1) 1px solid;
 }
 
-@media all and (max-width: 719px) {
-  .move-top {
-    bottom: 62px;
-    right: 12px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background-color: white;
-    opacity: 0.9;
-    z-index: 20;
-  }
-  .f-cont {
-    text-align: left;
-    padding-left: 12px;
-    padding-top: 4px auto;
-  }
-  .f-cont a {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-  .f-cont .f-4 {
-    display: none;
-  }
-  .f-cont .f-5 {
-    display: none;
-  }
-  .f-cont .f-6 {
-    display: none;
-  }
-  .f-cont .f-8 {
-    display: none;
-  }
-  .f-cont .f-7::after {
-    background-color: white;
-  }
-  .f-grid {
-    width: 100vw;
-        grid-template-areas: 'grid2 grid2 grid2 grid2'
- 'grid2 grid2 grid2 grid2';
-    -ms-grid-columns: 100vw 0 0 0;
-        grid-template-columns: 100vw 0 0 0;
-    -ms-grid-rows: 180px 0px;
-        grid-template-rows: 180px 0px;
-    background-color: whitesmoke;
-    color: #666666;
-  }
-  .f-grid button {
-    display: none;
-  }
-  .f-grid .f-grid-1 {
-    display: none;
-  }
-  .f-grid .f-grid-3 {
-    display: none;
-  }
-  .f-grid .f-grid-4 {
-    display: none;
-  }
-  .f-grid .f-grid-5 {
-    display: none;
-  }
-  .f-grid .f-grid-6 {
-    display: none;
-  }
-  .f-grid .f-grid-7 {
-    display: none;
-  }
-  .f-grid .f-grid-8 {
-    display: none;
-  }
-  .bottom-fixed {
-    position: fixed;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 100vw;
-    bottom: 0px;
-    padding: 15px 5px;
-    height: 50px;
-    background-color: white;
-    border-top: rgba(128, 128, 128, 0.428) solid 1px;
-    z-index: 10;
-  }
-}
-
 .move-top {
   position: fixed;
   bottom: 62px;
@@ -1126,8 +1043,7 @@ a {
   }
   .f-grid {
     width: 100vw;
-        grid-template-areas: 'grid2 grid2 grid2 grid2'
- 'grid2 grid2 grid2 grid2';
+        grid-template-areas: 'grid2 grid2 grid2 grid2' 'grid2 grid2 grid2 grid2';
     -ms-grid-columns: 100vw 0 0 0;
         grid-template-columns: 100vw 0 0 0;
     -ms-grid-rows: 180px 0px;
