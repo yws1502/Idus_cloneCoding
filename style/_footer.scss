@@ -5,6 +5,7 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
   text-align: center;
   border-top: 3px solid #ff7b30;
   border-bottom: 1px solid #acacac;
+  margin-top: 50px;
   a{
     display: inline-block;
     margin-top: 10px;
@@ -37,69 +38,70 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
   nth($column,1)+px nth($column,2)+px nth($column,3)+px nth($column,4)+px;
   grid-template-rows: 240px 120px;
   row-gap: 0px; column-gap: 0px; padding: 0px;
-  .f-grid-1{grid-area: grid1;}
-  .f-grid-2{grid-area: grid2;}
-  .f-grid-3{grid-area: grid3;}
-  .f-grid-4{grid-area: grid4;}
-  .f-grid-5{grid-area: grid5;}
-  .f-grid-6{grid-area: grid6;}
-  .f-grid-7{grid-area: grid7;}
+  color: #666666;
+  .f-grid-1{
+    grid-area: grid1;
+    border: none;
+    padding: 0px;
+    .image{@include image-loading(100px, 50px, -397px, -398px)}
+  }
+  .f-grid-2{
+    grid-area: grid2;
+    border: none;
+    padding: 0px;
+    .p1{font-weight: bold; display: inline-block; margin-bottom: 10px;}
+    .p2{display: inline-block; margin-top: 15px; font-size: 10px;} 
+    .p3{font-size: 10px;}
+    .p4{font-size: 10px; margin-top: 10px;}
+    p>button{font-size: 10px; border: 1px solid grey; width: 90px; border-radius: 3px; float: right;
+    // &:after{content:''; width:3px; height:3px; background-color: black; }
+    }
+  }
+  .f-grid-3{
+    grid-area: grid3;
+    border: none;
+    padding: 0px;
+    strong{font-weight: bold; margin-bottom: 10px; display: inline-block;}
+    .p5{font-size: 10px;}
+    ul>li>span{display: inline-block; width: 60px;}
+    .p6{font-size: 10px;}
+    .p7{display: inline-block; margin-top: 10px;}
+  }
+  .f-grid-4{
+    grid-area: grid4;
+    border: none;
+    padding: 0px;
+    div{
+      padding: 0px;
+      .facebook{@include image-loading(36px, 36px, -461px, -488px); margin-right:5px;}
+      .instagram{@include image-loading(36px, 36px, -512px, -488px); margin-right:5px;}
+      .naverblog{@include image-loading(36px, 36px, -405px, -262px); margin-right:5px;}
+      .naverpost{@include image-loading(36px, 36px, -556px, -563px); margin-right:5px;}
+      .twitter{@include image-loading(36px, 36px, -204px, -626px)}
+      .image1{@include image-loading(90px, 55px, -210px, -140px)}
+      .image2{@include image-loading(70px, 55px, -5px, -493px)}
+    }
+  }
+  .f-grid-5{
+    grid-area: grid5;
+    border: none;
+    padding: 0px;
+    .image{@include image-loading(35px, 33px, -617px, -399px); float: left;}
+  }
+  .f-grid-6{
+    grid-area: grid6;
+    border: none;
+    padding: 0px;
+    .image{@include image-loading(36px, 33px, -610px, -513px); float: left;}
+  }
+  .f-grid-7{
+    grid-area: grid7;
+    border: none;
+  }
   div{
     padding: 10px;
     border: rgba(0, 0, 0, 0.1) 1px solid;}
 }
-
-
-// @media all and (max-width: 719px) {
-//   .move-top{
-//     bottom: 62px;
-//     right: 12px;
-//     box-shadow: none;
-//     background-color: white;
-//     opacity: 0.9;
-//     z-index: 20;
-//     }
-//     .f-cont{
-//       text-align: left;
-//       padding-left: 12px;
-//       padding-top: 4px auto; 
-//       a{margin-top: 16px; margin-bottom: 16px;}
-//       .f-4{display: none;}
-//       .f-5{display: none;}
-//       .f-6{display: none;}
-//       .f-8{display: none;}
-//       .f-7::after{background-color: white;}
-//     }
-//     .f-grid{
-//       width: 100vw;
-//       grid-template-areas: 
-//       'grid2 grid2 grid2 grid2'
-//       'grid2 grid2 grid2 grid2';
-//       grid-template-columns: 100vw 0 0 0;
-//       grid-template-rows: 180px 0px;
-//       background-color: rgb(245, 245, 245);
-//       color: #666666;
-//       button{display: none;}
-//       .f-grid-1{display: none;}
-//       .f-grid-3{display: none;}
-//       .f-grid-4{display: none;}
-//       .f-grid-5{display: none;}
-//       .f-grid-6{display: none;}
-//       .f-grid-7{display: none;}
-//       .f-grid-8{display: none;}
-//     }
-//     .bottom-fixed{
-//       position: fixed;
-//       box-sizing: border-box;
-//       width: 100vw;
-//       bottom: 0px;
-//       padding: 15px 5px;
-//       height: 50px;
-//       background-color: white;
-//       border-top: rgba(128, 128, 128, 0.428) solid 1px;
-//       z-index: 10;
-//     }
-// }
 
 .move-top{
   position: fixed;
@@ -116,4 +118,8 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
     line-height: 56px;
     text-decoration: none;
   }
+}
+
+.bottom-fixed{
+  display: none;
 }
