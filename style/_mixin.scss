@@ -16,3 +16,11 @@
   outline: 2px solid #015ECC;
   z-index: 10;
 }
+
+@mixin image-loading ($image-width, $image-height, $cordination-x, $cordination-y){ 
+  display: inline-block;
+  width: $image-width;
+  height: $image-height;
+  border: none;
+  background: url('../images/image.png') $cordination-x $cordination-y no-repeat;
+}
