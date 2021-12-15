@@ -207,12 +207,8 @@ button {
 }
 
 .banner-wrap {
-  position: relative;
   width: 100000px;
 
-  .showroom-banner.list-item {
-    display: block;
-  }
   .showroom-banner {
     display: none;
     position: relative;
@@ -233,6 +229,9 @@ button {
       }
     }
   }
+  .showroom-banner.list-item {
+    display: block;
+  }
 }
 
 // 슬라이드 배너 컨드롤러
@@ -249,13 +248,26 @@ button {
     height: 25px;
     &.prev {
       background-image: url(../images/icons/prev_icon.svg);
-      left: 5%;
-      // transform: translateX(-50%);
+      right: 50%;
+      margin-right: 530px;
     }
     &.next {
       background-image: url(../images/icons/next_icon.svg);
-      right: 5%;
-      // transform: translateX(-50%);
+      left: 50%;
+      margin-left: 530px;
+    }
+  }
+  .slice-numbers {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    background-color: #00000080;
+    color: #ccc;
+    border-radius: 15px;
+    margin-right: -500px;
+    padding: 2px 11px;
+    .curr_num {
+      color: #fff;
     }
   }
 }

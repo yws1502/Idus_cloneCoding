@@ -30,7 +30,6 @@
 
 body {
   font-size: 12px;
-  line-height: 1.5;
   font-family: 'NanumBarunGothic', sans-serif;
 }
 
@@ -282,12 +281,7 @@ button {
 }
 
 .banner-wrap {
-  position: relative;
   width: 100000px;
-}
-
-.banner-wrap .showroom-banner.list-item {
-  display: block;
 }
 
 .banner-wrap .showroom-banner {
@@ -314,6 +308,10 @@ button {
   height: 100%;
 }
 
+.banner-wrap .showroom-banner.list-item {
+  display: block;
+}
+
 .ui-control .btn-slice {
   position: absolute;
   top: 50%;
@@ -329,12 +327,29 @@ button {
 
 .ui-control .btn-slice.prev {
   background-image: url(../images/icons/prev_icon.svg);
-  left: 5%;
+  right: 50%;
+  margin-right: 530px;
 }
 
 .ui-control .btn-slice.next {
   background-image: url(../images/icons/next_icon.svg);
-  right: 5%;
+  left: 50%;
+  margin-left: 530px;
+}
+
+.ui-control .slice-numbers {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  background-color: #00000080;
+  color: #ccc;
+  border-radius: 15px;
+  margin-right: -500px;
+  padding: 2px 11px;
+}
+
+.ui-control .slice-numbers .curr_num {
+  color: #fff;
 }
 
 .product-list {

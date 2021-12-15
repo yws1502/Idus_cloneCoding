@@ -13,13 +13,12 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-  <!-- test -->
   <h1 class="text-hide">아이디어스 홈페이지</h1>
   <!-- 상단의 첫 구매 광고 배너 -->
   <!-- btn-closeAd 가상요소로 이미지 만들고 텍스트는 숨기기 onclick event 하면 display: none으로 지정 -->
   <div class="advertisement">
     <img src="https://image.idus.com/static/signup/web_benefit_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
-    <button class="btn-closeAd">광고 닫기</button>
+    <button type="button" class="btn-closeAd">광고 닫기</button>
   </div>
   <!-- // 상단의 첫 구매 광고 배너 -->
   <!-- header area -->
@@ -117,11 +116,9 @@
       </ul>
       <fieldset class="ui-control">
         <!-- 버튼들은 가상 요소로 만들고 텍스트는 숨기기 -->
-        <button class="btn-slice prev">이전 슬라이드</button>
-        <div class="slice-numbers">
-          <span class="current-number">1</span>/11
-        </div>
-        <button class="btn-slice next">다음 슬라이드</button>
+        <button type="button" class="btn-slice prev">이전 슬라이드</button>
+        <span class="slice-numbers"><em class="curr_num">1</em>/11</span>
+        <button type="button" class="btn-slice next">다음 슬라이드</button>
       </fieldset>
     </section>
     <!-- // 메인 슬라이드 배너 -->
