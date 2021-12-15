@@ -51,8 +51,34 @@ button {
   display: inline-block;
 }
 
-.btn-closeAd {
-  display: none;
+.advertisement {
+  background-color: #000;
+}
+
+.advertisement .inner {
+  position: relative;
+  width: 1056px;
+}
+
+.advertisement .btn-closeAd {
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.advertisement .btn-closeAd::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 27px;
+  right: 10%;
+  background-color: #fff;
+  background-image: url(../images/icons/close_icon.svg);
+  background-position: center;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
 }
 
 .top-navigation {
