@@ -77,7 +77,7 @@ a {
       top: 8px;
       width: 24px;
       height: 24px;
-      background: url('../img/sp-icon_1634026706070.png');
+      background: url('../images/image/sp-icon_1634026706070.png');
       background-position: -689px -469px;
       &:active {
         @include focus-outline;
@@ -242,6 +242,20 @@ a {
       overflow: hidden;
       text-overflow: ellipsis;
       margin-top: 10px;
+    }
+  }
+  &.item-selected {
+    .item__heart {
+      background-position: -689px -430px;
+    }
+    .item__thumb {
+      overflow: hidden;
+      .item__main-img {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
