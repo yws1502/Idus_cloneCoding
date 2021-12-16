@@ -24,7 +24,7 @@ button {
 
 .ui-dropdown {
   display: inline-block;
-  // hover 적용
+  // 아래에서 hover 적용
 }
 
 // top advertisement
@@ -56,7 +56,7 @@ button {
 }
 
 
-// header
+// header gray bar
 .top-navigation {
   background-color: $gray-bgc;
   height: 32px;
@@ -67,17 +67,139 @@ button {
   color: $gray-font;
   align-items: center;
   [class^="btn"] {
-    @include font-module(13px, $color:$gray-font);
-    padding: 13px
+    @include font-module(12px, $color:$gray-font);
+    padding: 12px
+  }
+  .ui-dropdown:hover .container-install,
+  .ui-dropdown:hover .customer-center {
+    display: block;
   }
 }
 
+// header gray bar hover section
+.show-ui {
+  @include border-module(1px, #000, 4px);
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  padding: 25px;
+  top: 104px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: -7px;
+    left: 75px;
+    transform: translateX(-50%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid none;
+    border-bottom: 8px solid #fff;
+    border-right: 8px solid transparent;
+    border-left: 8px solid  transparent;
+  }
+  &::before {
+    border-bottom: 8px solid #000;
+    top: -8px;
+  }
+}
+
+.container-install {
+  display: none;
+  .install-title {
+    @include font-module(18px, $color:$gray-font);
+    border-bottom: 1px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    &::before {
+      @include image-loading(40px, 40px, -685px, -141px);
+      content: "";
+      vertical-align: -18px;
+      margin-right: 4px;
+    }
+  }
+  ol {
+    display: flex;
+    li {
+      &:first-child {
+        margin-right: 50px;
+      }
+      strong {
+        display: block;
+        font-size: 12px;
+      }
+      // 1.
+      form {
+        #phone-value {
+          padding: 3px 15px 3px 8px;
+          font-size: 12px;
+          margin: 10px 0;
+        }
+        .btn-submit {
+          @include font-module(12px, 700, $color:#fff);
+          background-color: $orange-font;
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+      }
+      // error message
+      .error-msg {
+        @include font-module(10px, $color:red);
+        display: none;
+        margin-bottom: 5px;
+      }
+      // 2.
+      p {
+        font-size: 10px;
+        width: 200px;
+      }
+      img {
+        width: 100px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+// customer center
+.register-wrap {
+  position: relative;
+  .customer-center {
+    display: none;
+    // show-ui class overiding
+    padding: 5px;
+    border-color: $line-division;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    right: -22px;
+    top: 35px;
+    &::before,
+    &::after {
+      left: 50%;
+    }
+    &::before {
+      border-bottom-color: $line-division;
+    }
+    li {
+      margin: 8px;
+      font-size: 12px;
+      padding-right: 20px;
+      a {
+        font-size: 11px;
+        &:hover {
+          color: $orange-font;
+        }
+      }
+    }
+  }
+}
+
+// header search section
 .search-header {
   border-bottom: 1px solid $line-division;
-  overflow: hidden;
 }
 
 .inner-top-search {
+  position: relative;
   padding: 10px 0;
 }
 
@@ -103,6 +225,41 @@ button {
   }
   .link-product {
     color: $orange-font;
+  }
+  .class-tip {
+    @include font-module(1px, $height:19px, $color:#fff);
+    background-image: linear-gradient(to bottom, #a527e7, #8c36ed 100%);
+    position: absolute;
+    left: 150px;
+    top: -18px;
+    border-radius: 2px;
+    padding: 3px 8px;
+    animation: vertical_move linear 4s infinite;
+    @keyframes vertical_move {
+      0% {
+        transform: translateY(3px);
+      }
+      50% {
+        transform: translateY(-3px);
+      }
+      100% {
+        transform: translateY(3px);
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid #8c36ed;
+      border-bottom: 5px solid none;
+      border-right: 5px solid transparent;
+      border-left: 5px solid  transparent;
+    }
   }
 }
 
