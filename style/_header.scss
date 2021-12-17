@@ -24,15 +24,62 @@ button {
 
 .ui-dropdown {
   display: inline-block;
-  // hover 적용
+  // 아래에서 hover 적용
+}
+
+// hover시 보여지는 친구
+.show-ui {
+  @include border-module(1px, #000, 4px);
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  padding: 25px;
+  top: 0px;
+  &::before,
+  &::after {
+    @include triangle(8px, #fff, up);
+    position: absolute;
+    top: -16px;
+    left: 75px;
+    transform: translateX(-50%);
+    content: "";
+  }
+  &::before {
+    border-bottom: 8px solid #000;
+    top: -17px;
+  }
 }
 
 // top advertisement
-.btn-closeAd {
-  display: none;
+.advertisement {
+  background-color: #000;
+  .inner {
+    position: relative;
+    width: 1056px;
+  }
+  .btn-closeAd {
+    position: absolute;
+    text-indent: -9999px;
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 27px;
+      right: 10%;
+      background-color: #fff;
+      background-image: url(../images/icons/close_icon.svg);
+      background-position: center;
+      background-size: 12px;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+    }
+  }
 }
 
-// header
+
+// header gray bar
 .top-navigation {
   background-color: $gray-bgc;
   height: 32px;
@@ -43,17 +90,114 @@ button {
   color: $gray-font;
   align-items: center;
   [class^="btn"] {
-    @include font-module(13px, $color:$gray-font);
-    padding: 13px
+    @include font-module(12px, $color:$gray-font);
+    padding: 12px
+  }
+  .ui-dropdown:hover .container-install,
+  .ui-dropdown:hover .customer-center {
+    display: block;
   }
 }
 
+// header gray bar hover section
+.container-install {
+  // show-ui class overiding
+  display: none;
+  top: 104px;
+  .install-title {
+    @include font-module(18px, $color:$gray-font);
+    border-bottom: 1px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    &::before {
+      @include image-loading(40px, 40px, -685px, -141px);
+      content: "";
+      vertical-align: -18px;
+      margin-right: 4px;
+    }
+  }
+  ol {
+    display: flex;
+    li {
+      &:first-child {
+        margin-right: 50px;
+      }
+      strong {
+        display: block;
+        font-size: 12px;
+      }
+      // 1.
+      form {
+        #phone-value {
+          padding: 3px 15px 3px 8px;
+          font-size: 12px;
+          margin: 10px 0;
+        }
+        .btn-submit {
+          @include font-module(12px, 700, 17px, $color:#fff);
+          background-color: $orange-font;
+          border-radius: 2px;
+          padding: 4px 10px;
+        }
+      }
+      // error message
+      .error-msg {
+        @include font-module(10px, $color:red);
+        display: none;
+        margin-bottom: 5px;
+      }
+      // 2.
+      p {
+        font-size: 10px;
+        width: 200px;
+      }
+      img {
+        width: 100px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+// customer center
+.register-wrap {
+  position: relative;
+  .customer-center {
+    display: none;
+    // show-ui class overiding
+    padding: 5px;
+    border-color: $line-division;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    right: -22px;
+    top: 35px;
+    &::before,
+    &::after {
+      left: 50%;
+    }
+    &::before {
+      border-bottom-color: $line-division;
+    }
+    li {
+      margin: 8px;
+      font-size: 12px;
+      padding-right: 20px;
+      a {
+        font-size: 11px;
+        &:hover {
+          color: $orange-font;
+        }
+      }
+    }
+  }
+}
+
+// header search section
 .search-header {
   border-bottom: 1px solid $line-division;
-  overflow: hidden;
 }
 
 .inner-top-search {
+  position: relative;
   padding: 10px 0;
 }
 
@@ -80,6 +224,41 @@ button {
   .link-product {
     color: $orange-font;
   }
+  .class-tip {
+    @include font-module(1px, $height:19px, $color:#fff);
+    background-image: linear-gradient(to bottom, #a527e7, #8c36ed 100%);
+    position: absolute;
+    left: 150px;
+    top: -18px;
+    border-radius: 2px;
+    padding: 3px 8px;
+    animation: vertical_move linear 4s infinite;
+    @keyframes vertical_move {
+      0% {
+        transform: translateY(3px);
+      }
+      50% {
+        transform: translateY(-3px);
+      }
+      100% {
+        transform: translateY(3px);
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 5px solid #8c36ed;
+      border-bottom: 5px solid none;
+      border-right: 5px solid transparent;
+      border-left: 5px solid  transparent;
+    }
+  }
 }
 
 // 상품 검색
@@ -87,7 +266,7 @@ button {
   @include border-module(1px, $orange-font, 5px);
   display: inline-block;
   vertical-align: 5px;
-  padding: 5px 0 5px 8px;
+  padding: 8px 0 8px 8px;
   margin-right: 18px;
   .search-text {
     border: none;
@@ -124,15 +303,71 @@ button {
   display: inline-block;
   .ranking-item {
     .link-item{
-      @include font-module(13px, $color:$gray-font);
-      font-size: 13px;
+      @include font-module(13px, 550);
       em {
-        color: black;
-        font-weight: 550;
-        margin-right: 10px;
+        @include font-module(13px, $color: $gray-font);
+        margin-left: 10px;
       }
     }
   }
+}
+
+.ui-dropdown:hover .hide-ranking {
+  display: block
+}
+
+.hide-ranking {
+  @include border-module(1px, $line-division, 5px);
+  display: none;
+  top: 45px;
+  padding: 15px 15px;
+  width: 300px;
+  &::before,
+  &::after {
+    display: none;
+  }
+  .btn-wrap {
+    position: relative;
+    border: 1px solid $line-division;
+    margin-bottom: 15px;
+    [class^="btn"] {
+      @include font-module(12px, 700, $color:$gray-font);
+      background-color: $gray-bgc;
+      padding: 6px;
+      width: 50%;
+      &.on {
+        background-color: #fff;
+        color: black;
+      }
+    }
+    // line-break
+    button + button {
+      border-left: 1px solid $line-division;
+    }
+    .btn-realtime::before {
+      display: inline-block;
+      content: "";
+      background-image: url("../images/icons/trending_up_icon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 16px;
+      vertical-align: -5px;
+    }
+  }
+}
+.realtime-list,
+.popular-list {
+  display: none;
+  .keyword-item {
+    float: left;
+    width: 50%;
+  }
+}
+.realtime-list.on,
+.popular-list.on {
+  color: black;
+  display: block;
 }
 
 // 내정보, 장바구니
@@ -177,6 +412,14 @@ button {
 }
 
 // 전역 네이게이션 바
+// fixed은 js로 구현
+.gnb-fixed {
+  position: fixed;
+  top: -1px;
+  z-index: 200;
+  background-color: #fff;
+  width: 100vw;
+}
 .gnb {
   .nav-wrap {
     position: relative;
@@ -200,6 +443,64 @@ button {
   }
 }
 
+// hover시 카테고리 상세 
+// show-ui 상속
+.category-link {
+  position: relative;
+  &:hover .category-dropdown {
+    display: flex;
+  }
+}
+
+.category-dropdown {
+  display: none;
+  border-color: $line-division;
+  width: 800px;
+  padding: 20px 0;
+  top: 34px;
+  left: -66px;
+  &::before,
+  &::after {
+    left: 98px;
+  }
+  &::before {
+    border-bottom-color: $line-division;
+  }
+  ul + ul {
+    border-left: 1px solid $line-division;
+  }
+  .category {
+    padding: 0 13px;
+    width: 25%;
+    li {
+      position: relative;
+      width: 100%;
+      padding: 2px 10px;
+      &:hover {
+        background-color: #FAECE5;
+        &::after {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          top: 4px;
+          right: 5px;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images/icons/next_icon_gray.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+    li + li {
+      margin-top: 10px;
+    }
+  }
+}
 // 슬라이드 배너
 .container-banner {
   overflow: hidden;
@@ -207,12 +508,8 @@ button {
 }
 
 .banner-wrap {
-  position: relative;
   width: 100000px;
 
-  .showroom-banner.list-item {
-    display: block;
-  }
   .showroom-banner {
     display: none;
     position: relative;
@@ -233,6 +530,9 @@ button {
       }
     }
   }
+  .showroom-banner.list-item {
+    display: block;
+  }
 }
 
 // 슬라이드 배너 컨드롤러
@@ -249,13 +549,26 @@ button {
     height: 25px;
     &.prev {
       background-image: url(../images/icons/prev_icon.svg);
-      left: 5%;
-      // transform: translateX(-50%);
+      right: 50%;
+      margin-right: 530px;
     }
     &.next {
       background-image: url(../images/icons/next_icon.svg);
-      right: 5%;
-      // transform: translateX(-50%);
+      left: 50%;
+      margin-left: 530px;
+    }
+  }
+  .slice-numbers {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    background-color: #00000080;
+    color: #ccc;
+    border-radius: 15px;
+    margin-right: -500px;
+    padding: 2px 11px;
+    .curr_num {
+      color: #fff;
     }
   }
 }
