@@ -85,6 +85,7 @@ button {
   height: 32px;
 }
 .inner-top-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   color: $gray-font;
@@ -101,9 +102,9 @@ button {
 
 // header gray bar hover section
 .container-install {
-  // show-ui class overiding
+  // show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
   display: none;
-  top: 104px;
+  top: 32px;
   .install-title {
     @include font-module(18px, $color:$gray-font);
     border-bottom: 1px solid #000;
@@ -164,7 +165,7 @@ button {
   position: relative;
   .customer-center {
     display: none;
-    // show-ui class overiding
+    // show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
     padding: 5px;
     border-color: $line-division;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
@@ -312,6 +313,7 @@ button {
   }
 }
 
+// ranking hover show
 .ui-dropdown:hover .hide-ranking {
   display: block
 }
@@ -319,7 +321,7 @@ button {
 .hide-ranking {
   @include border-module(1px, $line-division, 5px);
   display: none;
-  top: 45px;
+  top: 18px;
   padding: 15px 15px;
   width: 300px;
   &::before,
@@ -335,39 +337,108 @@ button {
       background-color: $gray-bgc;
       padding: 6px;
       width: 50%;
+      // ranking button togle on
       &.on {
         background-color: #fff;
         color: black;
       }
     }
-    // line-break
-    button + button {
-      border-left: 1px solid $line-division;
-    }
+    // 상승 image
     .btn-realtime::before {
       display: inline-block;
       content: "";
-      background-image: url("../images/icons/trending_up_icon.svg");
+      background-image: url("../images/icons/trending_up_icon_on.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 20px;
       height: 16px;
-      vertical-align: -5px;
+      vertical-align: -4px;
+    }
+    // ranking button togle on
+    .btn-realtime.on::before {
+      background-image: url("../images/icons/trending_up_icon_off.svg");
+    }
+    // line-break
+    button + button {
+      border-left: 1px solid $line-division;
     }
   }
 }
+
 .realtime-list,
 .popular-list {
   display: none;
   .keyword-item {
     float: left;
     width: 50%;
+    height: 100%;
   }
 }
+
+// ranking button togle
 .realtime-list.on,
 .popular-list.on {
-  color: black;
+  position: relative;
   display: block;
+  overflow: auto;
+  // line break
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: $line-division;
+  }
+  .keyword-item {
+    position: relative;
+    color: $light-gray-font;
+    padding: 5px 0;
+    &:nth-child(even) {
+      padding-left: 15px;
+    }
+    em {
+      display: inline-block;
+      width: 14px;
+    }
+    .keyword {
+      @include font-module(12px, $color:$gray-font);
+      margin-left: 6px;
+      &:hover {
+        color: $orange-font;
+      }
+    }
+  }
+}
+
+// ranking up, down and still
+.up::after {
+  content: "";
+  display: inline-block;
+  @include triangle(5px, #ff4b50, up);
+  position: absolute;
+  top: 6px;
+  right: 17px;
+}
+.down::after {
+  content: "";
+  display: inline-block;
+  @include triangle(5px, #3c7de6, down);
+  position: absolute;
+  top: 12px;
+  right: 17px;
+}
+.keep::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  background-color: $light-gray-font;
+  position: absolute;
+  top: 10px;
+  right: 18px;
 }
 
 // 내정보, 장바구니
@@ -444,7 +515,7 @@ button {
 }
 
 // hover시 카테고리 상세 
-// show-ui 상속
+// show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
 .category-link {
   position: relative;
   &:hover .category-dropdown {
