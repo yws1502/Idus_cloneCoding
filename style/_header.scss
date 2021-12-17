@@ -85,6 +85,7 @@ button {
   height: 32px;
 }
 .inner-top-nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   color: $gray-font;
@@ -101,9 +102,9 @@ button {
 
 // header gray bar hover section
 .container-install {
-  // show-ui class overiding
+  // show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
   display: none;
-  top: 104px;
+  top: 32px;
   .install-title {
     @include font-module(18px, $color:$gray-font);
     border-bottom: 1px solid #000;
@@ -164,7 +165,7 @@ button {
   position: relative;
   .customer-center {
     display: none;
-    // show-ui class overiding
+    // show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
     padding: 5px;
     border-color: $line-division;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
@@ -336,29 +337,34 @@ button {
       background-color: $gray-bgc;
       padding: 6px;
       width: 50%;
+      // ranking button togle on
       &.on {
         background-color: #fff;
         color: black;
       }
     }
-    // line-break
-    button + button {
-      border-left: 1px solid $line-division;
-    }
+    // 상승 image
     .btn-realtime::before {
       display: inline-block;
       content: "";
-      background-image: url("../images/icons/trending_up_icon.svg");
+      background-image: url("../images/icons/trending_up_icon_on.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 20px;
       height: 16px;
       vertical-align: -4px;
     }
+    // ranking button togle on
+    .btn-realtime.on::before {
+      background-image: url("../images/icons/trending_up_icon_off.svg");
+    }
+    // line-break
+    button + button {
+      border-left: 1px solid $line-division;
+    }
   }
 }
 
-// ranking의 item list
 .realtime-list,
 .popular-list {
   display: none;
@@ -368,6 +374,8 @@ button {
     height: 100%;
   }
 }
+
+// ranking button togle
 .realtime-list.on,
 .popular-list.on {
   position: relative;
@@ -507,7 +515,7 @@ button {
 }
 
 // hover시 카테고리 상세 
-// show-ui 상속
+// show-ui class를 overiding하여 해당 요소에 맞게 위치 조정
 .category-link {
   position: relative;
   &:hover .category-dropdown {

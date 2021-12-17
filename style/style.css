@@ -115,6 +115,7 @@ button {
 }
 
 .inner-top-nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +143,7 @@ button {
 
 .container-install {
   display: none;
-  top: 104px;
+  top: 32px;
 }
 
 .container-install .install-title {
@@ -464,19 +465,23 @@ button {
   color: black;
 }
 
-.hide-ranking .btn-wrap button + button {
-  border-left: 1px solid #D9D9D9;
-}
-
 .hide-ranking .btn-wrap .btn-realtime::before {
   display: inline-block;
   content: "";
-  background-image: url("../images/icons/trending_up_icon.svg");
+  background-image: url("../images/icons/trending_up_icon_on.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
   height: 16px;
   vertical-align: -4px;
+}
+
+.hide-ranking .btn-wrap .btn-realtime.on::before {
+  background-image: url("../images/icons/trending_up_icon_off.svg");
+}
+
+.hide-ranking .btn-wrap button + button {
+  border-left: 1px solid #D9D9D9;
 }
 
 .realtime-list,
