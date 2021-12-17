@@ -1830,17 +1830,67 @@ a {
     display: none;
   }
   .bottom-fixed {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     position: fixed;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100vw;
     bottom: 0px;
-    padding: 15px 5px;
-    height: 50px;
+    right: 0px;
+    width: 100vw;
+    height: 53px;
     background-color: white;
     border-top: rgba(128, 128, 128, 0.428) solid 1px;
     z-index: 10;
+  }
+  .bottom-fixed .content1 {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    border: none;
+    background: url("../images/image.png") -575px -624px no-repeat;
+    text-align: center;
+    padding-top: 35px;
+  }
+  .bottom-fixed .content2 {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    border: none;
+    background: url("../images/image.png") -575px -624px no-repeat;
+    text-align: center;
+    padding-top: 35px;
+  }
+  .bottom-fixed .content3 {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    border: none;
+    background: url("../images/image.png") -575px -624px no-repeat;
+    text-align: center;
+    padding-top: 35px;
+  }
+  .bottom-fixed .content4 {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    border: none;
+    background: url("../images/image.png") -575px -624px no-repeat;
+    text-align: center;
+    padding-top: 35px;
+  }
+  .bottom-fixed .content5 {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    border: none;
+    background: url("../images/image.png") -575px -624px no-repeat;
+    text-align: center;
+    padding-top: 35px;
   }
 }
 /*# sourceMappingURL=style.css.map */
