@@ -426,10 +426,15 @@ button {
   margin-left: 10px;
 }
 
+.ui-dropdown:hover .hide-ranking {
+  display: block;
+}
+
 .hide-ranking {
   border: 1px solid #D9D9D9;
   border-radius: 5px;
-  top: 45px;
+  display: none;
+  top: 18px;
   padding: 15px 15px;
   width: 300px;
 }
@@ -471,7 +476,7 @@ button {
   background-size: contain;
   width: 20px;
   height: 16px;
-  vertical-align: -5px;
+  vertical-align: -4px;
 }
 
 .realtime-list,
@@ -483,12 +488,93 @@ button {
 .popular-list .keyword-item {
   float: left;
   width: 50%;
+  height: 100%;
 }
 
 .realtime-list.on,
 .popular-list.on {
-  color: black;
+  position: relative;
   display: block;
+  overflow: auto;
+}
+
+.realtime-list.on::after,
+.popular-list.on::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #D9D9D9;
+}
+
+.realtime-list.on .keyword-item,
+.popular-list.on .keyword-item {
+  position: relative;
+  color: #999;
+  padding: 5px 0;
+}
+
+.realtime-list.on .keyword-item:nth-child(even),
+.popular-list.on .keyword-item:nth-child(even) {
+  padding-left: 15px;
+}
+
+.realtime-list.on .keyword-item em,
+.popular-list.on .keyword-item em {
+  display: inline-block;
+  width: 14px;
+}
+
+.realtime-list.on .keyword-item .keyword,
+.popular-list.on .keyword-item .keyword {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #666666;
+  margin-left: 6px;
+}
+
+.realtime-list.on .keyword-item .keyword:hover,
+.popular-list.on .keyword-item .keyword:hover {
+  color: #FF7B30;
+}
+
+.up::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #ff4b50;
+  position: absolute;
+  top: 6px;
+  right: 17px;
+}
+
+.down::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #3c7de6;
+  position: absolute;
+  top: 12px;
+  right: 17px;
+}
+
+.keep::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  background-color: #999;
+  position: absolute;
+  top: 10px;
+  right: 18px;
 }
 
 .wrap-profile {
