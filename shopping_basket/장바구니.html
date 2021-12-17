@@ -6,12 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/reset.css">
   <link rel="stylesheet" href="장바구니.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <title></title>
 </head>
 <body>
 
-<br><br><br><br><br><br><br>
 
+  <br><br>
+  <div class="구현사항">
+    <strong>구현사항</strong><br>
+    <br><span>(JavaScript)</span>
+    <br>1. 체크박스 연동 : 하나의 체크박스 선택/해제시 모두 적용
+    <br>2. 상품수량 제어 : 상품수량 최소한 1개로 제한 및 css 변화
+    <br>3. 결제금액 연동 : 수량x가격으로 변화 및 1000단위마다 쉼표 적용
+    <br>
+    <br><span>(CSS)</span>
+    <br>1. 미디어쿼리 : 상단 타이틀, 작품내용 안쪽 padding, 말풍선 / 수량조절버튼 이동?
+    <br>2. 포커스 트랜지션 : textarea에 focus시, 저장버튼 활성화 및 아래주석 추가 / textarea custom?
+    <br>3. 말풍선 구현 : 말풍선 아래쪽 뾰족한 부분 ::after, ::before로 구현
+    <br>4. 디스플레이 : 아래 창 sticky로 구현, 아래 창 살짝 투명한 부분
+    <br>
+    <br>+ SCSS 및 jQuery 사용
+  </div>
+  <br><br>
+  
+  
 <div class="컨테이너">
   <header class="header_desktop">
     <h1 class="타이틀">장바구니</h1>
@@ -26,12 +45,12 @@
   </header>
   <article>
     <div class="작품명">
-      <input type="checkbox">
+      <input class="checkbox1" type="checkbox">
       COMING CANDLE (커밍캔들) 작가님
     </div>
     <div class="작품내용">
       <div class="작품내용1">
-        <input type="checkbox">
+        <input class="checkbox2" type="checkbox">
         <div class="작품사진"></div>
         <div class="작품설명">
           <p>[웰컴딜] 뽀글이 곰돌이 석고방향제 (차량용, 실내용)</p>
@@ -62,13 +81,13 @@
     </div>
     <div class="작품배송비">배송비
       <p class="작품실제배송비">3,000원
-       <br><span>70,000원 이상 무료배송</span>
+      <br><span>70,000원 이상 무료배송</span>
       </p>
     </div>
   </article>
   <main>
     <div class="메인컨테이너1">
-      <input type="checkbox">
+      <input class="checkbox3" type="checkbox">
       <p>전체 선택</p><p>&nbsp;(1/1)</p>
       <button>선택 삭제</button>
     </div>
@@ -77,7 +96,7 @@
         <div>작품금액</div><div>배송비</div><div>결제 예정금액</div>
       </div>
       <div class="메인컨테이너2-2">
-        <div>100</div><div>3,000</div><div>3,100</div>
+        <div class="작품금액">100</div><div>3,000</div><div class="결제예정금액">3,100</div>
       </div>
     </div>
     <div class="주문하기">
@@ -90,5 +109,40 @@
     </button>
   </main>
 </div>
+<script>
+  let price = 100;
+  $('.minus').click(function() {
+    let quantity = Number($('.quantity').text());
+    if (quantity<2) {
+      $('.minus').css("backgroundColor", "#f2f2f2");
+    } else{
+      $('.quantity').text(quantity-1);
+      $('.작품내용2-2').text(`${((quantity-1)*price).toLocaleString()}원`);
+      $('.작품금액').text(`${((quantity-1)*price).toLocaleString()}`);
+      $('.결제예정금액').text(`${((quantity-1)*price+3000).toLocaleString()}`);
+    }
+    
+  })
+  $('.plus').click(function() {
+    let quantity = Number($('.quantity').text());
+    $('.quantity').text(quantity+1);
+    $('.minus').css("backgroundColor", "white");
+    $('.작품내용2-2').text(`${((quantity+1)*price).toLocaleString()}원`);
+    $('.작품금액').text(`${((quantity+1)*price).toLocaleString()}`);
+    $('.결제예정금액').text(`${((quantity+1)*price+3000).toLocaleString()}`);
+  })
+  $('input:checkbox').click(function(){
+    if($(this).is(":checked")){
+      $('.checkbox1').prop("checked", true);
+      $('.checkbox2').prop("checked", true);
+      $('.checkbox3').prop("checked", true);
+    }
+    else{
+      $('.checkbox1').prop("checked", false);
+      $('.checkbox2').prop("checked", false);
+      $('.checkbox3').prop("checked", false);
+    }
+  })
+</script>
 </body>
 </html>

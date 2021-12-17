@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.구현사항 {
+  max-width: 800px;
+  margin: 0px auto;
+  font-size: 14px;
+  color: red;
+  line-height: 1.4;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 0, 0, 0.08);
+}
+
+.구현사항 strong {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.구현사항 span {
+  font-weight: bold;
+}
+
 .컨테이너 {
   max-width: 800px;
   margin: 0px auto;
@@ -190,7 +210,29 @@ article .작품내용 .작품내용4 textarea {
   border-radius: 3px;
 }
 
+article .작품내용 .작품내용4 textarea:focus {
+  margin-bottom: 30px;
+}
+
+article .작품내용 .작품내용4 textarea:focus ~ button {
+  background-color: white;
+  color: #FF7B30;
+  font-weight: bold;
+  border: #FF7B30 1px solid;
+}
+
+article .작품내용 .작품내용4 textarea:focus ~ div::after {
+  content: '@ 입력 후 저장버튼을 눌러주세요';
+  position: absolute;
+  left: -545px;
+  bottom: -75px;
+  font-size: 12px;
+  width: 300px;
+  height: 100px;
+}
+
 article .작품내용 .작품내용4 .빈공간 {
+  position: relative;
   width: 10px;
 }
 
@@ -278,7 +320,7 @@ main .메인컨테이너1 button {
 }
 
 main .메인컨테이너2 {
-  padding: 25px;
+  padding: 15px 25px;
   border: 1px solid black;
   border-radius: 5px;
   background: white;
@@ -290,7 +332,7 @@ main .메인컨테이너2 .메인컨테이너2-1 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 main .메인컨테이너2 .메인컨테이너2-1 div {
@@ -342,8 +384,8 @@ main .주문하기 button {
 main .말풍선 {
   position: absolute;
   padding-top: 6px;
-  -webkit-transform: translateY(-250px) translateX(300px);
-          transform: translateY(-250px) translateX(300px);
+  top: 15px;
+  left: 290px;
   width: 185px;
   height: 54px;
   background: #fff0b4F0;
@@ -428,6 +470,9 @@ main .말풍선::before {
   }
   article .작품내용 .작품내용4 {
     padding-left: 63px;
+  }
+  main .말풍선 {
+    left: 20vw;
   }
 }
 /*# sourceMappingURL=장바구니.css.map */
