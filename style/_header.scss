@@ -313,12 +313,12 @@ button {
 }
 
 .ui-dropdown:hover .hide-ranking {
-  display: block
+  // display: block
 }
 
 .hide-ranking {
   @include border-module(1px, $line-division, 5px);
-  display: none;
+  // display: none;
   top: 45px;
   padding: 15px 15px;
   width: 300px;
