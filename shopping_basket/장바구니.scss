@@ -1,3 +1,19 @@
+.구현사항{
+  max-width: 800px;
+  margin: 0px auto;
+  font-size: 14px;
+  color: red;
+  line-height: 1.4;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 0, 0, 0.08);
+  strong{font-weight: bold; font-size: 20px;}
+  span{font-weight: bold;}
+}
+
+/// 위 부분은 추후 삭제
+
+
 .컨테이너{
   max-width: 800px;
   margin: 0px auto;
@@ -82,8 +98,27 @@ article{
         font-size: 12px;
         border: rgba(128, 128, 128, 0.5) 1px solid;
         border-radius: 3px;
+        &:focus{
+          margin-bottom: 30px;
+        }
+        &:focus~button{
+          background-color: white;
+          color: #FF7B30;
+          font-weight: bold;
+          border: #FF7B30 1px solid;
+        }
+        &:focus~div::after{
+          content: '@ 입력 후 저장버튼을 눌러주세요';
+          position: absolute;
+          left: -545px;
+          bottom: -75px;
+          font-size: 12px;
+          width: 300px;
+          height: 100px;
+        }
       }
       .빈공간{
+        position: relative;
         width: 10px;
       }
       button{
@@ -155,14 +190,14 @@ main{
     }
   }
   .메인컨테이너2{
-    padding: 25px;
+    padding: 15px 25px;
     border: 1px solid black;
     border-radius: 5px;
     background: white;
     .메인컨테이너2-1{
       display: flex;
       justify-content: space-around;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       div{text-align: center; font-size: 12px; color: grey;}
     }
     .메인컨테이너2-2{
@@ -196,7 +231,8 @@ main{
   .말풍선{
     position: absolute;
     padding-top: 6px;
-    transform: translateY(-250px) translateX(300px);;
+    top: 15px;
+    left: 290px;
     width: 185px;
     height: 54px;
     background: #fff0b4F0;
@@ -257,6 +293,11 @@ main{
       .작품내용2{padding-left: 63px;}
       .작품내용3{padding-left: 63px;}
       .작품내용4{padding-left: 63px;}
+    }
+  }
+  main{
+    .말풍선{
+      left: 20vw;
     }
   }
 }
