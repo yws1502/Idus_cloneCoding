@@ -51,6 +51,34 @@ button {
   display: inline-block;
 }
 
+.show-ui {
+  border: 1px solid #000;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  padding: 25px;
+  top: 0px;
+}
+
+.show-ui::before, .show-ui::after {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -16px;
+  left: 75px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+}
+
+.show-ui::before {
+  border-bottom: 8px solid #000;
+  top: -17px;
+}
+
 .advertisement {
   background-color: #000;
 }
@@ -112,38 +140,9 @@ button {
   display: block;
 }
 
-.show-ui {
-  border: 1px solid #000;
-  border-radius: 4px;
-  position: absolute;
-  z-index: 100;
-  background-color: #fff;
-  padding: 25px;
-  top: 104px;
-}
-
-.show-ui::before, .show-ui::after {
-  position: absolute;
-  top: -7px;
-  left: 75px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 8px solid none;
-  border-bottom: 8px solid #fff;
-  border-right: 8px solid transparent;
-  border-left: 8px solid  transparent;
-}
-
-.show-ui::before {
-  border-bottom: 8px solid #000;
-  top: -8px;
-}
-
 .container-install {
   display: none;
+  top: 104px;
 }
 
 .container-install .install-title {
@@ -191,7 +190,7 @@ button {
 .container-install ol li form .btn-submit {
   font-size: 12px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 17px;
   color: #fff;
   background-color: #FF7B30;
   border-radius: 2px;
@@ -359,7 +358,7 @@ button {
   border-radius: 5px;
   display: inline-block;
   vertical-align: 5px;
-  padding: 5px 0 5px 8px;
+  padding: 8px 0 8px 8px;
   margin-right: 18px;
 }
 
@@ -414,16 +413,87 @@ button {
 
 .ranking-product .ranking-item .link-item {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 16px;
-  color: #666666;
-  font-size: 13px;
+  color: black;
 }
 
 .ranking-product .ranking-item .link-item em {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #666666;
+  margin-left: 10px;
+}
+
+.ui-dropdown:hover .hide-ranking {
+  display: block;
+}
+
+.hide-ranking {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  display: none;
+  top: 45px;
+  padding: 15px 15px;
+  width: 300px;
+}
+
+.hide-ranking::before, .hide-ranking::after {
+  display: none;
+}
+
+.hide-ranking .btn-wrap {
+  position: relative;
+  border: 1px solid #D9D9D9;
+  margin-bottom: 15px;
+}
+
+.hide-ranking .btn-wrap [class^="btn"] {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #666666;
+  background-color: #F5F5F5;
+  padding: 6px;
+  width: 50%;
+}
+
+.hide-ranking .btn-wrap [class^="btn"].on {
+  background-color: #fff;
   color: black;
-  font-weight: 550;
-  margin-right: 10px;
+}
+
+.hide-ranking .btn-wrap button + button {
+  border-left: 1px solid #D9D9D9;
+}
+
+.hide-ranking .btn-wrap .btn-realtime::before {
+  display: inline-block;
+  content: "";
+  background-image: url("../images/icons/trending_up_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 16px;
+  vertical-align: -5px;
+}
+
+.realtime-list,
+.popular-list {
+  display: none;
+}
+
+.realtime-list .keyword-item,
+.popular-list .keyword-item {
+  float: left;
+  width: 50%;
+}
+
+.realtime-list.on,
+.popular-list.on {
+  color: black;
+  display: block;
 }
 
 .wrap-profile {
@@ -477,6 +547,14 @@ button {
   border-radius: 100%;
 }
 
+.gnb-fixed {
+  position: fixed;
+  top: -1px;
+  z-index: 200;
+  background-color: #fff;
+  width: 100vw;
+}
+
 .gnb .nav-wrap {
   position: relative;
   z-index: 30;
@@ -507,6 +585,74 @@ button {
   display: inline-block;
   color: #FF7B30;
   border-bottom: 2px solid #FF7B30;
+}
+
+.category-link {
+  position: relative;
+}
+
+.category-link:hover .category-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.category-dropdown {
+  display: none;
+  border-color: #D9D9D9;
+  width: 800px;
+  padding: 20px 0;
+  top: 34px;
+  left: -66px;
+}
+
+.category-dropdown::before, .category-dropdown::after {
+  left: 98px;
+}
+
+.category-dropdown::before {
+  border-bottom-color: #D9D9D9;
+}
+
+.category-dropdown ul + ul {
+  border-left: 1px solid #D9D9D9;
+}
+
+.category-dropdown .category {
+  padding: 0 13px;
+  width: 25%;
+}
+
+.category-dropdown .category li {
+  position: relative;
+  width: 100%;
+  padding: 2px 10px;
+}
+
+.category-dropdown .category li:hover {
+  background-color: #FAECE5;
+}
+
+.category-dropdown .category li:hover::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/next_icon_gray.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-dropdown .category li a {
+  display: block;
+  width: 100%;
+}
+
+.category-dropdown .category li + li {
+  margin-top: 10px;
 }
 
 .container-banner {
@@ -1703,7 +1849,7 @@ a {
   display: grid;
   width: 970px;
   margin: 0px auto 50px;
-      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
+      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
   -ms-grid-columns: 150px 300px 300px 220px;
       grid-template-columns: 150px 300px 300px 220px;
   -ms-grid-rows: 240px 120px;
@@ -2047,7 +2193,7 @@ a {
   }
   .f-grid {
     width: 100vw;
-        grid-template-areas: 'grid2 grid2 grid2 grid2' 'grid2 grid2 grid2 grid2';
+        grid-template-areas: 'grid2 grid2 grid2 grid2' 'grid2 grid2 grid2 grid2';
     -ms-grid-columns: 100vw 0 0 0;
         grid-template-columns: 100vw 0 0 0;
     -ms-grid-rows: 180px 0px;

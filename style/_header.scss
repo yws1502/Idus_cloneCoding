@@ -27,6 +27,29 @@ button {
   // 아래에서 hover 적용
 }
 
+// hover시 보여지는 친구
+.show-ui {
+  @include border-module(1px, #000, 4px);
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  padding: 25px;
+  top: 0px;
+  &::before,
+  &::after {
+    @include triangle(8px, #fff, up);
+    position: absolute;
+    top: -16px;
+    left: 75px;
+    transform: translateX(-50%);
+    content: "";
+  }
+  &::before {
+    border-bottom: 8px solid #000;
+    top: -17px;
+  }
+}
+
 // top advertisement
 .advertisement {
   background-color: #000;
@@ -77,35 +100,10 @@ button {
 }
 
 // header gray bar hover section
-.show-ui {
-  @include border-module(1px, #000, 4px);
-  position: absolute;
-  z-index: 100;
-  background-color: #fff;
-  padding: 25px;
-  top: 104px;
-  &::before,
-  &::after {
-    position: absolute;
-    top: -7px;
-    left: 75px;
-    transform: translateX(-50%);
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 8px solid none;
-    border-bottom: 8px solid #fff;
-    border-right: 8px solid transparent;
-    border-left: 8px solid  transparent;
-  }
-  &::before {
-    border-bottom: 8px solid #000;
-    top: -8px;
-  }
-}
-
 .container-install {
+  // show-ui class overiding
   display: none;
+  top: 104px;
   .install-title {
     @include font-module(18px, $color:$gray-font);
     border-bottom: 1px solid #000;
@@ -136,7 +134,7 @@ button {
           margin: 10px 0;
         }
         .btn-submit {
-          @include font-module(12px, 700, $color:#fff);
+          @include font-module(12px, 700, 17px, $color:#fff);
           background-color: $orange-font;
           border-radius: 2px;
           padding: 4px 10px;
@@ -268,7 +266,7 @@ button {
   @include border-module(1px, $orange-font, 5px);
   display: inline-block;
   vertical-align: 5px;
-  padding: 5px 0 5px 8px;
+  padding: 8px 0 8px 8px;
   margin-right: 18px;
   .search-text {
     border: none;
@@ -305,15 +303,71 @@ button {
   display: inline-block;
   .ranking-item {
     .link-item{
-      @include font-module(13px, $color:$gray-font);
-      font-size: 13px;
+      @include font-module(13px, 550);
       em {
-        color: black;
-        font-weight: 550;
-        margin-right: 10px;
+        @include font-module(13px, $color: $gray-font);
+        margin-left: 10px;
       }
     }
   }
+}
+
+.ui-dropdown:hover .hide-ranking {
+  display: block
+}
+
+.hide-ranking {
+  @include border-module(1px, $line-division, 5px);
+  display: none;
+  top: 45px;
+  padding: 15px 15px;
+  width: 300px;
+  &::before,
+  &::after {
+    display: none;
+  }
+  .btn-wrap {
+    position: relative;
+    border: 1px solid $line-division;
+    margin-bottom: 15px;
+    [class^="btn"] {
+      @include font-module(12px, 700, $color:$gray-font);
+      background-color: $gray-bgc;
+      padding: 6px;
+      width: 50%;
+      &.on {
+        background-color: #fff;
+        color: black;
+      }
+    }
+    // line-break
+    button + button {
+      border-left: 1px solid $line-division;
+    }
+    .btn-realtime::before {
+      display: inline-block;
+      content: "";
+      background-image: url("../images/icons/trending_up_icon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 16px;
+      vertical-align: -5px;
+    }
+  }
+}
+.realtime-list,
+.popular-list {
+  display: none;
+  .keyword-item {
+    float: left;
+    width: 50%;
+  }
+}
+.realtime-list.on,
+.popular-list.on {
+  color: black;
+  display: block;
 }
 
 // 내정보, 장바구니
@@ -358,6 +412,14 @@ button {
 }
 
 // 전역 네이게이션 바
+// fixed은 js로 구현
+.gnb-fixed {
+  position: fixed;
+  top: -1px;
+  z-index: 200;
+  background-color: #fff;
+  width: 100vw;
+}
 .gnb {
   .nav-wrap {
     position: relative;
@@ -381,6 +443,64 @@ button {
   }
 }
 
+// hover시 카테고리 상세 
+// show-ui 상속
+.category-link {
+  position: relative;
+  &:hover .category-dropdown {
+    display: flex;
+  }
+}
+
+.category-dropdown {
+  display: none;
+  border-color: $line-division;
+  width: 800px;
+  padding: 20px 0;
+  top: 34px;
+  left: -66px;
+  &::before,
+  &::after {
+    left: 98px;
+  }
+  &::before {
+    border-bottom-color: $line-division;
+  }
+  ul + ul {
+    border-left: 1px solid $line-division;
+  }
+  .category {
+    padding: 0 13px;
+    width: 25%;
+    li {
+      position: relative;
+      width: 100%;
+      padding: 2px 10px;
+      &:hover {
+        background-color: #FAECE5;
+        &::after {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          top: 4px;
+          right: 5px;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images/icons/next_icon_gray.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+    li + li {
+      margin-top: 10px;
+    }
+  }
+}
 // 슬라이드 배너
 .container-banner {
   overflow: hidden;
