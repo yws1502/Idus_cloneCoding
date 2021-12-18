@@ -40,3 +40,27 @@
     border-right-color: $color;
   }
 }
+
+@mixin info-icon ($width, $height, $top, $left) {
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: $top;
+  left: $left;
+  background: url(../../images/icons/icon-info.svg) no-repeat;
+  background-size: $width $height;
+}
+
+@mixin balloon-box {
+  width: 220px;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0 #0000004d;
+  border: solid 1px $gray-font;
+  font-size: $size-12;
+  background-color: #ffffffeb;
+  z-index: 10;
+}

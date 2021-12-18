@@ -2,37 +2,319 @@
 
 .content,
 .product-detail {
-  max-width: 1056px;
-  width: 100%;
+  width: 1056px;
   margin: 0 auto;
+  font-size: $size-12;
 }
 .content {
+  position: relative;
   .content-img {
     width: 560px;
     padding: 36px 0;
+    position: relative;
+    .img-view {
+      .slide-img{
+        .welcome-badge{
+          width: 72px;
+          height: 72px;
+          position: absolute;
+          bottom: 110px;
+          left: 15px;
+          background: url('../../images/image/badge_welcomedeal.png') no-repeat center ;
+          background-size: 72px 72px;
+          z-index: 10px;
+        }
+      }
+    }
+    .img-control {
+      .btn-next.btn,
+      .btn-prev.btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #0000004d;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $bg-light-gray;
+        .fas {
+          font-size: 12px;
+        }
+      }
+      .btn-prev.btn {
+        left: 0;
+        
+      }
+      .btn-next.btn {
+        right: 0;
+      }
+      .img-indicator {
+        width: 462px;
+        height: 56px;
+        display: flex;
+        margin: 8px auto 0;
+        .indicator-img {
+          width: 56px;
+        }
+        .indicator-img:nth-child(n+2) {
+          margin-left: 2px;
+        }
+      }
+    }
   }
   .content-info {
     width: 472px;
     padding: 16px;
-    left: 54%;
-    top: 240px;
+    left: 55%;
+    top: 36px;
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 #0000001a;
     background-color: #fff;
     position: absolute;
     z-index: 10;
+    .artist-card {
+      display: flex;
+      align-items: center;
+      .artist-img {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+        border-radius: 50%;
+        background: url('../../images/image/artist-img.jpg') no-repeat center;
+        background-size: 24px;
+      }
+      .artist-cardLabel {
+        font-size: $size-14;
+        color: $gray-font;
+      }
+      .fas.artist-card {
+        margin: 2px 0 2px 2px;
+        vertical-align: top;
+        color: $light-gray-font;
+      }
+    }
+    .product-tit {
+      position: relative;
+      .product-title {
+      margin: 12px 0;
+      font-size: 20px;
+      color: $dark-gray-font;
+      }
+      .price-label {
+        font-size: $size-24;
+        word-spacing: -5px;
+        .price-sale {
+          color: $red-font;
+        }
+        .price {
+          margin: 0 6px 0 8px; 
+          color: $dark-gray-font;
+        }
+        del {
+          font-size: $size-14;
+          color: $light-gray-font;
+        }
+      }
+      .product-mark {
+        .like-btn {
+            position: absolute;
+            top: 47px;
+            right: 58px;
+            @include image-loading(24px, 24px, -653px, -470px);
+          }
+          .like-btn-txt {
+            position: absolute;
+            top: 71px;
+            right: 60px;
+            font-size: 10px;
+            color: $light-gray-font;
+          }
+          .share-btn {
+            position: absolute;
+            top: 47px;
+            right: 11px;
+            @include image-loading(24px, 25px, -272px, -598px);
+        }
+      }
+      .mark-txt {
+        float: right;
+        margin: 10px 10px 0 0;
+        color: $gray-font;
+        font-size: $size-14;
+        em {
+          font-weight: bold;
+          margin-right: 3px;
+        }
+      }
+    }
+    .product-option {
+      .option-btn {
+        display: block;
+        width: 438px;
+        padding: 8px 16px;
+        position: relative;
+        background: $bg-white;
+        text-align: left;
+        color: $dark-gray-font;
+        border: 1px solid $dark-gray-font;
+        border-radius: 2px;
+        .fa-chevron-down {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+      }
+    }
+    .quota-message {
+        display: inline-block;
+        margin: 10px 0 21px 17px;
+        position: relative;
+        color: $gray-font;
+      }
+      .quota-message::before {
+        display: inline-block;
+        content: '';
+        @include info-icon(14px, 14px, 1px, -17px);
+        color: $gray-font;
+    }
+    .checkout-cost {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .cost-label{
+      color: $gray-font;
+      font-size: $size-14;
+      }
+      .cost {
+        font-size: $size-20;
+        color: $dark-gray-font;
+      }
+    }
+    .product-selected {
+      margin-top: $size-16;
+      display: flex;
+      .btn {
+        font-size: $size-16;
+        border-radius: 2px;
+        padding: 13px;
+        border: 1px solid #d9d9d9;
+        height: 48px;
+        box-shadow: 0 1px 3px 0 #dcdcdc4d;
+      }
+      .btn-cart {
+        width: 29%;
+        background: #fff;
+        color: $dark-gray-font;
+      }
+      .btn-npay {
+        width: 29%;
+        background: #30c612;
+        border-color: #30c612;
+        margin: 0 5px 0 6px;
+        .npay {
+          width: 64px;
+        }
+      }
+      .btn-pay {
+        width: 45%;
+        background-color: $orange-font;
+        color: $bg-white;
+      }
+    }
   }
   .content-info.fixed {
     position: fixed;
     top: 10px;
+    left: 55%;
   }
-  .artist-card {
-    .artist-img {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: url(../images/image/artist-img.jpg) no-repeat center;
-      background-size: 24px;
+  // 배송 및 수량 정보
+  .description {
+    margin: 36px 0 16px 0;
+    dt {
+      float: left;
+      width: 80px;
+      font-size: 14px;
+      color: $gray-font;
+      margin-left: 0;
+    }
+    dd {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: $dark-gray-font;
+      em {
+        font-weight: bold;
+      }
+      .delivery-priceUp {
+        color: $light-gray-font;
+        font-size: $size-12;
+      }
+    }
+    .delivery-info{
+      position: relative;
+      .balloon-btn {
+        @include info-icon(16px, 16px, 2px, 265px);
+      }
+      .balloon-delivery {
+        display: none;
+        @include balloon-box;
+      }
+    }
+  
+    .item-rating {
+      display: inline-block;
+      width: 135px;
+      .rationg-star {
+        display: inline-block;
+        width: 78px;
+        font-size: 15px;
+        color: #ffc500;
+        .fa-star {
+          margin: 0 -2px;
+        }
+      }
+      .fa-chevron-right.rating {
+        display: inline-block;
+        font-size: 14px;
+        color: $gray-font;
+      }
+    }
+    .balloon-parents {
+      position: relative;
+      .balloon-box {
+        display: none;
+        @include balloon-box;
+      }
+      .balloon-btn {
+        @include info-icon(16px, 16px, 1px, 15px);
+      }
+      .balloon-point {
+        width: 100%;
+        overflow: hidden;
+        dt, dd {
+          color: $dark-gray-font;
+        }
+        dt {
+          float: left;
+          width: 100px;
+          margin-bottom: 2px;
+        }
+        dd {
+          margin: 0;
+          float: right;
+        }
+      }
+      .idus-vip {
+        margin-top: 5px;
+        padding-top: 1px;
+        border-top: 1px solid $line-division;
+        .vip-moreBtn {
+          float: right;
+          color: $orange-font;
+        }
+        .balloon-content-txt {
+          margin-top: 13px;
+          color: $light-gray-font;
+        }
+      }
     }
   }
 }
