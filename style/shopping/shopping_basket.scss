@@ -1,3 +1,5 @@
+@import "../common";
+
 // .구현사항{
 //   max-width: 800px;
 //   margin: 0px auto;
@@ -48,7 +50,7 @@ article{
         min-width: 72px; 
         height: 72px; 
         margin-left: 8px; 
-        background: url(../images/image/곰돌이.png);
+        background: url(../../images/image/곰돌이.png);
         background-size: 72px;
         border-radius: 3px;
       }
@@ -80,8 +82,8 @@ article{
       }
       .작품내용3-2{
         right: 20px;
-        .설정{background: url(../images/image/설정.png); width: 36px; height: 28px;}
-        .닫기{background: url(../images/image/닫기.png); width: 36px; height: 28px;}
+        .설정{background: url(../../images/image/설정.png); width: 36px; height: 28px;}
+        .닫기{background: url(../../images/image/닫기.png); width: 36px; height: 28px;}
       }
     }
     .작품내용4{

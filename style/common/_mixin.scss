@@ -22,7 +22,7 @@
   width: $image-width;
   height: $image-height;
   border: none;
-  background: url('../images/image.png') $cordination-x $cordination-y no-repeat;
+  background: url('../../images/image.png') $cordination-x $cordination-y no-repeat;
 }
 
 @mixin triangle ($size, $color, $direction) {
