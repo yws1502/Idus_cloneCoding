@@ -6,7 +6,7 @@
   line-height: 1.4;
   padding: 15px;
   border-radius: 15px;
-  background-color: rgba(255, 0, 0, 0.08);
+  background-color: rgba(255, 0, 0, 0.03);
   strong{font-weight: bold; font-size: 20px;}
   span{font-weight: bold;}
 }
@@ -50,7 +50,7 @@ article{
         min-width: 72px; 
         height: 72px; 
         margin-left: 8px; 
-        background: url(./곰돌이.png);
+        background: url(../images/image/곰돌이.png);
         background-size: 72px;
         border-radius: 3px;
       }
@@ -82,8 +82,8 @@ article{
       }
       .작품내용3-2{
         right: 20px;
-        .설정{background: url(./설정.png); width: 36px; height: 28px;}
-        .닫기{background: url(./닫기.png); width: 36px; height: 28px;}
+        .설정{background: url(../images/image/설정.png); width: 36px; height: 28px;}
+        .닫기{background: url(../images/image/닫기.png); width: 36px; height: 28px;}
       }
     }
     .작품내용4{
@@ -98,6 +98,7 @@ article{
         font-size: 12px;
         border: rgba(128, 128, 128, 0.5) 1px solid;
         border-radius: 3px;
+/////////////////CSS2
         &:focus{
           margin-bottom: 30px;
         }
@@ -241,6 +242,7 @@ main{
     font-size: 12px;
     p{display: inline-block;font-weight: bold; transform: translateY(-5px);}
     span{font-size: 25px;}
+/////////////////CSS3
     &::after{
       content:'';
       position: absolute;
@@ -264,6 +266,7 @@ main{
   }
 }
 
+/////////////////CSS1
 @media all and (max-width: 719px) {
   .header_desktop{
     display: none;

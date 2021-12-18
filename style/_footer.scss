@@ -1,4 +1,4 @@
-$column: 150, 300, 300, 220;
+$column: 150, 330, 300, 220;
 $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
 
 .f-cont{
@@ -30,13 +30,13 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
 .f-grid{
   display: grid;
   width: $column-sum+px;
-  margin: 0px auto 50px;
+  margin: 30px auto 50px;
   grid-template-areas: 
   'grid1 grid2 grid3 grid4'
   'grid1 grid5 grid6 grid7';
   grid-template-columns: 
   nth($column,1)+px nth($column,2)+px nth($column,3)+px nth($column,4)+px;
-  grid-template-rows: 240px 120px;
+  grid-template-rows: 200px 120px;
   row-gap: 0px; column-gap: 0px; padding: 0px;
   color: #666666;
   .f-grid-1{
@@ -53,8 +53,8 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
     .p2{display: inline-block; margin-top: 15px; font-size: 10px;} 
     .p3{font-size: 10px;}
     .p4{font-size: 10px; margin-top: 10px;}
-    p>button{font-size: 10px; border: 1px solid grey; width: 90px; border-radius: 3px; float: right;
-    // &:after{content:''; width:3px; height:3px; background-color: black; }
+    p>button{margin-right: 70px; font-size: 10px; border: 1px solid grey; width: 80px; height: 18px; border-radius: 3px; float: right;
+    // p>button::after{content:''; border-left: black 10px solid; }
     }
   }
   .f-grid-3{
@@ -63,6 +63,7 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
     padding: 0px;
     strong{font-weight: bold; margin-bottom: 10px; display: inline-block;}
     .p5{font-size: 10px;}
+    ul>li>a{text-decoration: underline;}
     ul>li>span{display: inline-block; width: 60px;}
     .p6{font-size: 10px;}
     .p7{display: inline-block; margin-top: 10px;}
@@ -71,32 +72,44 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
     grid-area: grid4;
     border: none;
     padding: 0px;
+    font-weight: bold;
     div{
       padding: 0px;
-      .facebook{@include image-loading(36px, 36px, -461px, -488px); margin-right:5px;}
+      border: none;
+      .facebook{@include image-loading(36px, 36px, -461px, -488px); margin-top: 10px; margin-right:5px;}
       .instagram{@include image-loading(36px, 36px, -512px, -488px); margin-right:5px;}
       .naverblog{@include image-loading(36px, 36px, -405px, -262px); margin-right:5px;}
       .naverpost{@include image-loading(36px, 36px, -556px, -563px); margin-right:5px;}
       .twitter{@include image-loading(36px, 36px, -204px, -626px)}
-      .image1{@include image-loading(90px, 55px, -210px, -140px)}
+      .image1{@include image-loading(90px, 55px, -210px, -140px); margin-top: 30px;}
       .image2{@include image-loading(70px, 55px, -5px, -493px)}
     }
   }
   .f-grid-5{
     grid-area: grid5;
     border: none;
+    border-top: #acacac 1px solid;
     padding: 0px;
-    .image{@include image-loading(35px, 33px, -617px, -399px); float: left;}
+    padding-top: 20px;
+    font-size: 10px;
+    .image{@include image-loading(35px, 33px, -617px, -399px); float: left; margin-right: 10px;}
   }
   .f-grid-6{
     grid-area: grid6;
     border: none;
+    border-top: #acacac 1px solid;
     padding: 0px;
-    .image{@include image-loading(36px, 33px, -610px, -513px); float: left;}
+    padding-top: 20px;
+    font-size: 10px;
+    .image{@include image-loading(36px, 33px, -610px, -513px); float: left; margin-right: 10px;}
+    button{margin-right: 70px; font-size: 10px; border: 1px solid grey; width: 80px; height: 18px; border-radius: 3px;}
   }
   .f-grid-7{
     grid-area: grid7;
     border: none;
+    border-top: #acacac 1px solid;
+    padding: 0px;
+    padding-top: 20px;
   }
   div{
     padding: 10px;

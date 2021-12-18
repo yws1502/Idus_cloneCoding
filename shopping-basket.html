@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/reset.css">
-  <link rel="stylesheet" href="장바구니.css">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <title></title>
 </head>
@@ -111,12 +111,14 @@
 </div>
 <script>
   let price = 100;
+  // 2. 상품수량 제어
   $('.minus').click(function() {
     let quantity = Number($('.quantity').text());
     if (quantity<2) {
       $('.minus').css("backgroundColor", "#f2f2f2");
     } else{
       $('.quantity').text(quantity-1);
+      // 3. 결제금액 연동
       $('.작품내용2-2').text(`${((quantity-1)*price).toLocaleString()}원`);
       $('.작품금액').text(`${((quantity-1)*price).toLocaleString()}`);
       $('.결제예정금액').text(`${((quantity-1)*price+3000).toLocaleString()}`);
@@ -131,6 +133,7 @@
     $('.작품금액').text(`${((quantity+1)*price).toLocaleString()}`);
     $('.결제예정금액').text(`${((quantity+1)*price+3000).toLocaleString()}`);
   })
+  // 1. Check-box 연동
   $('input:checkbox').click(function(){
     if($(this).is(":checked")){
       $('.checkbox1').prop("checked", true);

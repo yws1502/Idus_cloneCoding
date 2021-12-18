@@ -1933,13 +1933,13 @@ a {
 .f-grid {
   display: -ms-grid;
   display: grid;
-  width: 970px;
-  margin: 0px auto 50px;
+  width: 1000px;
+  margin: 30px auto 50px;
       grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
-  -ms-grid-columns: 150px 300px 300px 220px;
-      grid-template-columns: 150px 300px 300px 220px;
-  -ms-grid-rows: 240px 120px;
-      grid-template-rows: 240px 120px;
+  -ms-grid-columns: 150px 330px 300px 220px;
+      grid-template-columns: 150px 330px 300px 220px;
+  -ms-grid-rows: 200px 120px;
+      grid-template-rows: 200px 120px;
   row-gap: 0px;
   -webkit-column-gap: 0px;
           column-gap: 0px;
@@ -1994,9 +1994,11 @@ a {
 }
 
 .f-grid .f-grid-2 p > button {
+  margin-right: 70px;
   font-size: 10px;
   border: 1px solid grey;
-  width: 90px;
+  width: 80px;
+  height: 18px;
   border-radius: 3px;
   float: right;
 }
@@ -2019,6 +2021,10 @@ a {
   font-size: 10px;
 }
 
+.f-grid .f-grid-3 ul > li > a {
+  text-decoration: underline;
+}
+
 .f-grid .f-grid-3 ul > li > span {
   display: inline-block;
   width: 60px;
@@ -2039,10 +2045,12 @@ a {
   grid-area: grid4;
   border: none;
   padding: 0px;
+  font-weight: bold;
 }
 
 .f-grid .f-grid-4 div {
   padding: 0px;
+  border: none;
 }
 
 .f-grid .f-grid-4 div .facebook {
@@ -2051,6 +2059,7 @@ a {
   height: 36px;
   border: none;
   background: url("../images/image.png") -461px -488px no-repeat;
+  margin-top: 10px;
   margin-right: 5px;
 }
 
@@ -2095,6 +2104,7 @@ a {
   height: 55px;
   border: none;
   background: url("../images/image.png") -210px -140px no-repeat;
+  margin-top: 30px;
 }
 
 .f-grid .f-grid-4 div .image2 {
@@ -2110,7 +2120,10 @@ a {
   -ms-grid-column: 2;
   grid-area: grid5;
   border: none;
+  border-top: #acacac 1px solid;
   padding: 0px;
+  padding-top: 20px;
+  font-size: 10px;
 }
 
 .f-grid .f-grid-5 .image {
@@ -2120,6 +2133,7 @@ a {
   border: none;
   background: url("../images/image.png") -617px -399px no-repeat;
   float: left;
+  margin-right: 10px;
 }
 
 .f-grid .f-grid-6 {
@@ -2127,7 +2141,10 @@ a {
   -ms-grid-column: 3;
   grid-area: grid6;
   border: none;
+  border-top: #acacac 1px solid;
   padding: 0px;
+  padding-top: 20px;
+  font-size: 10px;
 }
 
 .f-grid .f-grid-6 .image {
@@ -2137,6 +2154,16 @@ a {
   border: none;
   background: url("../images/image.png") -610px -513px no-repeat;
   float: left;
+  margin-right: 10px;
+}
+
+.f-grid .f-grid-6 button {
+  margin-right: 70px;
+  font-size: 10px;
+  border: 1px solid grey;
+  width: 80px;
+  height: 18px;
+  border-radius: 3px;
 }
 
 .f-grid .f-grid-7 {
@@ -2144,6 +2171,9 @@ a {
   -ms-grid-column: 4;
   grid-area: grid7;
   border: none;
+  border-top: #acacac 1px solid;
+  padding: 0px;
+  padding-top: 20px;
 }
 
 .f-grid div {
@@ -2286,12 +2316,17 @@ a {
         grid-template-rows: 180px 0px;
     background-color: whitesmoke;
     color: #666666;
+    margin-top: 0px;
+    margin-bottom: 53px;
   }
   .f-grid button {
     display: none;
   }
   .f-grid .f-grid-1 {
     display: none;
+  }
+  .f-grid .f-grid-2 {
+    padding: 10px;
   }
   .f-grid .f-grid-3 {
     display: none;
@@ -2337,6 +2372,7 @@ a {
     background: url("../images/image.png") -575px -624px no-repeat;
     text-align: center;
     padding-top: 35px;
+    font-size: 12px;
   }
   .bottom-fixed .content2 {
     display: inline-block;
@@ -2346,6 +2382,7 @@ a {
     background: url("../images/image.png") -575px -624px no-repeat;
     text-align: center;
     padding-top: 35px;
+    font-size: 12px;
   }
   .bottom-fixed .content3 {
     display: inline-block;
@@ -2355,6 +2392,7 @@ a {
     background: url("../images/image.png") -575px -624px no-repeat;
     text-align: center;
     padding-top: 35px;
+    font-size: 12px;
   }
   .bottom-fixed .content4 {
     display: inline-block;
@@ -2364,6 +2402,7 @@ a {
     background: url("../images/image.png") -575px -624px no-repeat;
     text-align: center;
     padding-top: 35px;
+    font-size: 12px;
   }
   .bottom-fixed .content5 {
     display: inline-block;
@@ -2373,6 +2412,7 @@ a {
     background: url("../images/image.png") -575px -624px no-repeat;
     text-align: center;
     padding-top: 35px;
+    font-size: 12px;
   }
 }
 
@@ -2412,5 +2452,482 @@ a {
   border-radius: 50%;
   background: url(../images/image/artist-img.jpg) no-repeat center;
   background-size: 24px;
+}
+
+.구현사항 {
+  max-width: 800px;
+  margin: 0px auto;
+  font-size: 14px;
+  color: red;
+  line-height: 1.4;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 0, 0, 0.03);
+}
+
+.구현사항 strong {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.구현사항 span {
+  font-weight: bold;
+}
+
+.컨테이너 {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.header_desktop {
+  overflow: hidden;
+  margin: 50px 0px;
+}
+
+.header_desktop .타이틀 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header_desktop span {
+  margin-top: 10px;
+  float: right;
+  font-weight: bold;
+}
+
+.header_desktop .float2 {
+  margin-left: 7px;
+  color: #d9d9d9;
+  font-weight: bold;
+}
+
+.header_desktop .float3 {
+  margin-left: 7px;
+  color: #d9d9d9;
+  font-weight: bold;
+}
+
+.header_phone {
+  display: none;
+}
+
+article {
+  border: #d9d9d9 solid 1px;
+}
+
+article .작품명 {
+  padding: 21px 18px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+
+article .작품명 input {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+article .작품내용 .작품내용1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 21px 18px;
+}
+
+article .작품내용 .작품내용1 .작품사진 {
+  min-width: 72px;
+  height: 72px;
+  margin-left: 8px;
+  background: url(../images/image/곰돌이.png);
+  background-size: 72px;
+  border-radius: 3px;
+}
+
+article .작품내용 .작품내용1 .작품설명 {
+  margin-left: 25px;
+}
+
+article .작품내용 .작품내용1 .작품설명 :first-child {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+article .작품내용 .작품내용1 .작품설명 :last-child {
+  font-size: 12px;
+  color: grey;
+}
+
+article .작품내용 .작품내용2 {
+  padding: 0px 20px 0px 145px;
+  overflow: hidden;
+}
+
+article .작품내용 .작품내용2 .작품내용2-1 {
+  width: 70%;
+  font-size: 12px;
+  color: grey;
+  line-height: 1.4;
+  float: left;
+}
+
+article .작품내용 .작품내용2 .작품내용2-2 {
+  font-size: 15px;
+  float: right;
+}
+
+article .작품내용 .줄바꿈 {
+  display: none;
+}
+
+article .작품내용 .작품내용3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 20px 20px 145px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 3px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-1 .minus {
+  width: 24px;
+  height: 24px;
+  color: #666666;
+  border: rgba(128, 128, 128, 0.5) 1px solid;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-1 .quantity {
+  width: 36px;
+  height: 24px;
+  border-top: rgba(128, 128, 128, 0.5) 1px solid;
+  border-bottom: rgba(128, 128, 128, 0.5) 1px solid;
+  text-align: center;
+  line-height: 2;
+  font-size: 10px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-1 .plus {
+  width: 24px;
+  height: 24px;
+  color: #666666;
+  border: rgba(128, 128, 128, 0.5) 1px solid;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-2 {
+  right: 20px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-2 .설정 {
+  background: url(../images/image/설정.png);
+  width: 36px;
+  height: 28px;
+}
+
+article .작품내용 .작품내용3 .작품내용3-2 .닫기 {
+  background: url(../images/image/닫기.png);
+  width: 36px;
+  height: 28px;
+}
+
+article .작품내용 .작품내용4 {
+  padding: 10px 20px 20px 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article .작품내용 .작품내용4 textarea {
+  width: 85%;
+  color: grey;
+  padding-top: 10px;
+  text-indent: 5px;
+  font-size: 12px;
+  border: rgba(128, 128, 128, 0.5) 1px solid;
+  border-radius: 3px;
+}
+
+article .작품내용 .작품내용4 textarea:focus {
+  margin-bottom: 30px;
+}
+
+article .작품내용 .작품내용4 textarea:focus ~ button {
+  background-color: white;
+  color: #FF7B30;
+  font-weight: bold;
+  border: #FF7B30 1px solid;
+}
+
+article .작품내용 .작품내용4 textarea:focus ~ div::after {
+  content: '@ 입력 후 저장버튼을 눌러주세요';
+  position: absolute;
+  left: -545px;
+  bottom: -75px;
+  font-size: 12px;
+  width: 300px;
+  height: 100px;
+}
+
+article .작품내용 .작품내용4 .빈공간 {
+  position: relative;
+  width: 10px;
+}
+
+article .작품내용 .작품내용4 button {
+  width: 65px;
+  height: 70px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  border: #d9d9d9 1px solid;
+  color: #d9d9d9;
+}
+
+article .작품가격 {
+  padding: 21px 20px 21px 40px;
+  border-top: 1px #d9d9d9 solid;
+  border-bottom: 1px #d9d9d9 solid;
+  font-size: 12px;
+  color: #666666;
+}
+
+article .작품가격 .작품실제가격 {
+  float: right;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+article .작품배송비 {
+  padding: 35px 20px 35px 40px;
+  font-size: 12px;
+  color: #666666;
+}
+
+article .작품배송비 .작품실제배송비 {
+  float: right;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+
+article .작품배송비 .작품실제배송비 span {
+  font-size: 12px;
+  font-weight: 100;
+  color: #66666699;
+}
+
+main {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+
+main .메인컨테이너1 {
+  display: block;
+  padding: 15px 0px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+main .메인컨테이너1 input {
+  background: white;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+main .메인컨테이너1 p {
+  display: inline-block;
+  font-size: 12px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+main .메인컨테이너1 button {
+  background: white;
+  float: right;
+  border: 1px solid #66666650;
+  font-size: 12px;
+  width: 80px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+main .메인컨테이너2 {
+  padding: 15px 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: white;
+}
+
+main .메인컨테이너2 .메인컨테이너2-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+main .메인컨테이너2 .메인컨테이너2-1 div {
+  text-align: center;
+  font-size: 12px;
+  color: grey;
+}
+
+main .메인컨테이너2 .메인컨테이너2-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+main .메인컨테이너2 .메인컨테이너2-2 div {
+  text-align: center;
+  font-size: 24px;
+}
+
+main .메인컨테이너2 .메인컨테이너2-2 div::after {
+  content: '원';
+  font-size: 16px;
+}
+
+main .메인컨테이너2 .메인컨테이너2-2 :nth-child(3) {
+  color: #FF7B30;
+}
+
+main .주문하기 {
+  background: white;
+}
+
+main .주문하기 button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 16px;
+  width: 100%;
+  max-width: 768px;
+  height: 48px;
+  border-radius: 3px;
+  background-color: #FF7B30;
+  color: white;
+  font-size: 16px;
+}
+
+main .말풍선 {
+  position: absolute;
+  padding-top: 6px;
+  top: 15px;
+  left: 290px;
+  width: 185px;
+  height: 54px;
+  background: #fff0b4F0;
+  border: #ffd200 solid 1px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+main .말풍선 p {
+  display: inline-block;
+  font-weight: bold;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+main .말풍선 span {
+  font-size: 25px;
+}
+
+main .말풍선::after {
+  content: '';
+  position: absolute;
+  top: 51px;
+  left: 145px;
+  border: 8px solid #FFF0B4;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+main .말풍선::before {
+  content: '';
+  position: absolute;
+  top: 52px;
+  left: 145px;
+  border: 8px solid #FFD200;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+@media all and (max-width: 719px) {
+  .header_desktop {
+    display: none;
+  }
+  .header_phone {
+    display: block;
+    padding: 15px 0px;
+    font-size: 12px;
+    overflow: hidden;
+    border-bottom: #66666650 1px solid;
+    border-top: #66666650 1px solid;
+  }
+  .header_phone input {
+    margin-left: 10px;
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  .header_phone p {
+    display: inline-block;
+    font-size: 12px;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  .header_phone button {
+    float: right;
+    border: 1px solid #66666650;
+    font-size: 12px;
+    width: 80px;
+    height: 32px;
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+  article {
+    margin-top: 10px;
+  }
+  article .작품내용 .작품내용2 {
+    padding-left: 63px;
+  }
+  article .작품내용 .작품내용3 {
+    padding-left: 63px;
+  }
+  article .작품내용 .작품내용4 {
+    padding-left: 63px;
+  }
+  main .말풍선 {
+    left: 20vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

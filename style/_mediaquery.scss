@@ -27,8 +27,11 @@
     grid-template-rows: 180px 0px;
     background-color: rgb(245, 245, 245);
     color: #666666;
+    margin-top: 0px;
+    margin-bottom: 53px;
     button{display: none;}
     .f-grid-1{display: none;}
+    .f-grid-2{padding: 10px;}
     .f-grid-3{display: none;}
     .f-grid-4{display: none;}
     .f-grid-5{display: none;}
@@ -52,26 +55,31 @@
       @include image-loading(50px, 32px, -575px, -624px);
       text-align: center;
       padding-top: 35px;
+      font-size: 12px;
     }
     .content2{
       @include image-loading(50px, 32px, -575px, -624px);
       text-align: center;
       padding-top: 35px;
+      font-size: 12px;
     }
     .content3{
       @include image-loading(50px, 32px, -575px, -624px);
       text-align: center;
       padding-top: 35px;
+      font-size: 12px;
     }
     .content4{
       @include image-loading(50px, 32px, -575px, -624px);
       text-align: center;
       padding-top: 35px;
+      font-size: 12px;
     }
     .content5{
       @include image-loading(50px, 32px, -575px, -624px);
       text-align: center;
       padding-top: 35px;
+      font-size: 12px;
     }
   }
 }
