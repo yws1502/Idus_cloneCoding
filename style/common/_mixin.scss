@@ -1,0 +1,42 @@
+@mixin font-module($size, $weight:500, $height:16px, $color:black) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin border-module($pixel, $color, $radius:false) {
+  border: $pixel solid $color;
+  @if ($radius) {
+    border-radius: $radius;
+  }
+}
+
+@mixin focus-outline {
+  outline: 2px solid #015ECC;
+  z-index: 10;
+}
+
+@mixin image-loading ($image-width, $image-height, $cordination-x, $cordination-y){ 
+  display: inline-block;
+  width: $image-width;
+  height: $image-height;
+  border: none;
+  background: url('../../images/image.png') $cordination-x $cordination-y no-repeat;
+}
+
+@mixin triangle ($size, $color, $direction) {
+  width: 0;
+  height: 0;
+  
+  border: $size solid transparent;
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color
+  } @else if $direction == left {
+    border-right-color: $color;
+  }
+}

@@ -1,0 +1,85 @@
+@media all and (max-width: 719px) {
+  .move-top{
+    bottom: 62px;
+    right: 12px;
+    box-shadow: none;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 20;
+    }
+  .f-cont{
+    text-align: left;
+    padding-left: 12px;
+    padding-top: 4px auto; 
+    a{margin-top: 16px; margin-bottom: 16px;}
+    .f-4{display: none;}
+    .f-5{display: none;}
+    .f-6{display: none;}
+    .f-8{display: none;}
+    .f-7::after{background-color: white;}
+  }
+  .f-grid{
+    width: 100vw;
+    grid-template-areas: 
+    'grid2 grid2 grid2 grid2'
+    'grid2 grid2 grid2 grid2';
+    grid-template-columns: 100vw 0 0 0;
+    grid-template-rows: 180px 0px;
+    background-color: rgb(245, 245, 245);
+    color: #666666;
+    margin-top: 0px;
+    margin-bottom: 53px;
+    button{display: none;}
+    .f-grid-1{display: none;}
+    .f-grid-2{padding: 10px;}
+    .f-grid-3{display: none;}
+    .f-grid-4{display: none;}
+    .f-grid-5{display: none;}
+    .f-grid-6{display: none;}
+    .f-grid-7{display: none;}
+    .f-grid-8{display: none;}
+  }
+  .bottom-fixed{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 53px;
+    background-color: white;
+    border-top: rgba(128, 128, 128, 0.428) solid 1px;
+    z-index: 10;
+    .content1{
+      @include image-loading(50px, 32px, -575px, -624px);
+      text-align: center;
+      padding-top: 35px;
+      font-size: 12px;
+    }
+    .content2{
+      @include image-loading(50px, 32px, -575px, -624px);
+      text-align: center;
+      padding-top: 35px;
+      font-size: 12px;
+    }
+    .content3{
+      @include image-loading(50px, 32px, -575px, -624px);
+      text-align: center;
+      padding-top: 35px;
+      font-size: 12px;
+    }
+    .content4{
+      @include image-loading(50px, 32px, -575px, -624px);
+      text-align: center;
+      padding-top: 35px;
+      font-size: 12px;
+    }
+    .content5{
+      @include image-loading(50px, 32px, -575px, -624px);
+      text-align: center;
+      padding-top: 35px;
+      font-size: 12px;
+    }
+  }
+}

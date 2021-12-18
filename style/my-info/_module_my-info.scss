@@ -1,0 +1,409 @@
+// 사이드 바
+.my-info-aside {
+  .my-info-aside__profile {
+    padding: 25px 0 28px;
+    border: 1px solid #ff7b30;
+    text-align: center;
+    .my-info-aside__avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      padding: 5px;
+      margin: 0 auto;
+      .avatar-img {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: url('../../images/image/profile-bg.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        &:hover:after {
+          top: 64px;
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          content: '수정';
+          color: white;
+          font-size: 10px;
+          background-color: #374148;
+        }
+      }
+      .avatar-input {
+        display: none;
+      }
+    }
+    .membership {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22px;
+      margin-bottom: 10px;
+    }
+    .membership__img {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('../images/image/sp-icon_1634026706070.png');
+      background-position: -689px -274px;
+      margin-right: 3px;
+    }
+    .user-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .my-info-aside__nav {
+    .my-info-aside__title {
+      background-color: #ff7b30;
+      color: white;
+      padding: 9px 16px;
+      font-size: 13px;
+    }
+    .info-list {
+      background-color: #FBFAFA;
+      .info-list__el {
+        padding: 11px 16px 8px;
+        border-bottom: 1px solid #EFE8E6;
+        .title {
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .el-list li {
+          &:hover {
+            color: #ff7b30;
+            cursor: pointer;
+          }
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+// 내 정보 테이블
+.my-info__table {
+ .my-info__table__title {
+    padding: 22px 24px;
+    background: #F5F5F5;
+    font-weight: normal;
+    font-size: 21px;
+  }
+  .table-list {
+    display: flex;
+    flex-direction: row;
+    border: $base-border;
+    border-top: none;
+    border-right: none;
+    .table-list__el {
+      width: 25%;
+      padding: 24px;
+      border-right: $base-border;
+      .label {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        .info {
+          position: absolute;
+          top: 0;
+          right: -25px;
+          font-size: large;
+          color: #CCCCCC;
+          &:hover + .info-desc {
+            display: inline-block;
+          }
+        }
+        .info-desc {
+          position: absolute;
+          right: -135px;
+          top: -10px;
+          display: none;
+          padding: 8px;
+          border: $base-border;
+          font-size: 12px;
+          color: #666;
+          border-radius: 4px;
+          z-index: 10;
+          &::before {
+            position: absolute;
+            left: -6px;
+            top: 10px;
+            display: block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: $base-border;
+            border-top: none;
+            border-right: none;
+            transform: rotate(45deg);
+            z-index: 20;
+            background-color: #FFFFFF;
+          }
+        }
+      }
+      .cont-label {
+        display: flex;
+      }
+      .count {
+        display: block;
+        font-size: 24px;
+        color: #ff7b30;
+      }
+    }
+  }
+}
+
+// 헤더
+.my-info__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  .header-title {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  .header-more {
+    color: #00aa9b;
+    font-size: 14px;
+  }
+}
+
+// 주문 테이블
+.my-info__order-list {
+  margin-top: 24px;
+  display: flex;
+  li {
+    width: 33.33%;
+    padding: 20px 0 17px;
+    text-align: center;
+    font-size: 16px;
+    border: $base-border;
+    color: #acacac;
+    border-bottom-width: 2px;
+    border-bottom-color: #333;
+    background: #f5f5f5;
+    &.active{
+      background: #fff;
+      color: #333;
+      font-weight: bold;
+      border: 2px solid #333;
+      border-bottom-width: 1px;
+      border-bottom-color: #ffffff;
+    }
+  }
+}
+
+// 구매한 작품
+.purchased-item {
+  margin-top: 16px;
+  color: #666;
+  width: 100%;
+  border: $base-border;
+  .purchased-item__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding: 12px 16px;
+  }
+  .purchased-item__info {
+    display: flex;
+    .info-el {
+      // 높이 수정 필요
+      height: 173px;
+      border-right: $base-border;
+      &.item__info {
+        position: relative;
+        display: flex;
+        flex: 1;
+        padding: 16px;
+        .item-img {
+          width: 64px;
+          height: 64px;
+          margin-right: 10px;
+        }
+        .text-area {
+          padding-top: 10px;
+          display: flex;
+          flex-direction: column;
+          .row-1 {
+            margin-bottom: 7px;
+            .title {
+              font-size: 14px;
+              font-weight: bold;
+              color: #333;
+            }
+            .shipping-info {
+              border: 1px solid #00aa9b;
+              color: #00aa9b;
+              height: 18px;
+              font-size: 9px;
+              border-radius: 10px;
+              padding: 3px 12px;
+              margin-left: 5px;
+            }
+          }
+          .row-2 {
+            display: flex;
+            .count {
+              position: absolute;
+              right: 16px;
+            }
+          }
+        }
+      }
+      &.purchased-item__message,
+      &.purchased-item__application {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 120px;
+        padding: 16px 10px;
+        text-align: center;
+        button {
+          padding: 6px 12px;
+          border: $base-border;
+          font-size: 12px;
+          &.purchase-review {
+            color: white;
+            background-color: #FF7B30;
+            &:hover {
+              background-color: #FF6D23;
+            }
+          }
+        }
+      }
+      &.purchased-item__message {
+        justify-content: center;
+      }
+      &.purchased-item__application {
+        border-right: none;
+      }
+    }
+  }
+}
+
+// 알림 정보
+.notice {
+  padding: 10px 16px;
+  border-bottom: $base-border;
+  &:hover {
+    background-color: #F2F2F2;
+  }
+  a {
+    display: flex;
+    .notice__thumb {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: $base-border;
+      margin-top: 15px;
+      margin-right: 15px;
+    }
+    .notice__info {
+      .notice__type {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        .type {
+          color: #fda06c;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .date {
+          color: #999999;
+        }
+      }
+      .notice__title {
+        color: #333333;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .notice__desc {
+        color: #666666;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+// 팔로우하는 작가
+.following-artist {
+  display: flex;
+  .artist-profile-area {
+    display: flex;
+    padding: 28px 36px 28px 31px;
+    .artist-thumb {
+      background: url("http://image.idus.com/image/files/a4d4bd5aa6234b6b8ee73b67aff74490_324.jpg");
+      min-width: 100px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: solid 1px rgba(217, 217, 217, 0.5);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-right: 32px;
+      cursor: pointer;
+      position: relative;
+    }
+    .artist-profile {
+      .text-area {
+        .artist-name {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 1.5;
+          color: #333333;
+          margin-bottom: 8px;
+          cursor: pointer;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .artist-intro {
+        width: 184px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #999999;
+        height: 54px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 24px;
+      }
+      .following {
+        border: $base-border;
+        min-width: 96px;
+        width: 96px;
+        height: 32px;
+        font-size: 12px;
+        color: rgb(51, 51, 51);
+        border-radius: 4px;
+      }
+    }
+  }
+  .item-thumbs {
+    display: flex;
+    .item-thumb {
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+  }
+}

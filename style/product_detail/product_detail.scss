@@ -1,0 +1,40 @@
+@import "../common";
+
+.content,
+.product-detail {
+  max-width: 1056px;
+  width: 100%;
+  margin: 0 auto;
+}
+.content {
+  .content-img {
+    width: 560px;
+    padding: 36px 0;
+  }
+  .content-info {
+    width: 472px;
+    padding: 16px;
+    left: 54%;
+    top: 240px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 #0000001a;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+  }
+  .content-info.fixed {
+    position: fixed;
+    top: 10px;
+  }
+  .artist-card {
+    .artist-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: url(../images/image/artist-img.jpg) no-repeat center;
+      background-size: 24px;
+    }
+  }
+}
+
+

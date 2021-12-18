@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="./images/icons/favicon_32.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/my-info/my-info.css">
+  <script defer src="https://kit.fontawesome.com/fa4967e6b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1 class="text-hide">내 정보</h1>
+  <!-- header area -->
+  <header class="main-header">
+    <!-- 회원 관리 목록 -->
+    <section class="top-navigation">
+      <h2 class="text-hide">회원 관리 항목</h2>
+      <div class="inner-top-nav">
+        <div class="ui-dropdown btn-nav">
+          <button type="button" class="btn-dropdown">아이디어스 앱 설치하기</button>
+          <article class="container-install show-ui">
+            <h3 class="install-title">아이디어스를 스마트폰으로 더욱 편리하게 사용하세요.</h3>
+            <ol>
+              <li>
+                <strong class="subtitle">1. 문자로 앱설치 안내받기</strong>
+                <form method="post" action="#none">
+                  <label for="phone-value" class="text-hide">번호 입력창</label>
+                  <input id="phone-value" type="text" placeholder="'-'없이 번호를 입력하세요" required>
+                  <button type="submit" class="btn-submit">전송</button>
+                </form>
+                <strong class="error-msg">필수 항목입니다.</strong>
+                <p>앱 설치 URL 전송을 위하여 휴대폰번호를 입력하며 입력된 정보는 저장되지 않습니다.</p>
+              </li>
+              <li>
+                <strong class="subtitle">2. QR코드로 앱설치하기</strong>
+                <img src="https://www.idus.com/resources/dist/images/qrcode.png" alt="QR코드">
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div class="register-wrap">
+          <a href="#none" class="btn-nav">로그인</a>
+          <a href="#none" class="btn-nav">회원가입</a>
+          <div class="ui-dropdown">
+            <button type="button" class="btn-dropdown">고객센터</button>
+            <ul class="customer-center show-ui">
+              <li><a href="#none">공지사항</a></li>
+              <li><a href="#none">자주 묻는 질문</a></li>
+              <li><a href="#none">메일로 문의</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // 회원 관리 목록 -->
+
+    <!-- 상품 검색 및 내 정보 확인 -->
+    <section class="search-header">
+      <div class="inner-top-search">
+        <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+        <nav class="wrap-serviceNav">
+          <a href="#none" class="link-product">작품</a>
+          <div class="class-tip">오늘의 취미를 골라보세요!</div>
+          <a href="#none" class="link-class">클래스</a>
+        </nav>
+        <form method="get" class="search-form">
+          <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+          <label for="search-item">
+            <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+          </label>
+        </form>
+        <div class="ui-dropdown">
+          <ol class="ranking-product">
+            <!-- hover 적용 및 리스트 바뀌는 것 구현 -->
+            <li class="ranking-item">
+              <a href="#none" class="link-item">1<em>꾸덕쿠키</em></a>
+            </li>
+          </ol>
+          <div class="hide-ranking show-ui">
+            <div class="btn-wrap">
+              <button type="button" class="btn-realtime on">실시간 급상승</button
+                ><button type="button" class="btn-popular">인기 검색어</button>
+            </div>
+            <!-- on class 추가 시 위의 btn에도 on class 추가 -->
+            <ul class="realtime-list on">
+              <li class="keyword-item up"><em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a></li>
+              <li class="keyword-item down"><em>2</em><a href="#none" class="keyword ellipsis">무드등</a></li>
+              <li class="keyword-item keep"><em>3</em><a href="#none" class="keyword ellipsis">네일팁</a></li>
+              <li class="keyword-item up"><em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a></li>
+              <li class="keyword-item keep"><em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a></li>
+              <li class="keyword-item up"><em>6</em><a href="#none" class="keyword ellipsis">귀도리</a></li>
+              <li class="keyword-item down"><em>7</em><a href="#none" class="keyword ellipsis">머리띠</a></li>
+              <li class="keyword-item up"><em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a></li>
+              <li class="keyword-item up"><em>9</em><a href="#none" class="keyword ellipsis">도장</a></li>
+              <li class="keyword-item down"><em>10</em><a href="#none" class="keyword ellipsis">장갑</a></li>
+              <li class="keyword-item up"><em>11</em><a href="#none" class="keyword ellipsis">드로잉</a></li>
+              <li class="keyword-item keep"><em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a></li>
+              <li class="keyword-item up"><em>13</em><a href="#none" class="keyword ellipsis">비누</a></li>
+              <li class="keyword-item down"><em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a></li>
+              <li class="keyword-item keep"><em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a></li>
+              <li class="keyword-item up"><em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a></li>
+              <li class="keyword-item keep"><em>17</em><a href="#none" class="keyword ellipsis">와인</a></li>
+              <li class="keyword-item up"><em>18</em><a href="#none" class="keyword ellipsis">일러스트</a></li>
+              <li class="keyword-item down"><em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a></li>
+              <li class="keyword-item up"><em>20</em><a href="#none" class="keyword ellipsis">편지지</a></li>
+            </ul>
+            <!-- on class 추가 시 위의 btn에도 on class 추가 -->
+            <ul class="popular-list">
+              <li class="keyword-item"><em>1</em><a href="#none" class="keyword ellipsis">연말선물</a></li>
+              <li class="keyword-item"><em>2</em><a href="#none" class="keyword ellipsis">무드등</a></li>
+              <li class="keyword-item"><em>3</em><a href="#none" class="keyword ellipsis">네일팁</a></li>
+              <li class="keyword-item"><em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a></li>
+              <li class="keyword-item"><em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a></li>
+              <li class="keyword-item"><em>6</em><a href="#none" class="keyword ellipsis">귀도리</a></li>
+              <li class="keyword-item"><em>7</em><a href="#none" class="keyword ellipsis">머리띠</a></li>
+              <li class="keyword-item"><em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a></li>
+              <li class="keyword-item"><em>9</em><a href="#none" class="keyword ellipsis">도장</a></li>
+              <li class="keyword-item"><em>10</em><a href="#none" class="keyword ellipsis">장갑</a></li>
+              <li class="keyword-item"><em>11</em><a href="#none" class="keyword ellipsis">드로잉</a></li>
+              <li class="keyword-item"><em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a></li>
+              <li class="keyword-item"><em>13</em><a href="#none" class="keyword ellipsis">비누</a></li>
+              <li class="keyword-item"><em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a></li>
+              <li class="keyword-item"><em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a></li>
+              <li class="keyword-item"><em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a></li>
+              <li class="keyword-item"><em>17</em><a href="#none" class="keyword ellipsis">와인</a></li>
+              <li class="keyword-item"><em>18</em><a href="#none" class="keyword ellipsis">일러스트</a></li>
+              <li class="keyword-item"><em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a></li>
+              <li class="keyword-item"><em>20</em><a href="#none" class="keyword ellipsis">편지지</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="wrap-profile">
+          <a href="./my-info.html" class="link-profile">내 정보</a>
+          <a href="./shopping_basket/장바구니.html" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+        </nav>
+      </div>
+    </section>
+    <!-- // 상품 검색 및 내정보 확인 -->
+
+    <!-- 상품 관련 모든 카테고리 link 탭 -->
+    <section class="gnb"> <!-- global navigation bar -->
+      <h2 class="text-hide">전역 네비게이션</h2>
+      <nav>
+        <ul class="nav-wrap">
+          <li class="category-link">
+            <a href="#none" class="btn-gnb">카테고리</a>
+            <div class="category-dropdown show-ui">
+              <ul class="category">
+                <li><a href="#none">디저트, 베이커리, 떡</a></li>
+                <li><a href="#none">음료 (커피, 차 등)</a></li>
+                <li><a href="#none">전통주</a></li>
+                <li><a href="#none">수제 반찬</a></li>
+                <li><a href="#none">그 외 수제먹거리</a></li>
+                <li><a href="#none">농축수산물</a></li>
+                <li><a href="#none">의류, 홈웨어</a></li>
+                <li><a href="#none">패션잡화</a></li>
+                <li><a href="#none">지갑 (지폐,카드,동전,명함)</a></li>
+                <li><a href="#none">가방, 파우치</a></li>
+              </ul>
+              <ul class="category">
+                <li><a href="#none">시계</a></li>
+                <li><a href="#none">섬유, 퀼트</a></li>
+                <li><a href="#none">남성 수제화</a></li>
+                <li><a href="#none">여성 수제화</a></li>
+                <li><a href="#none">육아, 아동</a></li>
+                <li><a href="#none">반지</a></li>
+                <li><a href="#none">귀걸이</a></li>
+                <li><a href="#none">목걸이</a></li>
+                <li><a href="#none">팔찌</a></li>
+                <li><a href="#none">그 외 액세서리</a></li>
+              </ul>
+              <ul class="category">
+                <li><a href="#none">꽃 (생화,드라이,다육 등)</a></li>
+                <li><a href="#none">캔들, 디퓨저, 방향제</a></li>
+                <li><a href="#none">인테이러 소품</a></li>
+                <li><a href="#none">도자기</a></li>
+                <li><a href="#none">주방, 생활</a></li>
+                <li><a href="#none">가구</a></li>
+                <li><a href="#none">인형, 장난감</a></li>
+                <li><a href="#none">반려동물 용품</a></li>
+                <li><a href="#none">파인아트</a></li>
+                <li><a href="#none">공예</a></li>
+              </ul>
+              <ul class="category">
+                <li><a href="#none">휴대폰 케이스</a></li>
+                <li><a href="#none">전자기기 관련</a></li>
+                <li><a href="#none">문구, 팬시</a></li>
+                <li><a href="#none">페인팅, 캐리커쳐, 캘리</a></li>
+                <li><a href="#none">향수, 화장품, 뷰티</a></li>
+                <li><a href="#none">비누, 천연비누</a></li>
+                <li><a href="#none">기타</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="on"><a href="#none" class="btn-gnb">홈</a></li>
+          <li><a href="#none" class="btn-gnb">오늘의 작품</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 구매</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 후기</a></li>
+          <li><a href="#none" class="btn-gnb">작가님 추천</a></li>
+          <li><a href="#none" class="btn-gnb">실시간 추천</a></li>
+          <li><a href="#none" class="btn-gnb">인기 작품</a></li>
+          <li><a href="#none" class="btn-gnb">스토리</a></li>
+          <li><a href="#none" class="btn-gnb">최신 작품</a></li>
+          <li><a href="#none" class="btn-gnb">인기작가</a></li>
+          <li><a href="#none" class="btn-gnb">소담상회</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!-- // 상품 관련 모든 카테고리 link 탭 -->
+  </header>
+  <!-- // header area -->
+  <main class="my-info">
+    <aside class="my-info-aside">
+      <h2 class="text-hide">내 정보 사이드 바</h2>
+      <div class="my-info-aside__profile">
+        <div class="my-info-aside__avatar">
+          <label for="avatar-img" class="avatar-img"></label>
+          <input type="file" name="avatar-img" id="avatar-img" class="avatar-input">
+        </div>
+        <a href="#none" class="membership">
+          <span class="membership__img"></span>
+          <span>아기손 > </span>
+        </a>
+        <div class="user-name">페이커</div>
+      </div>
+      <nav class="my-info-aside__nav">
+        <h3 class="my-info-aside__title">MY MENU</h3>
+        <ul class="info-list">
+          <li class="info-list__el">
+            <h4 class="title">주문 배송</h4>
+            <ul class="el-list">
+              <li><a href="#none">주문내역</a></li>
+              <li><a href="#none">취소/환불내역</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">알림 및 메시지</h4>
+            <ul class="el-list">
+              <li><a href="#none">알림</a></li>
+              <li><a href="#none">메시지</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">선물함</h4>
+            <ul class="el-list">
+              <li><a href="#none">받은 선물함</a></li>
+              <li><a href="#none">보낸 선물함</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">나의 구매후기</h4>
+            <ul class="el-list">
+              <li><a href="#none">후기 쓰기</a></li>
+              <li><a href="#none">내가 쓴 후기</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">관심 리스트</h4>
+            <ul class="el-list">
+              <li><a href="#none">찜 목록</a></li>
+              <li><a href="#none">팔로우하는 작가</a></li>
+              <li><a href="#none">최근 본 작품</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">할인혜택</h4>
+            <ul class="el-list">
+              <li><a href="#none">VIP 클럽</a></li>
+              <li><a href="#none">온라인 클래스 무제한 스트리밍</a></li>
+              <li><a href="#none">쿠폰함</a></li>
+              <li><a href="#none">적립금</a></li>
+              <li><a href="#none">친구 초대 쿠폰</a></li>
+            </ul>
+          </li>
+          <li class="info-list__el">
+            <h4 class="title">내 정보</h4>
+            <ul class="el-list">
+              <li><a href="#none">회원 등급</a></li>
+              <li><a href="#none">회원 정보 관리</a></li>
+              <li><a href="#none">신용카드 및 환불계좌 관리</a></li>
+              <li><a href="#none">주소(배송지) 관리</a></li>
+              <li><a href="#none">본인 인증</a></li>
+              <li><a href="#none">로그아웃</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="my-info__main">
+      <div class="my-info__table">
+        <h2 class="my-info__table__title">내 정보</h2>
+        <ul class="table-list">
+          <li class="table-list__el">
+            <strong class="label">적립금</strong>
+            <a href="#none" class="count">0P</a>
+          </li>
+          <li class="table-list__el">
+            <strong class="label">할인 쿠폰 수</strong>
+            <a href="#none" class="count">2</a>
+          </li>
+          <li class="table-list__el">
+            <div class="cont-label">
+              <strong class="label">
+                작가 발송 완료
+                <i class="fas fa-info-circle info"></i>
+                <span class="info-desc">최근 1개월 기준</span>
+              </strong>
+            </div>
+            <a href="#none" class="count">0</a>
+          </li>
+          <li class="table-list__el">
+            <div class="cont-label">
+              <strong class="label">
+                취소/환불 완료
+                <i class="fas fa-info-circle info"></i>
+                <span class="info-desc">최근 1개월 기준</span>
+              </strong>
+            </div>
+            <a href="#none" class="count">0</a>
+          </li>
+        </ul>
+      </div>
+      <div class="my-info__header">
+        <h2 class="header-title">최근 주문내역</h2>
+        <a href="#none" class="header-more">더보기 > </a>
+      </div>
+      <ul class="my-info__order-list">
+        <h2 class="text-hide">주문 테이블</h2>
+        <li class="items active">작품</li>
+        <li class="online-class"><a href="#none">온라인 클래스</a></li>
+        <li class="offline-class"><a href="#none">오프라인 클래스</a></li>
+      </ul>
+      <div class="purchased-item">
+        <h2 class="text-hide">구매한 작품</h2>
+        <div class="purchased-item__header">
+          <span class="date">2021-12-14</span>
+          <span class="price">
+            <span>4,000원 </span>
+            <span> > </span>
+          </span>
+        </div>
+        <div class="purchased-item__info">
+          <div class="info-el item__info">
+            <img src="https://image.idus.com/image/files/7d736e0d84764ec287bf0c22af1d8397_320.jpg" alt="작품 썸네일" class="item-img">
+            <div class="text-area">
+              <div class="row row-1">
+                <a href="#none" class="title">[웰컴딜] ‼️국산닭고기순살❤로제닭갈비❤로제찜닭‼️</a>
+                <span class="shipping-info">작가 발송 완료</span>
+              </div>
+              <div class="row row-2">
+                <span class="desc">월컴딜 수량 확인 : 1인당 1개 작품만 구매 가능해요</span>
+                <span class="count">1개</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-el purchased-item__message">
+            <div>👊두 남자의 식탐👊</div>
+            <button>메시지로 문의</button>
+          </div>
+          <div class="info-el purchased-item__application">
+            <button class="purchase-review">구매후기 작성</button>
+            <button>교환신청</button>
+            <button>환불신청</button>
+            <button>발송 정보 조회</button>
+          </div>
+        </div>
+      </div>
+      <a href="#none" class="product-list__showMoreBtn">
+        최근 주문내역 더보기
+      </a>
+      <div class="cont-messageAndNotice">
+        <div class="cont-message">
+          <div class="my-info__header">
+            <h2 class="header-title">안 읽은 메시지</h2>
+            <a href="#none" class="header-more">더보기 > </a>
+          </div>
+          <div class="message-box"></div>
+        </div>
+        <div class="cont-notice">
+          <div class="my-info__header">
+            <h2 class="header-title">알림</h2>
+            <a href="#none" class="header-more">더보기 > </a>
+          </div>
+          <div class="notice-box">
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+            <div class="notice">
+              <a href="#none" class="notice__link">
+                <img src="https://image.idus.com/image/files/1b943d7e4df14e029705d57b9c2e55ed.jpg" alt="알림 정보 썸네일" class="notice__thumb">
+                <div class="notice__info">
+                  <div class="notice__type">
+                    <span class="type">이벤트</span>
+                    <span class="date">12월 16일</span>
+                  </div>
+                  <div class="notice__title">~53%할인! 하루만에 연말 홈파티 준비 가능👌</div>
+                  <div class="notice__desc">(광고)💃🕺영화 속 장면이 이렇게 만들어지네요💞
+                    *수신거부:내정보>설정>앱 알림</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-info__header">
+        <h2 class="header-title">찜한 작품</h2>
+        <a href="#none" class="header-more">더보기 > </a>
+      </div>
+      <ul class="cont-item-selected">
+        <li class="item item--sm item-selected">
+          <h2 class="text-hide">찜한 상품</h2>
+          <a href="#none" target="_blank">
+            <div class="item__thumb">
+              <img src="https://image.idus.com/image/files/193a6429db8246d0ba3d9bc097563887_512.jpg" alt="" class="item__main-img">
+              <button class="item__heart" type="button">
+              </button>
+            </div>
+            <div class="item__info">
+              <div class="item__maker-name">
+                시루봉공방
+              </div>
+              <div class="item__name">
+                애플워치 메탈 시계줄 밴드 스트랩 쥬빌레롤렉스 페이스
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="item item--sm item-selected">
+          <h2 class="text-hide">찜한 상품</h2>
+          <a href="#none" target="_blank">
+            <div class="item__thumb">
+              <img src="https://image.idus.com/image/files/193a6429db8246d0ba3d9bc097563887_512.jpg" alt="" class="item__main-img">
+              <button class="item__heart" type="button">
+              </button>
+            </div>
+            <div class="item__info">
+              <div class="item__maker-name">
+                시루봉공방
+              </div>
+              <div class="item__name">
+                애플워치 메탈 시계줄 밴드 스트랩 쥬빌레롤렉스 페이스
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="item item--sm item-selected">
+          <h2 class="text-hide">찜한 상품</h2>
+          <a href="#none" target="_blank">
+            <div class="item__thumb">
+              <img src="https://image.idus.com/image/files/193a6429db8246d0ba3d9bc097563887_512.jpg" alt="" class="item__main-img">
+              <button class="item__heart" type="button">
+              </button>
+            </div>
+            <div class="item__info">
+              <div class="item__maker-name">
+                시루봉공방
+              </div>
+              <div class="item__name">
+                애플워치 메탈 시계줄 밴드 스트랩 쥬빌레롤렉스 페이스
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="item item--sm item-selected">
+          <h2 class="text-hide">찜한 상품</h2>
+          <a href="#none" target="_blank">
+            <div class="item__thumb">
+              <img src="https://image.idus.com/image/files/193a6429db8246d0ba3d9bc097563887_512.jpg" alt="" class="item__main-img">
+              <button class="item__heart" type="button">
+              </button>
+            </div>
+            <div class="item__info">
+              <div class="item__maker-name">
+                시루봉공방
+              </div>
+              <div class="item__name">
+                애플워치 메탈 시계줄 밴드 스트랩 쥬빌레롤렉스 페이스
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="my-info__header">
+        <h2 class="header-title">팔로우하는 작가</h2>
+        <a href="#none" class="header-more">더보기 > </a>
+      </div>
+      <div class="following-artist">
+        <div class="artist-profile-area">
+          <div class="artist-thumb"></div>
+          <div class="artist-profile">
+            <div class="text-area">
+              <div class="artist-name">목걸이맛집 구루미 9rumi</div>
+              <div class="artist-intro">
+                반짝이는 너에게. 🏅idus 금손작가🏅365일 무료배송💕
+                <br />
+                빠르고 안전한 우체국택배로 발송됩니다.
+                작가 🔽팔로우🔽하시면 매달 할인쿠폰이 발급됩니다🤗
+              </div>
+            </div>
+            <button type="button" class="following">✔️ 팔로잉</button>
+          </div>
+        </div>
+        <div class="item-thumbs">
+          <a href="#none" class="thumb-wrapper">
+            <img src="https://image.idus.com/image/files/9ddfe64f298846f7af18e64996268b6a_512.jpg" alt="" class="item-thumb">
+          </a>
+          <a href="#none" class="thumb-wrapper">
+            <img src="https://image.idus.com/image/files/b32d3dead13f4cfdac3a27253bed9a8f_512.png" alt="" class="item-thumb">
+          </a>
+          <a href="#none" class="thumb-wrapper">
+            <img src="https://image.idus.com/image/files/cd56cba5d44a4eddb8c3165211e197dc_512.jpg" alt="" class="item-thumb">
+          </a>
+        </div>
+      </div>
+      <div class="my-info__header">
+        <h2 class="header-title">최근 본 작품</h2>
+        <a href="#none" class="header-more">더보기 > </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="f-cont">
+      <a class="f-1" href="#">이용약관</a>
+      <a class="f-2" href="#">개인정보 처리방침</a>
+      <a class="f-3" href="#">공지사항</a>
+      <a class="f-4" href="#">자주 묻는 질문</a>
+      <a class="f-5" href="#">이벤트</a>
+      <a class="f-6" href="#">입점문의</a>
+      <a class="f-7" href="#">About idus</a>
+      <a class="f-8" href="#">인재 영입</a>
+    </div>
+    <div class="f-grid">
+      <div class="f-grid-1">
+        <div class="image"></div>
+      </div>
+      <div class="f-grid-2">
+        <strong class="p1">(주) 백패커</strong>
+        <p>대표이사 : 김동환</p>
+        <p>서울특별시 마포구 동교로 19길 12</p>
+        <p>사업자 등록번호 : 107-87-83297 
+          <button>사업자 정보확인</button>
+        </p>
+        <p >통신판매업신고 : 2015-서울마포-0440</p>
+
+        <p class="p2">아이디어스는 통신판매중개자이며 통신판매의 당사자가 아닙니다.</p>
+        <p class="p3">따라서 아이디어스는 상품 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+        <p class="p4">Copyright © 2021 Backpackr All right reserved.</p>
+      </div>
+      <div class="f-grid-3">
+        <strong>고객센터</strong>
+        <span class="p5">(주 7일 오전 10시 ~ 저녁 10시까지)</span>
+        <ul>
+          <li><span>카카오톡</span><a>아이디어스</a></li>
+          <li><span>대표번호</span>1668-3651</li>
+          <li><span>메일</span>support@backpac.kr</li>
+          <li><span>제휴문의</span>biz@backpac.kr</li>
+        </ul>
+        <p class="p6 p7">아이디어스 이용 중 궁금하신 점이 있으신가요?</p>
+        <p class="p6">메일 또는 플러스친구 `아이디어스`로 연락해주세요.</p>
+        <p class="p6">최선을 다해 도와드리겠습니다.</p>
+      </div>
+      <div class="f-grid-4">
+        <strong>Follow Us</strong>
+        <div>
+          <a href="https://www.facebook.com/" class="facebook"></a> 
+          <a href="https://www.instagram.com/" class="instagram"></a> 
+          <a href="https://blog.naver.com/" class="naverblog"></a> 
+          <a href="https://post.naver.com/" class="naverpost"></a> 
+          <a href="https://www.twitter.com/" class="twitter"></a> 
+        </div>  
+        <div>
+          <div class="image1"></div>
+          <div class="image2"></div>
+        </div>  
+      </div>
+      <div class="f-grid-5">
+        <div class="image"></div>
+        <p>[인증범위] 온라인 마켓 플랫폼 운영(아이디어스)</p>
+        <p>[유효기간] 2020.11.18 - 2023.11.17</p>
+      </div>
+      <div class="f-grid-6">
+        <div class="image"></div>    
+        <p>고객님은 현금 등으로 결제시 당사에서 가입한</p>
+        <p>구매안전서비스를 이용하실 수 있습니다.</p>
+        <button>가입사실확인</button>
+      </div>
+      <div class="f-grid-7"></div>
+    </div>
+    <div class="bottom-fixed"> img1 / img2 / img3 / img4 / img5</div>
+  </footer>
+  <a class="move-top" href="#" ></a>
+
+</body>
+</html>

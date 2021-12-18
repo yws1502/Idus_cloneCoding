@@ -1,0 +1,50 @@
+@import "../common";
+@import "module_my-info";
+
+.my-info {
+  display: flex;
+  width: 1056px;
+  margin: 0 auto;
+  padding-top: 36px;
+  .my-info-aside {
+    width: 180px;
+  }
+  .my-info__main {
+    width: 852px;
+    margin-left: 24px;
+    .purchased-item {
+      height: 216px;
+    }
+    .product-list__showMoreBtn {
+      width: 235px;
+      font-size: 13px;
+      padding: 0 24px;
+      line-height: 46px;
+    }
+    .cont-messageAndNotice {
+      display: flex;
+      justify-content: space-between;
+      .cont-message {
+        width: 48%;
+        .message-box {
+          height: 430px;
+          overflow-y: scroll;
+        }
+      }
+      .cont-notice {
+        width: 48%;
+        .notice-box {
+          height: 430px;
+          overflow-y: scroll;
+        }
+      }
+    }
+    .cont-item-selected {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 200px;
+      }
+    }
+  }
+}
