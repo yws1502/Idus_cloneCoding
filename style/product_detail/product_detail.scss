@@ -195,7 +195,7 @@
       .btn {
         font-size: $size-16;
         border-radius: 2px;
-        padding: 13px;
+        padding: 13 0px;
         border: 1px solid #d9d9d9;
         height: 48px;
         box-shadow: 0 1px 3px 0 #dcdcdc4d;
@@ -315,6 +315,92 @@
           color: $light-gray-font;
         }
       }
+    }
+  }
+  .vip-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 560px;
+    padding: 24px;
+    background: #f8f8f8;
+    margin-bottom: 24px; 
+    border-radius: 4px;   
+    text-align: center;
+    p {
+      float: left;
+      font-size: $size-14;
+    }
+    .vip-boxEm {
+      font-weight: bold;
+    }
+    .vib-clubBtn {
+      display: inline-block;
+      padding: 8px 29px;
+      border-radius: 4px;
+      border: 1px solid $orange-font;
+      background-color: $bg-white;
+      color: $orange-font;
+      text-align: center;
+      margin-right: 15px;
+    }
+  }
+  .delivery-graph-box {
+    width: 560px;
+    padding: 24px;
+    margin-bottom: 24px;
+    .delivery-graph-tit {
+      display: block;
+      margin-bottom: 24px;
+      font-size: $size-16;
+      text-align: center;
+      em {
+        font-weight: bold;
+      }
+    }
+    .delivery-description {
+      margin: 8px 0;
+      position: relative;
+      .txt {
+        float: left;
+      }
+      .txt-highlight.txt,
+      .txt-detail.highlight {
+        color: $orange-font;
+      }
+      .delivery-graph {
+        position: absolute;
+        width: 417px;
+        height: 6px;
+        margin: 0 0 0 58px;
+        top: 4px;
+        border-radius: 3px;
+        background-color: $gray-bgc;
+        .delivery-value {
+          float: left;
+          height: 6px;
+          background-color: #acacac;
+          border-radius: 3px;
+        }
+        .delivery-value.highlight {
+          background-color: $orange-font;
+        }
+      }
+      
+      .txt-detail {
+        float: right;
+      }
+    }
+    .delivery-description::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .delivery-total {
+      display: block;
+      margin-top: 12px;
+      text-align: center;
+      color: $light-gray-font;
     }
   }
 }
