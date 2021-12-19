@@ -292,7 +292,7 @@ button {
 }
 
 .wrap-serviceNav .class-tip {
-  font-size: 1px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 19px;
   color: #fff;
@@ -583,7 +583,7 @@ button {
 
 .wrap-profile {
   position: relative;
-  bottom: -26px;
+  bottom: -28px;
   float: right;
 }
 

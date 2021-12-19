@@ -228,7 +228,7 @@ button {
     color: $orange-font;
   }
   .class-tip {
-    @include font-module(1px, $height:19px, $color:#fff);
+    @include font-module(10px, $height:19px, $color:#fff);
     background-image: linear-gradient(to bottom, #a527e7, #8c36ed 100%);
     position: absolute;
     left: 150px;
@@ -446,7 +446,7 @@ button {
 // 내정보, 장바구니
 .wrap-profile {
   position: relative;
-  bottom: -26px;
+  bottom: -28px;
   float: right;
   & > * {
     @include font-module(10px, $color:$gray-font);
