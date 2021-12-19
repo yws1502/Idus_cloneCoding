@@ -121,7 +121,7 @@ body {
   width: 24px;
   height: 24px;
   border: none;
-  background: url("../../images/image.png") -635px -631px no-repeat;
+  background: url("../../images/image.png") -631px -631px no-repeat;
   content: "";
   vertical-align: -8px;
   margin-right: 5px;
@@ -154,7 +154,7 @@ body {
 }
 
 .sns-login .sns-wrap .naver {
-  background-color: #30C612;
+  background-color: #63c33d;
 }
 
 .sns-login .sns-wrap .facebook {
@@ -179,7 +179,7 @@ body {
   width: 32px;
   height: 32px;
   border: none;
-  background: url("../../images/image.png") -201px -565px no-repeat;
+  background: url("../../images/image.png") -198px -567px no-repeat;
 }
 
 .sns-login .sns-wrap .link-facebook {
@@ -187,7 +187,7 @@ body {
   width: 32px;
   height: 32px;
   border: none;
-  background: url("../../images/image.png") -538px -626px no-repeat;
+  background: url("../../images/image.png") -535px -628px no-repeat;
 }
 
 .sns-login .sns-wrap .link-twitter {
@@ -195,7 +195,7 @@ body {
   width: 32px;
   height: 32px;
   border: none;
-  background: url("../../images/image.png") -688px -94px no-repeat;
+  background: url("../../images/image.png") -684px -96px no-repeat;
 }
 
 .sns-login .sns-wrap .link-apple {
@@ -203,7 +203,7 @@ body {
   width: 32px;
   height: 32px;
   border: none;
-  background: url("../../images/image.png") -564px -490px no-repeat;
+  background: url("../../images/image.png") -560px -491px no-repeat;
 }
 
 .login {

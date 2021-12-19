@@ -81,7 +81,7 @@ body{
     background-color: #FEE500;
     margin-bottom: 13px;
     &::before {
-      @include image-loading(24px, 24px, -635px, -631px);
+      @include image-loading(24px, 24px, -631px, -631px);
       content: "";
       vertical-align: -8px;
       margin-right: 5px; 
@@ -104,7 +104,7 @@ body{
       border-radius: 100%;
       margin: 0 5px;
     }
-    .naver {background-color: #30C612;}
+    .naver {background-color: #63c33d;}
     .facebook {background-color: #3C5B96;}
     .twitter {background-color: #51ACF1;}
     .apple {border: 1px solid black;}
@@ -112,10 +112,10 @@ body{
       text-indent: -9999px;
       border-radius: 100%; 
     }
-    .link-naver {@include image-loading(32px, 32px, -201px, -565px);}
-    .link-facebook {@include image-loading(32px, 32px, -538px, -626px);}
-    .link-twitter {@include image-loading(32px, 32px, -688px, -94px);}
-    .link-apple {@include image-loading(32px, 32px, -564px, -490px);}
+    .link-naver {@include image-loading(32px, 32px, -198px, -567px);}
+    .link-facebook {@include image-loading(32px, 32px, -535px, -628px);}
+    .link-twitter {@include image-loading(32px, 32px, -684px, -96px);}
+    .link-apple {@include image-loading(32px, 32px, -560px, -491px);}
   }
 }
 

@@ -1,0 +1,147 @@
+@import "../common/font";
+@import "../common/variables";
+@import "../common/mixin";
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body{
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+.container {
+  width: 384px;
+  margin: 0 auto;
+}
+
+.join-coupon {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .company-title {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+  .coupon-image {
+    width: 380px;
+  }
+}
+
+.container-join {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $gray-font;
+    z-index: -10;
+  }
+  .join-title {
+    @include font-module(14px, $color:$gray-font);
+    width: 170px;
+    background-color: #fff;
+    line-height: 2px;
+    margin: 0 auto 40px;
+  }
+  // 진행바
+  .join-process {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .one::after {
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 80px;
+      height: 1px;
+      background-color: $light-gray-font;
+      z-index: -10;
+    }
+    .one,
+    .two {
+      @include border-module(1px, $light-gray-font, 100%);
+      @include font-module(15px, $color:$light-gray-font);
+      background-color: #fff;
+      display: block;
+      line-height: 32px;
+      width: 30px;
+      height: 30px;
+      margin: 0 30px;
+      &.on {
+        background-color: $orange-font;
+        border-color: $orange-font;
+        color: #fff;
+      }
+    }
+  }
+  strong {
+    @include font-module(16px, 600);
+    display: block;
+    margin-bottom: 25px;
+  }
+  [class$="join"] {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 7px 0;
+    margin-bottom: 10px;
+    color: #fff;
+    &::before {
+      content: "";
+      vertical-align: -8px;
+      margin-right: 6px; 
+    }
+  }
+  .kakao-join {
+    @include border-module(1px, #FEE500, 2px);
+    background-color: #FEE500;
+    color: black;
+    &::before {@include image-loading(24px, 24px, -631px, -631px);}
+  }
+  .other-join {
+    @include border-module(1px, $line-division, 2px);
+    color: black;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    &::before {display: none}
+  }
+  .other-wrap {
+    display: none;
+  }
+  .naver-join {
+    @include border-module(1px, #63c33d, 2px);
+    background-color: #63c33d;
+    &::before {@include image-loading(24px, 24px, -201px, -570px);}
+  }
+  .facebook-join {
+    @include border-module(1px, #3C5B96, 2px);
+    background-color: #3C5B96;
+    &::before {@include image-loading(24px, 24px, -538px, -631px);}
+  }
+  .twitter-join {
+    @include border-module(1px, #51ACF1, 2px);
+    background-color: #51ACF1;
+    &::before {@include image-loading(24px, 24px, -688px, -98px);}
+  }
+  .email-join {
+    @include border-module(1px, $orange-font, 2px);
+    color: $orange-font;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    &::before {display: none}
+  }
+  .go-login {
+    @include font-module(14px, $color:$gray-font);
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
