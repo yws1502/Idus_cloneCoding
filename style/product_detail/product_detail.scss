@@ -1,13 +1,12 @@
 @import "../common";
 
-.content,
-.product-detail {
+
+
+.content {
+  position: relative;
   width: 1056px;
   margin: 0 auto;
   font-size: $size-12;
-}
-.content {
-  position: relative;
   .content-img {
     width: 560px;
     padding: 36px 0;
@@ -401,6 +400,124 @@
       margin-top: 12px;
       text-align: center;
       color: $light-gray-font;
+    }
+  }
+}
+
+
+.product-detail {
+  width: 1056px;
+  margin: 0 auto;
+  .product-detail-imgs {
+    width: 560px;
+    .detail-menu {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      z-index: 10;
+      background: #fff;
+      .menu {
+        width: 100%;
+        padding: 18px 0 17px;
+        flex-grow: 1;
+        text-align: center;
+        color: $gray-font;
+      }
+      .menu.active {
+          position: relative;
+          color: $orange-font;
+      }
+      .menu.active::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        bottom: -1px;
+        left: 0;
+        background-color: $orange-font;
+      }
+    }
+    .product-subtit {
+      display: block;
+      padding: 180px 0;
+      font-size: $size-16;
+      color: $dark-gray-font;
+      font-weight: bold;
+      text-align: center;
+    }
+    .description-imgFirst {
+      margin-bottom: 36px;
+    }
+    .product-detail-quoteItem {
+      padding: 36px 0;
+      position: relative;
+      .product-detail-txt.bold {
+        padding: 16px 0;
+        font-size: $size-16;
+        font-weight: bold;
+        color: $dark-gray-font;
+        text-align: center;
+      }
+      .quote-right,
+      .quote-left {
+        position: absolute;
+        color: $line-division;
+        svg {
+          max-height: 24px;
+          width: auto;
+          path {
+            fill: currentcolor;
+          }
+        }
+      }
+      .quote-left {
+        top: 10px;
+        left: 272px;
+      }
+      .quote-right {
+        bottom: 4px;
+        left: 270px;
+      }
+    }
+    .line,
+    .sm-line {
+      height: 1px;
+      margin: 60px auto 23px;
+      background-color: $dark-gray-font;
+    }
+    .line {
+      width: 60px;
+    }
+    .description-imgCar {
+      margin: 126px 0 216px;
+    }
+    .product-detail-txt {
+      text-align: center;
+      font-size: $size-14;
+      padding: 20px;
+    }
+    .product-detail-txt.incense {
+      line-height: 2.5;
+    }
+    .product-detail-txt.details {
+      padding-bottom: 120px;
+    }
+    .description-img.car-detail {
+      margin-top: 126px;
+    }
+    .sm-line {
+      width: 5px;
+    }
+    .more-btn {
+      width: 560px;
+      max-width: 100%;
+      margin-bottom: 18px;
+      padding: 12px 0;
+      border: 1px solid #505fcd;
+      color: #505fcd;
+      font-size: $size-16;
     }
   }
 }
