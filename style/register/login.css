@@ -317,4 +317,13 @@ form .login-btn {
   border-radius: 2px;
   padding: 13px 0;
 }
+
+@media screen and (max-width: 718px) {
+  .container {
+    width: 95%;
+  }
+  .join-coupon .coupon-image {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=login.css.map */

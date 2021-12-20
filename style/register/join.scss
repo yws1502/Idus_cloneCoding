@@ -144,3 +144,14 @@ body{
     }
   }
 }
+
+@media screen and (max-width: 718px) {
+  .container {
+    width: 95%;
+  }
+  .join-coupon {
+    .coupon-image {
+      width: 100%;
+    }
+  }
+}

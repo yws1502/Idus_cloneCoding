@@ -243,4 +243,13 @@ body {
   color: inherit;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 718px) {
+  .container {
+    width: 95%;
+  }
+  .join-coupon .coupon-image {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=join.css.map */
