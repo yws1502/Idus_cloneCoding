@@ -1,5 +1,5 @@
-const contentInfo = document.querySelector('#content-fixed');
 const content = document.querySelector('.content');
+const contentInfo = content.querySelector('#content-fixed');
 const contentInfoHeight = content.getBoundingClientRect().top * 2;
 
 document.addEventListener('scroll', () => {
