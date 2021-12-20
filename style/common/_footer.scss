@@ -118,16 +118,7 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
 }
 
 .move-top{
-  position: fixed;
-  bottom: 62px;
-  right: calc(45% - 558px);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: url('../../images/icons/go-to-top-image.png') no-repeat center;
-  background-size: 36px 36px;
-  border: 1px solid #d9d9d9;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  @include move-btn(62px,'../../images/icons/go-to-top-image.png',36px, 36px);
 }
 
 .bottom-fixed{
