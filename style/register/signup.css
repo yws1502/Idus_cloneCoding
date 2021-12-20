@@ -25,7 +25,6 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-align: center;
 }
 
 body {
@@ -34,7 +33,7 @@ body {
 
 .container {
   width: 384px;
-  margin: 50px auto;
+  margin: 50px auto 200px;
 }
 
 .join-coupon {
@@ -65,18 +64,18 @@ body {
   z-index: -10;
 }
 
-.container-join .join-title {
+.join-title {
   font-size: 14px;
   font-weight: 500;
-  line-height: 16px;
-  color: #666666;
-  width: 170px;
-  background-color: #fff;
   line-height: 2px;
+  color: #666666;
+  background-color: #fff;
+  text-align: center;
+  width: 170px;
   margin: 0 auto 40px;
 }
 
-.container-join .join-process {
+.join-process {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,7 +86,7 @@ body {
   margin-bottom: 20px;
 }
 
-.container-join .join-process .one::after {
+.join-process .one::after {
   position: absolute;
   top: calc(50% - 1px);
   left: 50%;
@@ -101,8 +100,8 @@ body {
   z-index: -10;
 }
 
-.container-join .join-process .one,
-.container-join .join-process .two {
+.join-process .one,
+.join-process .two {
   border: 1px solid #999;
   border-radius: 100%;
   font-size: 15px;
@@ -111,136 +110,181 @@ body {
   color: #999;
   background-color: #fff;
   display: block;
+  text-align: center;
   line-height: 32px;
   width: 30px;
   height: 30px;
   margin: 0 30px;
 }
 
-.container-join .join-process .one.on,
-.container-join .join-process .two.on {
+.join-process .one.on,
+.join-process .two.on {
   background-color: #FF7B30;
   border-color: #FF7B30;
   color: #fff;
 }
 
-.container-join strong {
+strong {
   font-size: 16px;
   font-weight: 600;
   line-height: 16px;
-  color: black;
+  color: #000;
   display: block;
-  margin-bottom: 25px;
-}
-
-.container-join [class$="join"] {
-  display: block;
-  width: 100%;
-  font-size: 14px;
-  padding: 7px 0;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.container-join [class$="join"]::before {
-  content: "";
-  vertical-align: -8px;
-  margin-right: 6px;
-}
-
-.container-join .kakao-join {
-  border: 1px solid #FEE500;
-  border-radius: 2px;
-  background-color: #FEE500;
-  color: black;
-}
-
-.container-join .kakao-join::before {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: url("../../images/image.png") -631px -631px no-repeat;
-}
-
-.container-join .other-join {
-  border: 1px solid #D9D9D9;
-  border-radius: 2px;
-  color: black;
-  padding: 10px 0;
+  text-align: center;
   margin-bottom: 30px;
 }
 
-.container-join .other-join::before {
-  display: none;
+form {
+  margin: 30px 0;
 }
 
-.container-join .other-wrap {
-  display: none;
+.text-wrap {
+  margin-bottom: 25px;
+  font-size: 14px;
 }
 
-.container-join .naver-join {
-  border: 1px solid #63c33d;
-  border-radius: 2px;
-  background-color: #63c33d;
+.text-wrap label {
+  display: block;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.container-join .naver-join::before {
+.text-wrap label[class="required"]::before {
+  content: "*";
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: url("../../images/image.png") -201px -570px no-repeat;
+  width: 11px;
+  height: 11px;
+  color: #FF7B30;
 }
 
-.container-join .facebook-join {
-  border: 1px solid #3C5B96;
+.text-wrap input {
+  border: 1px solid #999;
   border-radius: 2px;
-  background-color: #3C5B96;
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 8px;
 }
 
-.container-join .facebook-join::before {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: url("../../images/image.png") -538px -631px no-repeat;
-}
-
-.container-join .twitter-join {
-  border: 1px solid #51ACF1;
+.text-wrap input.error {
+  border: 1px solid red;
   border-radius: 2px;
-  background-color: #51ACF1;
 }
 
-.container-join .twitter-join::before {
+.text-wrap #phone {
+  width: 70%;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background: url("../../images/image.png") -688px -98px no-repeat;
 }
 
-.container-join .email-join {
+.text-wrap .text-btn-wrap {
+  padding: 8px 0;
+}
+
+.text-wrap .text-btn-wrap input {
+  margin: 0;
+}
+
+.text-wrap .text-btn-wrap .phoneCheck-btn {
   border: 1px solid #FF7B30;
   border-radius: 2px;
-  color: #FF7B30;
-  padding: 10px 0;
-}
-
-.container-join .email-join::before {
-  display: none;
-}
-
-.container-join .go-login {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  color: #666666;
+  color: #fff;
+  background-color: #FF7B30;
+  width: 29%;
+  height: 42px;
 }
 
-.container-join .go-login a {
-  color: inherit;
+.check-wrap {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.check-wrap li {
+  margin: 5px 0;
+}
+
+.check-wrap li:first-child::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin: 10px 0 0;
+}
+
+.check-wrap li:last-child::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 10px;
+}
+
+.check-wrap li input {
+  margin-right: 8px;
+}
+
+.check-wrap li input::before {
+  border: 1px solid #999;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+}
+
+.check-wrap li input:checked::before {
+  background-image: url(../../images/icons/check_white_icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FF7B30;
+  border-color: #FF7B30;
+}
+
+.check-wrap li .agree-link {
+  cursor: pointer;
   text-decoration: underline;
 }
-/*# sourceMappingURL=join.css.map */
+
+.check-wrap li .adText {
+  color: #999;
+}
+
+.submit-btn {
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 16px;
+  color: #fff;
+  background-color: #FF7B30;
+  width: 100%;
+  height: 48px;
+}
+
+.form-error {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: red;
+  display: none;
+  text-align: left;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 718px) {
+  .container {
+    width: 90%;
+  }
+  .container #phone {
+    width: 80%;
+    display: inline-block;
+  }
+  .container .text-btn-wrap .phoneCheck-btn {
+    width: 19%;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

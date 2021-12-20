@@ -13,7 +13,7 @@ body{
 
 .container {
   width: 384px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .join-coupon {
@@ -133,7 +133,6 @@ body{
   .email-join {
     @include border-module(1px, $orange-font, 2px);
     color: $orange-font;
-    margin-bottom: 30px;
     padding: 10px 0;
     &::before {display: none}
   }
