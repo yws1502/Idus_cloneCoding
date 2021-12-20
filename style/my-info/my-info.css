@@ -584,7 +584,7 @@ button {
 
 .wrap-profile {
   position: relative;
-  bottom: -26px;
+  bottom: -28px;
   float: right;
 }
 
@@ -739,83 +739,6 @@ button {
 
 .category-dropdown .category li + li {
   margin-top: 10px;
-}
-
-.container-banner {
-  overflow: hidden;
-  position: relative;
-}
-
-.banner-wrap {
-  width: 100000px;
-}
-
-.banner-wrap .showroom-banner {
-  display: none;
-  position: relative;
-  float: left;
-  width: 100vw;
-  height: 480px;
-  background-color: #b39272;
-}
-
-.banner-wrap .showroom-banner .link-banner {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.banner-wrap .showroom-banner .link-banner .banner-img {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 1920px;
-  height: 100%;
-}
-
-.banner-wrap .showroom-banner.list-item {
-  display: block;
-}
-
-.ui-control .btn-slice {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 1px;
-  text-indent: -9999px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 25px;
-  height: 25px;
-}
-
-.ui-control .btn-slice.prev {
-  background-image: url(../../ges/icons/prev_icon.svg);
-  right: 50%;
-  margin-right: 530px;
-}
-
-.ui-control .btn-slice.next {
-  background-image: url(../../ges/icons/next_icon.svg);
-  left: 50%;
-  margin-left: 530px;
-}
-
-.ui-control .slice-numbers {
-  position: absolute;
-  bottom: 20px;
-  right: 50%;
-  background-color: #00000080;
-  color: #ccc;
-  border-radius: 15px;
-  margin-right: -500px;
-  padding: 2px 11px;
-}
-
-.ui-control .slice-numbers .curr_num {
-  color: #fff;
 }
 
 .f-cont {

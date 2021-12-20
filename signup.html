@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/register/signup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 쿠폰 광고 -->
+    <h1 class="text-hide">아이디어스 회원가입 페이지</h1>
+    <section class="join-coupon">
+      <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+    </section>
+    <!-- //상단 쿠폰 광고 -->
+    <!-- 회원가입 폼 -->
+    <section class="container-join">
+      <h2 class="join-title">정말 간단한 회원가입하기</h2>
+      <div class="join-process">
+        <span class="one">1</span>
+        <span class="two on">2</span>
+      </div>
+      <strong>가입 정보 입력하기</strong>
+      <form action="#none" method="post">
+        <ul class="text-wrap">
+          <!-- 아이디 -->
+          <li>
+            <label for="email" class="required">이메일</label>
+            <input type="text" id="email" placeholder="이메일을 입력해주세요" required>
+            <p id="email-error" class="form-error">필수 항목입니다.</p>
+          </li>
+          <!-- 비밀번호 -->
+          <li>
+            <label for="pwd" class="required">비밀번호</label>
+            <input type="password" id="pwd" placeholder="비밀번호 (영문+숫자+특수문자 8자 이상)" required>
+            <p class="form-error">필수 항목입니다.</p>
+            <input type="password" id="pwdCheck" placeholder="비밀번호 확인" required>
+            <p id="pwd-error" class="form-error">필수 항목입니다.</p>
+          </li>
+          <!-- 이름 -->
+          <li>
+            <label for="userName" class="required">이름</label>
+            <input type="text" id="userName" placeholder="이름을 입력해주세요" required>
+            <p id="userName-error" class="form-error">필수 항목입니다.</p>
+          </li>
+          <!-- 전화번호 -->
+          <li>
+            <label for="phone" class="required">전화번호</label>
+            <div class="text-btn-wrap">
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678" required>
+              <button class="phoneCheck-btn">인증요청</button>
+            </div>
+            <p id="phone-error" class="form-error">필수 항목입니다.</p>
+          </li>
+          <!-- 추천인코드 -->
+          <li>
+            <label for="recommandCode">추천인코드</label>
+            <input type="text" id="recommandCode" placeholder="선택사항">
+          </li>
+        </ul>
+        <!-- total check agree -->
+        <ul class="check-wrap">
+          <li>
+            <input type="checkbox" id="totalAgree">
+            <label for="totalAgree" class="check-text">모두 동의합니다</label>
+          </li>
+          <!-- age check -->
+          <li>
+            <input type="checkbox" id="ageAgree" required>
+            <label for="ageAgree" class="check-text">만 14세 이상입니다.</label>
+          <li/>
+          <!-- use check -->
+          <li>
+            <input type="checkbox" id="useAgree" required>
+            <a href="#none"><label for="useAgree" class="check-text agree-link">이용약관 필수 동의</label></a>
+          </li>
+          <!-- personal info check -->
+          <li>
+            <input type="checkbox" id="personalInfoAgree" required>
+            <a href="#none"><label for="personalInfoAgree" class="check-text agree-link">개인정보 수집 및 이용 동의</label></a>
+          <li/>
+          <!-- advertising check -->
+          <li>
+            <input type="checkbox" id="adAgree">
+            <label for="adAgree" class="check-text">할인쿠폰/이벤트/감동적인 뉴스레터 선택 동의 (선택)</label>
+            <p class="adText">SMS, 이메일을 통해 쿠폰 및 이벤트 정보를 받아보실 수 있습니다.</p>
+            <p id="age-error" class="form-error">만 14세 미만은 서비스를 이용할 수 없습니다.</p>
+            <p id="personalInfo-error" class="form-error">이용약관과 개인정보 수집 및 이용 동의는 필수 입니다.</p>
+          </li>
+        </ul>
+        <button type="submit" class="submit-btn">회원가입하기</button>
+      </form>
+    </section>
+    <!-- //회원가입 폼 -->
+  </div>
+</body>
+</html>

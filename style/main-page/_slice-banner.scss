@@ -1,0 +1,71 @@
+// 슬라이드 배너
+.container-banner {
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-wrap {
+  width: 100000px;
+
+  .showroom-banner {
+    display: none;
+    position: relative;
+    float: left;
+    width: 100vw;
+    height: 480px;
+    background-color: #b39272;
+    .link-banner {
+      display: block;
+      height: 100%;
+      width: 100%;
+      .banner-img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1920px;
+        height: 100%;
+      }
+    }
+  }
+  .showroom-banner.list-item {
+    display: block;
+  }
+}
+
+// 슬라이드 배너 컨드롤러
+.ui-control {
+  .btn-slice {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    &.prev {
+      background-image: url(../../images/icons/prev_icon.svg);
+      right: 50%;
+      margin-right: 530px;
+    }
+    &.next {
+      background-image: url(../../images/icons/next_icon.svg);
+      left: 50%;
+      margin-left: 530px;
+    }
+  }
+  .slice-numbers {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    background-color: #00000080;
+    color: #ccc;
+    border-radius: 15px;
+    margin-right: -500px;
+    padding: 2px 11px;
+    .curr_num {
+      color: #fff;
+    }
+  }
+}

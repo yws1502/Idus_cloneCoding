@@ -1,0 +1,329 @@
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"), url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+.container {
+  width: 384px;
+  margin: 0 auto;
+}
+
+.join-coupon {
+  margin-top: 20px;
+  margin-bottom: 37px;
+}
+
+.join-coupon .company-title {
+  width: 100px;
+  margin: 0 auto 10px;
+}
+
+.join-coupon .login-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.join-coupon .login-text strong {
+  position: relative;
+  font-weight: bold;
+  z-index: 30;
+}
+
+.join-coupon .login-text strong::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: -3px;
+  width: 48px;
+  height: 15px;
+  background-color: #FBD3BC;
+  z-index: -10;
+}
+
+.join-coupon .coupon-image {
+  width: 380px;
+}
+
+[class$="title"] {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #999;
+  text-align: center;
+  width: 125px;
+  background-color: #fff;
+  z-index: 100;
+  margin: 0 auto 10px;
+}
+
+.sns-login {
+  position: relative;
+}
+
+.sns-login::before {
+  position: absolute;
+  top: 6px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #D9D9D9;
+  z-index: -10;
+}
+
+.sns-login [class$="join"] {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.sns-login .kakao-join {
+  border: 1px solid #FEE500;
+  border-radius: 2px;
+  background-color: #FEE500;
+  margin-bottom: 13px;
+}
+
+.sns-login .kakao-join::before {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url("../../images/image.png") -631px -631px no-repeat;
+  content: "";
+  vertical-align: -8px;
+  margin-right: 5px;
+}
+
+.sns-login .email-join {
+  border: 1px solid #FF7B30;
+  border-radius: 2px;
+  color: #FF7B30;
+  margin-bottom: 20px;
+}
+
+.sns-login .sns-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 35px;
+}
+
+.sns-login .sns-wrap li {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+
+.sns-login .sns-wrap .naver {
+  background-color: #63c33d;
+}
+
+.sns-login .sns-wrap .facebook {
+  background-color: #3C5B96;
+}
+
+.sns-login .sns-wrap .twitter {
+  background-color: #51ACF1;
+}
+
+.sns-login .sns-wrap .apple {
+  border: 1px solid black;
+}
+
+.sns-login .sns-wrap [class^="link"] {
+  text-indent: -9999px;
+  border-radius: 100%;
+}
+
+.sns-login .sns-wrap .link-naver {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url("../../images/image.png") -198px -567px no-repeat;
+}
+
+.sns-login .sns-wrap .link-facebook {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url("../../images/image.png") -535px -628px no-repeat;
+}
+
+.sns-login .sns-wrap .link-twitter {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url("../../images/image.png") -684px -96px no-repeat;
+}
+
+.sns-login .sns-wrap .link-apple {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: url("../../images/image.png") -560px -491px no-repeat;
+}
+
+.login {
+  position: relative;
+}
+
+.login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  z-index: -10;
+  height: 1px;
+  width: 100%;
+  background-color: #D9D9D9;
+}
+
+.login .login-title {
+  margin-bottom: 20px;
+}
+
+form {
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+form [id^="user"] {
+  border: 1px solid #999;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+form [id^="user"].error {
+  border: 1px solid red;
+}
+
+form [id^="user"].error + .error-msg {
+  display: block;
+}
+
+form .error-msg {
+  display: none;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+form .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form .wrapper #keep-email::before {
+  border: 1px solid #999;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+}
+
+form .wrapper #keep-email:checked::before {
+  background-image: url(../../images/icons/check_white_icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FF7B30;
+  border-color: #FF7B30;
+}
+
+form .wrapper .keep-text {
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+form .wrapper .find-wrap {
+  font-size: 11px;
+  margin-bottom: 13px;
+}
+
+form .wrapper .find-wrap > * {
+  vertical-align: -4px;
+}
+
+form .wrapper .find-wrap .find-id::after {
+  content: "/";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  text-indent: 4px;
+}
+
+form .login-btn {
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 16px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  background-color: #FF7B30;
+  border-radius: 2px;
+  padding: 13px 0;
+}
+
+@media screen and (max-width: 718px) {
+  .container {
+    width: 95%;
+  }
+  .join-coupon .coupon-image {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=login.css.map */

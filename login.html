@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이디어스 | 로그인</title>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/register/login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 쿠폰 광고 -->
+    <h1 class="text-hide">아이디어스 로그인 페이지</h1>
+    <section class="join-coupon">
+      <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+      <p class="login-text"><strong>로그인</strong> 이 필요한 서비스입니다.</p>
+      <img src="https://image.idus.com/static/signup/web_benefit_signup.png" alt="회원가입 쿠폰 총 3만원, 지금 회원가입하시면 총 3만원 쿠폰을 즉시 지급해 드려요!" class="coupon-image">
+    </section>
+    <!-- //상단 쿠폰 광고 -->
+    <!-- sns로 로그인 or 회원가입 -->
+    <section class="sns-login">
+      <h2 class="register-title">간편 로그인/회원가입</h2>
+      <a href="#none" class="kakao-join">카카오로 3초만에 시작하기</a>
+      <a href="./join.html" class="email-join">이메일로 가입하기</a>
+      <ul class="sns-wrap">
+        <li class="naver"><a href="#none" class="link-naver">네이버</a></li>
+        <li class="facebook"><a href="#none" class="link-facebook">페이스북</a></li>
+        <li class="twitter"><a href="#none" class="link-twitter">트위터</a></li>
+        <li class="apple"><a href="#none" class="link-apple">애플</a></li>
+      </ul>
+    </section>
+    <!-- //sns로 로그인 or 회원가입 -->
+    <!-- 이메일로 로그인 -->
+    <section class="login">
+      <h2 class="login-title">이메일 로그인</h2>
+      <form action="">
+        <!-- 이메일 -->
+        <label for="userId" class="text-hide">이메일</label>
+        <input type="text" id="userId" placeholder="이메일" required>
+        <p class="error-msg">필수 항목입니다.</p>
+        <!-- 비밀번호 -->
+        <label for="userPwd" class="text-hide">비밀번호</label>
+        <input type="password" id="userPwd" placeholder="비밀번호" required>
+        <p class="error-msg">필수 항목입니다.</p>
+        <div class="wrapper">
+          <!-- 이메일 기억 -->
+          <div class="keep-wrap">
+            <input type="checkbox" id="keep-email">
+            <label for="keep-email" class="keep-text">이메일 기억하기</label>
+          </div>
+          <!-- 아이디 / 비밀번호 찾기 -->
+          <div class="find-wrap">
+            <a href="#none" class="find-id">아이디</a>
+            <a href="#none" class="find-pwd">비밀번호 찾기</a>
+          </div>
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+    </section>
+    <!-- //이메일로 로그인 -->
+  </div>
+</body>
+</html>
