@@ -17,7 +17,7 @@ button {
 }
 
 [class^="inner"] {
-  max-width: 1000px;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
 }
@@ -27,6 +27,11 @@ button {
   // 아래에서 hover 적용
 }
 
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 
 // hover시 보여지는 친구
@@ -214,7 +219,7 @@ button {
   padding: 0 27px;
   .company-logo {
     width: 73px;
-    vertical-align: baseline;
+    vertical-align: -3px;
   }
 }
 
@@ -302,18 +307,49 @@ button {
 }
 
 // 제품 순위 리스트
-.ranking-product {
-  display: inline-block;
-  .ranking-item {
-    .link-item{
-      @include font-module(13px, 550);
+.ui-dropdown.move-list {
+  position: relative;
+  height: 23px;
+  width: 200px;
+  overflow: hidden;
+  vertical-align: -5px;
+  &:hover {
+    overflow: visible;
+    .ranking-product {
+      animation: none;
+    }
+  }
+  .ranking-product {
+    position: absolute;
+    top: 23px;
+    display: inline-block;
+    animation: moveTop 20s infinite;
+    .ranking-item {
       em {
+        @include font-module(13px, 700);
+        vertical-align: 3px;
+      }
+      .link-item{
         @include font-module(13px, $color: $gray-font);
         margin-left: 10px;
       }
     }
   }
 }
+@keyframes moveTop {
+    0% {transform: translateY(0);}
+    10% {transform: translateY(-10%);}
+    20% {transform: translateY(-20%);}
+    30% {transform: translateY(-30%);}
+    40% {transform: translateY(-40%);}
+    50% {transform: translateY(-50%);}
+    60% {transform: translateY(-60%);}
+    70% {transform: translateY(-70%);}
+    80% {transform: translateY(-80%);}
+    90% {transform: translateY(-90%);} 
+    100% {transform: translateY(-100%);}
+}
+
 
 // ranking hover show
 .ui-dropdown:hover .hide-ranking {
@@ -323,7 +359,7 @@ button {
 .hide-ranking {
   @include border-module(1px, $line-division, 5px);
   display: none;
-  top: 18px;
+  top: -8px;
   padding: 15px 15px;
   width: 300px;
   &::before,
@@ -494,24 +530,29 @@ button {
   width: 100vw;
 }
 .gnb {
-  .nav-wrap {
+  nav {
     position: relative;
     z-index: 30;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     box-shadow: 0 4px 2px -1px rgba(0,0,0,0.2);
-    .btn-gnb {
-      @include font-module(13px, $color:$gray-font);
-      display: inline-block;
-      padding: 10px 8px;
-      &:hover {
-        color: $orange-font;
+    .nav-wrap {
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      .btn-gnb {
+        @include font-module(13px, $color:$gray-font);
+        display: inline-block;
+        padding: 10px 8px;
+        &:hover {
+          color: $orange-font;
+        }
       }
-    }
-    .on .btn-gnb {
-      display: inline-block;
-      color: $orange-font;
-      border-bottom: 2px solid $orange-font;
+      .on .btn-gnb {
+        display: inline-block;
+        color: $orange-font;
+        border-bottom: 2px solid $orange-font;
+      }
     }
   }
 }
