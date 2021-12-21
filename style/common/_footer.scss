@@ -117,9 +117,6 @@ $column-sum: nth($column,1) + nth($column,2) + nth($column,3) + nth($column,4);
     border: rgba(0, 0, 0, 0.1) 1px solid;}
 }
 
-.move-top{
-  @include move-btn(62px,'../../images/icons/go-to-top-image.png',36px, 36px);
-}
 
 .bottom-fixed{
   display: none;

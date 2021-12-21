@@ -908,7 +908,7 @@ button {
   display: grid;
   width: 1000px;
   margin: 30px auto 50px;
-      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
+      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
   -ms-grid-columns: 150px 330px 300px 220px;
       grid-template-columns: 150px 330px 300px 220px;
   -ms-grid-rows: 200px 120px;
@@ -1152,20 +1152,6 @@ button {
 .f-grid div {
   padding: 10px;
   border: rgba(0, 0, 0, 0.1) 1px solid;
-}
-
-.move-top {
-  position: fixed;
-  bottom: 62px;
-  right: calc(45% - 558px);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: url("../../images/icons/go-to-top-image.png") no-repeat center;
-  background-size: 36px 36px;
-  border: 1px solid #d9d9d9;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .bottom-fixed {
@@ -2117,5 +2103,32 @@ a {
 
 .my-info .my-info__main .cont-item-selected li {
   width: 200px;
+}
+
+.move-top {
+  position: fixed;
+  bottom: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: calc(45% - 558px);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  opacity: .9;
+}
+
+.move-top img {
+  width: 36px;
 }
 /*# sourceMappingURL=my-info.css.map */
