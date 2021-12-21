@@ -83,17 +83,20 @@
   border-top: 1px solid $line-division;
 }
 
-@mixin move-btn($bottom, $url, $bgrow, $bgcol) {
+@mixin move-btn($bottom) {
   position: fixed;
   bottom: $bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   right: calc(45% - 558px);
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: url($url) no-repeat center;
-  background-size: $bgrow $bgcol;
   border: 1px solid #d9d9d9;
+  background-color: $bg-white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  opacity: .9;
 }
 
 @mixin contentSize {

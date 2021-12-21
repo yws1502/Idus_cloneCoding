@@ -49,3 +49,10 @@
     }
   }
 }
+
+.move-top {
+  @include move-btn(62px);
+    img {
+      width: 36px;
+    };
+  };

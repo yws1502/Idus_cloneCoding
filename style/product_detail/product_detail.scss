@@ -1,4 +1,5 @@
 @import "../common";
+// @import "./mediaquery-product";
 
 .content {
   position: relative;
@@ -399,6 +400,7 @@
         flex-grow: 1;
         text-align: center;
         color: $gray-font;
+        font-size: $size-16;
       }
       .menu.active {
           position: relative;
@@ -699,11 +701,98 @@
 }
 
 
-// 작가 문의 고정 버튼
+// 고정 버튼
+.move-top {
+  @include move-btn(62px);
+    img {
+      width: 36px;
+    };
+  };
+
 .artist-question {
-  @include move-btn(62px, '../../images/icons/artist-inquire-icon.svg', 34px, 34px);
+  @include move-btn(90px); 
+    img {
+      width: 34px;
+    };
 }
 
 .artist-question.up {
   bottom: 127px;
+}
+
+
+// 미디어 쿼리
+
+@media all and (max-width: 719px) {
+  .advertisement,
+  .main-header,
+  footer {
+    display: none;
+  }
+
+  .content,
+  .product-detail,
+  .other-product {
+    width: 100%;
+    padding: 0;
+  }
+  .content {
+    .content-img {
+      padding-top: 0;
+      padding-bottom: 12px;
+      .slide-img {
+        width: 100%;
+        
+      }
+    }
+    .content-info {
+      width: 100%;
+      padding: 12px 12px 20px 12px;
+      z-index: 0;
+      left: 100%;
+      position: static;
+      .artist-card {
+        display: block;
+        display: flex;
+        .artist-cardLabel {
+        font-size: $size-14;
+      }
+      }
+      
+      .product-tit {
+         .product-title {
+        font-size: $size-20;
+        }
+        .product-mark {
+          .like-btn-box {
+            display: none;
+          }
+          .share-btn {
+            display: none;
+          }
+        }
+        .mark-txt {
+          float: left;
+        }
+      }
+      .product-selected {
+        position: fixed;
+        bottom: 10px;
+      }
+    }
+  }
+  .other-product {
+    display: none;
+  }
+  .artist-question {
+    display: none;
+    // @include move-btn(62px, '../../images/icons/artist-inquire-icon.svg', 34px, 34px);
+  }
+  .move-top {
+    display: none;
+
+  }
+
+
+
 }
