@@ -908,7 +908,7 @@ button {
   display: grid;
   width: 1000px;
   margin: 30px auto 50px;
-      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
+      grid-template-areas: 'grid1 grid2 grid3 grid4' 'grid1 grid5 grid6 grid7';
   -ms-grid-columns: 150px 330px 300px 220px;
       grid-template-columns: 150px 330px 300px 220px;
   -ms-grid-rows: 200px 120px;
@@ -1375,7 +1375,7 @@ a {
   top: 8px;
   width: 24px;
   height: 24px;
-  background: url("../images/image/sp-icon_1634026706070.png");
+  background: url("../../images/image/sp-icon_1634026706070.png");
   background-position: -689px -469px;
 }
 
@@ -1754,7 +1754,7 @@ a {
 }
 
 .review.main-inner .content-info .content-price-box {
-  margin: 10px 0 20px;
+  margin: 10px 0 10px;
 }
 
 .review.main-inner .content-info .content-price-box {
@@ -1861,7 +1861,7 @@ a {
   }
   .f-grid {
     width: 100vw;
-        grid-template-areas: 'grid2 grid2 grid2 grid2' 'grid2 grid2 grid2 grid2';
+        grid-template-areas: 'grid2 grid2 grid2 grid2' 'grid2 grid2 grid2 grid2';
     -ms-grid-columns: 100vw 0 0 0;
         grid-template-columns: 100vw 0 0 0;
     -ms-grid-rows: 180px 0px;
