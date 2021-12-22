@@ -10,31 +10,323 @@
   <title></title>
 </head>
 <body>
-
-<!-- 
-  <br><br>
-  <div class="구현사항">
-    <strong>구현사항</strong><br>
-    <br><span>(JavaScript)</span>
-    <br>1. 체크박스 연동 : 하나의 체크박스 선택/해제시 모두 적용
-    <br>2. 상품수량 제어 : 상품수량 최소한 1개로 제한 및 css 변화
-    <br>3. 결제금액 연동 : 수량x가격으로 변화 및 1000단위마다 쉼표 적용
-    <br>
-    <br><span>(CSS)</span>
-    <br>1. 미디어쿼리 : 상단 타이틀, 작품내용 안쪽 padding, 말풍선 / 수량조절버튼 이동?
-    <br>2. 포커스 트랜지션 : textarea에 focus시, 저장버튼 활성화 및 아래주석 추가 / textarea custom?
-    <br>3. 말풍선 구현 : 말풍선 아래쪽 뾰족한 부분 ::after, ::before로 구현
-    <br>4. 디스플레이 : 아래 창 sticky로 구현, 아래 창 살짝 투명한 부분
-    <br>
-    <br>+ SCSS 및 jQuery 사용
-  </div>
-  <br><br> -->
-
+  <h1 class="text-hide">내 정보</h1>
+    <!-- header area -->
+    <header class="main-header">
+      <!-- 회원 관리 목록 -->
+      <section class="top-navigation">
+        <h2 class="text-hide">회원 관리 항목</h2>
+        <div class="inner-top-nav">
+          <div class="ui-dropdown btn-nav">
+            <button type="button" class="btn-dropdown">아이디어스 앱 설치하기</button>
+            <article class="container-install show-ui">
+              <h3 class="install-title">아이디어스를 스마트폰으로 더욱 편리하게 사용하세요.</h3>
+              <ol>
+                <li>
+                  <strong class="subtitle">1. 문자로 앱설치 안내받기</strong>
+                  <form method="post" action="#none">
+                    <label for="phone-value" class="text-hide">번호 입력창</label>
+                    <input id="phone-value" type="text" placeholder="'-'없이 번호를 입력하세요" required>
+                    <button type="submit" class="btn-submit">전송</button>
+                  </form>
+                  <strong class="error-msg">필수 항목입니다.</strong>
+                  <p>앱 설치 URL 전송을 위하여 휴대폰번호를 입력하며 입력된 정보는 저장되지 않습니다.</p>
+                </li>
+                <li>
+                  <strong class="subtitle">2. QR코드로 앱설치하기</strong>
+                  <img src="https://www.idus.com/resources/dist/images/qrcode.png" alt="QR코드">
+                </li>
+              </ol>
+            </article>
+          </div>
+          <div class="register-wrap">
+            <a href="./login.html" class="btn-nav">로그인</a>
+            <a href="./join.html" class="btn-nav">회원가입</a>
+            <div class="ui-dropdown">
+              <button type="button" class="btn-dropdown">고객센터</button>
+              <ul class="customer-center show-ui">
+                <li><a href="#none">공지사항</a></li>
+                <li><a href="#none">자주 묻는 질문</a></li>
+                <li><a href="#none">메일로 문의</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- // 회원 관리 목록 -->
   
-<!-- 스크롤테스트용 <br> 태그들 -->
-<br><br><br><br><br><br><br> 
+      <!-- 상품 검색 및 내 정보 확인 -->
+      <section class="search-header">
+        <div class="inner-top-search">
+          <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+          <nav class="wrap-serviceNav">
+            <a href="#none" class="link-product">작품</a>
+            <div class="class-tip">오늘의 취미를 골라보세요!</div>
+            <a href="#none" class="link-class">클래스</a>
+          </nav>
+          <form method="get" class="search-form">
+            <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+            <label for="search-item">
+              <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+            </label>
+          </form>
+          <div class="ui-dropdown move-list">
+            <ol class="ranking-product">
+              <!-- hover 적용 및 리스트 바뀌는 것 구현 -->
+              <li class="ranking-item">
+                <em>1</em><a href="#none" class="link-item">꾸덕쿠키</a>
+              </li>
+              <li class="ranking-item">
+                <em>2</em><a href="#none" class="link-item">무드등</a>
+              </li>
+              <li class="ranking-item">
+                <em>3</em><a href="#none" class="link-item">네일팁</a>
+              </li>
+              <li class="ranking-item">
+                <em>4</em><a href="#none" class="link-item">용돈박스</a>
+              </li>
+              <li class="ranking-item">
+                <em>5</em><a href="#none" class="link-item">크리스마스 비누</a>
+              </li>
+              <li class="ranking-item">
+                <em>6</em><a href="#none" class="link-item">귀도리</a>
+              </li>
+              <li class="ranking-item">
+                <em>7</em><a href="#none" class="link-item">머리띠</a>
+              </li>
+              <li class="ranking-item">
+                <em>8</em><a href="#none" class="link-item">퇴사선물</a>
+              </li>
+              <li class="ranking-item">
+                <em>9</em><a href="#none" class="link-item">도장</a>
+              </li>
+              <li class="ranking-item">
+                <em>10</em><a href="#none" class="link-item">장갑</a>
+              </li>
+              <li class="ranking-item">
+                <em>11</em><a href="#none" class="link-item">드로잉</a>
+              </li>
+              <li class="ranking-item">
+                <em>12</em><a href="#none" class="link-item">14K목걸이</a>
+              </li>
+              <li class="ranking-item">
+                <em>13</em><a href="#none" class="link-item">비누</a>
+              </li>
+              <li class="ranking-item">
+                <em>14</em><a href="#none" class="link-item">휘낭시에</a>
+              </li>
+              <li class="ranking-item">
+                <em>15</em><a href="#none" class="link-item">생일케이크</a>
+              </li>
+              <li class="ranking-item">
+                <em>16</em><a href="#none" class="link-item">포춘쿠키</a>
+              </li>
+              <li class="ranking-item">
+                <em>17</em><a href="#none" class="link-item">와인</a>
+              </li>
+              <li class="ranking-item">
+                <em>18</em><a href="#none" class="link-item">일러스트</a>
+              </li>
+              <li class="ranking-item">
+                <em>19</em><a href="#none" class="link-item">머랭쿠키</a>
+              </li>
+              <li class="ranking-item">
+                <em>20</em><a href="#none" class="link-item">편지지</a>
+              </li>
+            </ol>
+            <div class="hide-ranking show-ui">
+              <div class="btn-wrap">
+                <button type="button" class="btn-realtime on">실시간 급상승</button
+                  ><button type="button" class="btn-popular">인기 검색어</button>
+              </div>
+              <!-- on class 추가 시 위의 btn에도 on class 추가 -->
+              <ul class="realtime-list on">
+                <li class="keyword-item up">
+                  <em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a>
+                </li>
+                <li class="keyword-item down">
+                  <em>2</em><a href="#none" class="keyword ellipsis">무드등</a>
+                </li>
+                <li class="keyword-item keep">
+                  <em>3</em><a href="#none" class="keyword ellipsis">네일팁</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a>
+                </li>
+                <li class="keyword-item keep">
+                  <em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>6</em><a href="#none" class="keyword ellipsis">귀도리</a>
+                </li>
+                <li class="keyword-item down">
+                  <em>7</em><a href="#none" class="keyword ellipsis">머리띠</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>9</em><a href="#none" class="keyword ellipsis">도장</a>
+                </li>
+                <li class="keyword-item down">
+                  <em>10</em><a href="#none" class="keyword ellipsis">장갑</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>11</em><a href="#none" class="keyword ellipsis">드로잉</a>
+                </li>
+                <li class="keyword-item keep">
+                  <em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>13</em><a href="#none" class="keyword ellipsis">비누</a>
+                </li>
+                <li class="keyword-item down">
+                  <em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a>
+                </li>
+                <li class="keyword-item keep">
+                  <em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a>
+                </li>
+                <li class="keyword-item keep">
+                  <em>17</em><a href="#none" class="keyword ellipsis">와인</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>18</em><a href="#none" class="keyword ellipsis">일러스트</a>
+                </li>
+                <li class="keyword-item down">
+                  <em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a>
+                </li>
+                <li class="keyword-item up">
+                  <em>20</em><a href="#none" class="keyword ellipsis">편지지</a>
+                </li>
+              </ul>
+              <!-- on class 추가 시 위의 btn에도 on class 추가 -->
+              <ul class="popular-list">
+                <li class="keyword-item"><em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a></li>
+                <li class="keyword-item"><em>2</em><a href="#none" class="keyword ellipsis">무드등</a></li>
+                <li class="keyword-item"><em>3</em><a href="#none" class="keyword ellipsis">네일팁</a></li>
+                <li class="keyword-item"><em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a></li>
+                <li class="keyword-item"><em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a></li>
+                <li class="keyword-item"><em>6</em><a href="#none" class="keyword ellipsis">귀도리</a></li>
+                <li class="keyword-item"><em>7</em><a href="#none" class="keyword ellipsis">머리띠</a></li>
+                <li class="keyword-item"><em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a></li>
+                <li class="keyword-item"><em>9</em><a href="#none" class="keyword ellipsis">도장</a></li>
+                <li class="keyword-item"><em>10</em><a href="#none" class="keyword ellipsis">장갑</a></li>
+                <li class="keyword-item"><em>11</em><a href="#none" class="keyword ellipsis">드로잉</a></li>
+                <li class="keyword-item"><em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a></li>
+                <li class="keyword-item"><em>13</em><a href="#none" class="keyword ellipsis">비누</a></li>
+                <li class="keyword-item"><em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a></li>
+                <li class="keyword-item"><em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a></li>
+                <li class="keyword-item"><em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a></li>
+                <li class="keyword-item"><em>17</em><a href="#none" class="keyword ellipsis">와인</a></li>
+                <li class="keyword-item"><em>18</em><a href="#none" class="keyword ellipsis">일러스트</a></li>
+                <li class="keyword-item"><em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a></li>
+                <li class="keyword-item"><em>20</em><a href="#none" class="keyword ellipsis">편지지</a></li>
+              </ul>
+            </div>
+          </div>
+          <nav class="wrap-profile">
+            <a href="./my-info.html" class="link-profile">내 정보</a>
+            <a href="./shopping-basket.html" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+          </nav>
+        </div>
+        <div class="inner-top-search-mobile">
+          <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+          <form method="get" class="search-form">
+            <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+            <label for="search-item">
+              <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+            </label>
+          </form>
+          <nav class="wrap-profile">
+            <a href="./shopping-basket.html" class="link-myBasket"><span class="basket-count">0</span></a>
+          </nav>
+        </div>
+      </section>
+      <!-- // 상품 검색 및 내정보 확인 -->
   
-
+      <!-- 상품 관련 모든 카테고리 link 탭 -->
+      <section class="gnb"> <!-- global navigation bar -->
+        <h2 class="text-hide">전역 네비게이션</h2>
+        <nav>
+          <ul class="nav-wrap">
+            <li class="category-link">
+              <a href="#none" class="btn-gnb">카테고리</a>
+              <div class="category-dropdown show-ui">
+                <ul class="category">
+                  <li><a href="#none">디저트, 베이커리, 떡</a></li>
+                  <li><a href="#none">음료 (커피, 차 등)</a></li>
+                  <li><a href="#none">전통주</a></li>
+                  <li><a href="#none">수제 반찬</a></li>
+                  <li><a href="#none">그 외 수제먹거리</a></li>
+                  <li><a href="#none">농축수산물</a></li>
+                  <li><a href="#none">의류, 홈웨어</a></li>
+                  <li><a href="#none">패션잡화</a></li>
+                  <li><a href="#none">지갑 (지폐,카드,동전,명함)</a></li>
+                  <li><a href="#none">가방, 파우치</a></li>
+                </ul>
+                <ul class="category">
+                  <li><a href="#none">시계</a></li>
+                  <li><a href="#none">섬유, 퀼트</a></li>
+                  <li><a href="#none">남성 수제화</a></li>
+                  <li><a href="#none">여성 수제화</a></li>
+                  <li><a href="#none">육아, 아동</a></li>
+                  <li><a href="#none">반지</a></li>
+                  <li><a href="#none">귀걸이</a></li>
+                  <li><a href="#none">목걸이</a></li>
+                  <li><a href="#none">팔찌</a></li>
+                  <li><a href="#none">그 외 액세서리</a></li>
+                </ul>
+                <ul class="category">
+                  <li><a href="#none">꽃 (생화,드라이,다육 등)</a></li>
+                  <li><a href="#none">캔들, 디퓨저, 방향제</a></li>
+                  <li><a href="#none">인테이러 소품</a></li>
+                  <li><a href="#none">도자기</a></li>
+                  <li><a href="#none">주방, 생활</a></li>
+                  <li><a href="#none">가구</a></li>
+                  <li><a href="#none">인형, 장난감</a></li>
+                  <li><a href="#none">반려동물 용품</a></li>
+                  <li><a href="#none">파인아트</a></li>
+                  <li><a href="#none">공예</a></li>
+                </ul>
+                <ul class="category">
+                  <li><a href="#none">휴대폰 케이스</a></li>
+                  <li><a href="#none">전자기기 관련</a></li>
+                  <li><a href="#none">문구, 팬시</a></li>
+                  <li><a href="#none">페인팅, 캐리커쳐, 캘리</a></li>
+                  <li><a href="#none">향수, 화장품, 뷰티</a></li>
+                  <li><a href="#none">비누, 천연비누</a></li>
+                  <li><a href="#none">기타</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="on"><a href="#none" class="btn-gnb">홈</a></li>
+            <li><a href="#none" class="btn-gnb">오늘의 작품</a></li>
+            <li><a href="#none" class="btn-gnb">실시간 구매</a></li>
+            <li><a href="#none" class="btn-gnb">실시간 후기</a></li>
+            <li><a href="#none" class="btn-gnb">작가님 추천</a></li>
+            <li><a href="#none" class="btn-gnb">실시간 추천</a></li>
+            <li><a href="#none" class="btn-gnb">인기 작품</a></li>
+            <li><a href="#none" class="btn-gnb">스토리</a></li>
+            <li><a href="#none" class="btn-gnb">최신 작품</a></li>
+            <li><a href="#none" class="btn-gnb">인기작가</a></li>
+            <li><a href="#none" class="btn-gnb">소담상회</a></li>
+          </ul>
+        </nav>
+      <button class="show-category-btn mobile"></button>
+      <!-- <nav class="hide-category">
+        추천 메뉴
+        <ul class="category-wrap">
+          <li class="item on"><a href="#none">홈</a></li>
+        </ul>
+      </nav> -->
+  
+      </section>
+      <!-- // 상품 관련 모든 카테고리 link 탭 -->
+    </header>
+    <!-- // header area -->
 <div class="컨테이너">
   <header class="header_desktop">
     <h1 class="타이틀">장바구니</h1>
@@ -113,6 +405,77 @@
     </button>
   </main>
 </div>
+
+<footer>
+  <div class="f-cont">
+    <a class="f-1" href="#">이용약관</a>
+    <a class="f-2" href="#">개인정보 처리방침</a>
+    <a class="f-3" href="#">공지사항</a>
+    <a class="f-4" href="#">자주 묻는 질문</a>
+    <a class="f-5" href="#">이벤트</a>
+    <a class="f-6" href="#">입점문의</a>
+    <a class="f-7" href="#">About idus</a>
+    <a class="f-8" href="#">인재 영입</a>
+  </div>
+  <div class="f-grid">
+    <div class="f-grid-1">
+      <div class="image"></div>
+    </div>
+    <div class="f-grid-2">
+      <strong class="p1">(주) 백패커</strong>
+      <p>대표이사 : 김동환</p>
+      <p>서울특별시 마포구 동교로 19길 12</p>
+      <p>사업자 등록번호 : 107-87-83297 
+        <button>사업자 정보확인</button>
+      </p>
+      <p >통신판매업신고 : 2015-서울마포-0440</p>
+
+      <p class="p2">아이디어스는 통신판매중개자이며 통신판매의 당사자가 아닙니다.</p>
+      <p class="p3">따라서 아이디어스는 상품 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+      <p class="p4">Copyright © 2021 Backpackr All right reserved.</p>
+    </div>
+    <div class="f-grid-3">
+      <strong>고객센터</strong>
+      <span class="p5">(주 7일 오전 10시 ~ 저녁 10시까지)</span>
+      <ul>
+        <li><span>카카오톡</span><a>아이디어스</a></li>
+        <li><span>대표번호</span>1668-3651</li>
+        <li><span>메일</span>support@backpac.kr</li>
+        <li><span>제휴문의</span>biz@backpac.kr</li>
+      </ul>
+      <p class="p6 p7">아이디어스 이용 중 궁금하신 점이 있으신가요?</p>
+      <p class="p6">메일 또는 플러스친구 `아이디어스`로 연락해주세요.</p>
+      <p class="p6">최선을 다해 도와드리겠습니다.</p>
+    </div>
+    <div class="f-grid-4">
+      <strong>Follow Us</strong>
+      <div>
+        <a href="https://www.facebook.com/" class="facebook"></a> 
+        <a href="https://www.instagram.com/" class="instagram"></a> 
+        <a href="https://blog.naver.com/" class="naverblog"></a> 
+        <a href="https://post.naver.com/" class="naverpost"></a> 
+        <a href="https://www.twitter.com/" class="twitter"></a> 
+      </div>  
+      <div>
+        <div class="image1"></div>
+        <div class="image2"></div>
+      </div>  
+    </div>
+    <div class="f-grid-5">
+      <div class="image"></div>
+      <p>[인증범위] 온라인 마켓 플랫폼 운영(아이디어스)</p>
+      <p>[유효기간] 2020.11.18 - 2023.11.17</p>
+    </div>
+    <div class="f-grid-6">
+      <div class="image"></div>    
+      <p>고객님은 현금 등으로 결제시 당사에서 가입한</p>
+      <p>구매안전서비스를 이용하실 수 있습니다.</p>
+      <button>가입사실확인</button>
+    </div>
+    <div class="f-grid-7"></div>
+  </div>
+  <div class="bottom-fixed"> img1 / img2 / img3 / img4 / img5</div>
+</footer>
 <script>
   let price = 100;
   // 2. 상품수량 제어
@@ -127,7 +490,6 @@
       $('.작품금액').text(`${((quantity-1)*price).toLocaleString()}`);
       $('.결제예정금액').text(`${((quantity-1)*price+3000).toLocaleString()}`);
     }
-    
   })
   $('.plus').click(function() {
     let quantity = Number($('.quantity').text());
