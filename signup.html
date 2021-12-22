@@ -62,11 +62,11 @@
           </li>
         </ul>
         <!-- total check agree -->
+        <div class="totalCheck-wrap">
+          <input type="checkbox" id="totalAgree">
+          <label for="totalAgree" class="check-text">모두 동의합니다</label>
+        </div>
         <ul class="check-wrap">
-          <li>
-            <input type="checkbox" id="totalAgree">
-            <label for="totalAgree" class="check-text">모두 동의합니다</label>
-          </li>
           <!-- age check -->
           <li>
             <input type="checkbox" id="ageAgree" required>
@@ -95,6 +95,23 @@
       </form>
     </section>
     <!-- //회원가입 폼 -->
+    <script>
+      const totalAgreeCheck = document.querySelector("#totalAgree");
+      const checkWrap = document.querySelector(".check-wrap");
+      const checkboxs = checkWrap.querySelectorAll("input");
+
+      // total check box click
+      totalAgreeCheck.addEventListener("click", () => {
+        checkboxs.forEach((el) => el.checked = true);
+      });
+
+      // 전부 체크 선택 후 하위 체크박스 중 한개를 빼면 전체 체크 박스 off
+      checkWrap.addEventListener("click", (event) => {
+        if (event.target.tagName === "INPUT" && event.target.checked == false) {
+            totalAgreeCheck.checked = false;
+        }
+      });
+    </script>
   </div>
 </body>
 </html>

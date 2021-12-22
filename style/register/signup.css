@@ -197,38 +197,13 @@ form {
   height: 42px;
 }
 
-.check-wrap {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.check-wrap li {
-  margin: 5px 0;
-}
-
-.check-wrap li:first-child::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  margin: 10px 0 0;
-}
-
-.check-wrap li:last-child::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  margin-top: 10px;
-}
-
-.check-wrap li input {
+.totalCheck-wrap input,
+.check-wrap input {
   margin-right: 8px;
 }
 
-.check-wrap li input::before {
+.totalCheck-wrap input::before,
+.check-wrap input::before {
   border: 1px solid #999;
   border-radius: 2px;
   content: "";
@@ -238,12 +213,30 @@ form {
   background-color: #fff;
 }
 
-.check-wrap li input:checked::before {
+.totalCheck-wrap input:checked::before,
+.check-wrap input:checked::before {
   background-image: url(../../images/icons/check_white_icon.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #FF7B30;
   border-color: #FF7B30;
+}
+
+.totalCheck-wrap {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.check-wrap {
+  font-size: 14px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.check-wrap li {
+  margin: 5px 0;
 }
 
 .check-wrap li .agree-link {

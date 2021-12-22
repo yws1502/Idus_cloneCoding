@@ -16,12 +16,6 @@ button {
   padding: 0;
 }
 
-[class^="inner"] {
-  width: 1000px;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .ui-dropdown {
   display: inline-block;
   // 아래에서 hover 적용
@@ -31,6 +25,12 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+// mobile 친구들
+// .hide-category,
+[class$="mobile"] {
+  display: none
 }
 
 
@@ -62,7 +62,8 @@ button {
   background-color: #000;
   .inner {
     position: relative;
-    width: 1056px;
+    width: 1000px;
+    margin: 0 auto;
   }
   .btn-closeAd {
     position: absolute;
@@ -93,10 +94,12 @@ button {
 }
 .inner-top-nav {
   position: relative;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   color: $gray-font;
   align-items: center;
+  margin: 0 auto;
   [class^="btn"] {
     @include font-module(12px, $color:$gray-font);
     padding: 12px
@@ -206,6 +209,8 @@ button {
 
 .inner-top-search {
   position: relative;
+  width: 1000px;
+  margin: 0 auto;
   padding: 10px 0;
 }
 
@@ -323,8 +328,9 @@ button {
     position: absolute;
     top: 23px;
     display: inline-block;
-    animation: moveTop 20s infinite;
+    animation: moveTop 40s infinite;
     .ranking-item {
+      margin: 5px 0;
       em {
         @include font-module(13px, 700);
         vertical-align: 3px;
@@ -338,15 +344,25 @@ button {
 }
 @keyframes moveTop {
     0% {transform: translateY(0);}
+    5% {transform: translateY(-5%);}
     10% {transform: translateY(-10%);}
+    15% {transform: translateY(-15%);}
     20% {transform: translateY(-20%);}
+    25% {transform: translateY(-25%);}
     30% {transform: translateY(-30%);}
+    35% {transform: translateY(-35%);}
     40% {transform: translateY(-40%);}
+    45% {transform: translateY(-45%);}
     50% {transform: translateY(-50%);}
+    55% {transform: translateY(-55%);}
     60% {transform: translateY(-60%);}
+    65% {transform: translateY(-65%);}
     70% {transform: translateY(-70%);}
+    75% {transform: translateY(-75%);}
     80% {transform: translateY(-80%);}
+    85% {transform: translateY(-85%);}
     90% {transform: translateY(-90%);} 
+    95% {transform: translateY(-95%);} 
     100% {transform: translateY(-100%);}
 }
 
@@ -616,18 +632,103 @@ button {
   }
 }
 
-// @media screen and (max-width: 719px) {
-//   .top-navigation {
-//     display: none;
-//   }
-//   .search-header {
-//     .wrap-serviceNav,
-//     .ui-dropdown,
-//     .link-profile {
-//       display: none;
-//     }
-//   }
+@media screen and (max-width: 719px) {
+  .advertisement,
+  .inner-top-search,
+  .top-navigation {
+    display: none;
+  }
+  [class$="mobile"] {
+    display: block;
+  }
 
+  .advertisement-mobile {
+    background-color: #000;
+    position: relative;
+    .inner {
+      text-align: center;
+      img {
+        width: 320px;
+      }
+    }
+    .btn-closeAd {
+      text-indent: -9999px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        background-color: #fff;
+        background-image: url(../../images/icons/close_icon.svg);
+        background-position: center;
+        background-size: 12px;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
 
+  .inner-top-search-mobile {
+    padding: 10px 0;
 
-// }
+    .company-title {
+      padding: 0 10px;
+    }
+
+    .search-form {
+      width: calc(100% - 165px);
+      margin: 0;
+      .search-text {
+        width: calc(100% - 20px);
+      }
+      .search-btn::before {
+          right: -9px;
+        }
+    }
+
+    .link-myBasket::before {
+      top: -26px;
+    }
+    .basket-count {
+      top: -27px;
+    }
+  }
+  
+  .gnb {
+    position: relative;
+    nav .nav-wrap {
+      justify-content: left;
+      .category-link .btn-gnb {
+        display: none;
+      } 
+    }
+    .show-category-btn {
+      position: absolute;
+      z-index: 100;
+      top: -1px;
+      right: 0;
+      width: 39px;
+      height: 39px;
+      border: 1px solid $line-division;
+      background-color: #fff;
+      background-image: url(../../images/icons/arrow-bottom.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .5s;
+    }
+    // .hide-category {
+    //   @include font-module(16px, $color:$gray-font);
+    //   position: absolute;
+    //   text-align: center;
+    //   top: 0;
+    //   bottom: 0;
+    //   .category-wrap {
+    //     position: absolute;
+    //     bottom: -20px;
+
+    //   }
+    // }
+  }
+}

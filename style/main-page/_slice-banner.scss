@@ -69,3 +69,22 @@
     }
   }
 }
+
+@media screen and (max-width: 720px) {
+  [class$="mobile"] {
+    display: block;
+  }
+
+  .container-banner {
+    .showroom-banner {
+      height: 275px;
+      .banner-img.mobile {
+        width: 100%;
+      }
+    }
+    .slice-numbers {
+      right: 2%;
+      margin: 0;
+    }
+  }
+}

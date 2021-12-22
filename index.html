@@ -24,6 +24,14 @@
       <button type="button" class="btn-closeAd">광고 닫기</button>
     </div>
   </div>
+  <div class="advertisement-mobile">
+    <div class="inner">
+      <a href="#none" class="ad_banner">
+        <img src="https://image.idus.com/static/signup/web_benefit_mobile_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
+      </a>
+      <button type="button" class="btn-closeAd">광고 닫기</button>
+    </div>
+  </div>
   <!-- // 상단의 첫 구매 광고 배너 -->
   <!-- header area -->
   <header class="main-header">
@@ -109,13 +117,43 @@
               <em>7</em><a href="#none" class="link-item">머리띠</a>
             </li>
             <li class="ranking-item">
-              <em>8</em><a href="#none" class="link-item">머리띠</a>
+              <em>8</em><a href="#none" class="link-item">퇴사선물</a>
             </li>
             <li class="ranking-item">
-              <em>9</em><a href="#none" class="link-item">머리띠</a>
+              <em>9</em><a href="#none" class="link-item">도장</a>
             </li>
             <li class="ranking-item">
-              <em>10</em><a href="#none" class="link-item">머리띠</a>
+              <em>10</em><a href="#none" class="link-item">장갑</a>
+            </li>
+            <li class="ranking-item">
+              <em>11</em><a href="#none" class="link-item">드로잉</a>
+            </li>
+            <li class="ranking-item">
+              <em>12</em><a href="#none" class="link-item">14K목걸이</a>
+            </li>
+            <li class="ranking-item">
+              <em>13</em><a href="#none" class="link-item">비누</a>
+            </li>
+            <li class="ranking-item">
+              <em>14</em><a href="#none" class="link-item">휘낭시에</a>
+            </li>
+            <li class="ranking-item">
+              <em>15</em><a href="#none" class="link-item">생일케이크</a>
+            </li>
+            <li class="ranking-item">
+              <em>16</em><a href="#none" class="link-item">포춘쿠키</a>
+            </li>
+            <li class="ranking-item">
+              <em>17</em><a href="#none" class="link-item">와인</a>
+            </li>
+            <li class="ranking-item">
+              <em>18</em><a href="#none" class="link-item">일러스트</a>
+            </li>
+            <li class="ranking-item">
+              <em>19</em><a href="#none" class="link-item">머랭쿠키</a>
+            </li>
+            <li class="ranking-item">
+              <em>20</em><a href="#none" class="link-item">편지지</a>
             </li>
           </ol>
           <div class="hide-ranking show-ui">
@@ -216,6 +254,18 @@
           <a href="./shopping-basket.html" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
         </nav>
       </div>
+      <div class="inner-top-search-mobile">
+        <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+        <form method="get" class="search-form">
+          <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+          <label for="search-item">
+            <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+          </label>
+        </form>
+        <nav class="wrap-profile">
+          <a href="./shopping-basket.html" class="link-myBasket"><span class="basket-count">0</span></a>
+        </nav>
+      </div>
     </section>
     <!-- // 상품 검색 및 내정보 확인 -->
 
@@ -287,6 +337,14 @@
           <li><a href="#none" class="btn-gnb">소담상회</a></li>
         </ul>
       </nav>
+    <button class="show-category-btn mobile"></button>
+    <!-- <nav class="hide-category">
+      추천 메뉴
+      <ul class="category-wrap">
+        <li class="item on"><a href="#none">홈</a></li>
+      </ul>
+    </nav> -->
+
     </section>
     <!-- // 상품 관련 모든 카테고리 link 탭 -->
   </header>
@@ -294,12 +352,13 @@
   <main>
     <!-- 메인 슬라이드 배너 -->
     <section class="container-banner">
-    <h2 class="text-hide">메인 슬라이드 배너</h2>
+      <h2 class="text-hide">메인 슬라이드 배너</h2>
       <ul class="banner-wrap">
         <!-- hover 시 배너 이동 없음, 배너 이동 구현 -->
         <li class="showroom-banner list-item">
           <a href="#none" class="link-banner">
             <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+            <img src="https://image.idus.com/image/files/04ad62f443f34e8a925bbcf641ae0f08.jpg" alt="banner" class="banner-img mobile">
           </a>
         </li>
         <li class="showroom-banner">
@@ -308,12 +367,12 @@
           </a>
         </li>
       </ul>
-      <fieldset class="ui-control">
+      <div class="ui-control">
         <!-- 버튼들은 가상 요소로 만들고 텍스트는 숨기기 -->
         <button type="button" class="btn-slice prev">이전 슬라이드</button>
         <span class="slice-numbers"><em class="curr_num">1</em>/11</span>
         <button type="button" class="btn-slice next">다음 슬라이드</button>
-      </fieldset>
+      </div>
     </section>
     <!-- // 메인 슬라이드 배너 -->
     <section class="product-list product-list__welcome-deal">
