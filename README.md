@@ -58,7 +58,7 @@ url : https://yws1502.github.io/Idus_cloneCoding/
 > 
 > 새로 배운 점
 > - CSS와 JavaScript를 고려한 HTML markup
-> - HTML, CSS 문법 숙지 (mediaquery, 가상클래스를 활용한 형제 CSS 변화주기)
+> - SCSS 활용 및 HTML, CSS 문법 숙련 
 > - JavaSciprt를 활용한 이벤트 객체 제어
 
 2. 김진권
