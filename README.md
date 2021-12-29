@@ -51,13 +51,15 @@ url : https://yws1502.github.io/Idus_cloneCoding/
 1. 김만학
 
 > 맡은 파트
-> - lorem
+> - 메인 풋터, 장바구니 페이지
 >
 > 회고
-> - lorem
+> - 협업툴로써의 Git에 대한 이해도가 높아지고, HTML+CSS 코드에 한층 더 익숙해질 수 있었습니다. 또한 처음으로 JavaScript를 활용하여 웹을 제어해보아 좋았습니다. 완벽하진 않더라도 팀원들과 협업하여 목표한 결과물을 얻어가는 과정이 즐거웠습니다. 
 > 
 > 새로 배운 점
-> - lorem
+> - CSS와 JavaScript를 고려한 HTML markup
+> - 익숙치 않았던 HTML, CSS 문법 숙지 (mediaquery, 가상클래스를 활용한 형제 CSS 변화주기)
+> - JavaSciprt를 활용한 이벤트 객체 제어
 
 2. 김진권
 
