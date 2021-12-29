@@ -101,7 +101,7 @@ button {
   align-items: center;
   margin: 0 auto;
   [class^="btn"] {
-    @include font-module(12px, $color:$gray-font);
+    @include font-module(12px, $height:9px, $color:$gray-font);
     padding: 12px
   }
   .ui-dropdown:hover .container-install,
