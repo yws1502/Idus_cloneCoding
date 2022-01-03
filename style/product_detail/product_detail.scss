@@ -1,11 +1,11 @@
 @import "../common";
-// @import "./mediaquery-product";
 
 .content {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   @include contentSize;
   .content-img {
-    width: 560px;
+    width: 53.03%;
     padding: 36px 0;
     position: relative;
   // img-view
@@ -31,7 +31,7 @@
         right: 0;
       }
       .img-indicator {
-        width: 462px;
+        max-width: 462px;
         height: 56px;
         display: flex;
         margin: 8px auto 0;
@@ -45,14 +45,13 @@
     }
   }
   .content-info {
-    width: 472px;
-    padding: 16px;
-    left: 55%;
-    top: 36px;
+    width: 44.69%;
+    max-height: 523px;
+    margin-top: 36px;
+    padding: 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 #0000001a;
     background-color: #fff;
-    position: absolute;
     z-index: 10;
     .artist-card {
       display: flex;
@@ -201,9 +200,11 @@
     }
   }
   .content-info.fixed {
+    max-width: 470px;
+    margin-top: 0;
     position: fixed;
     top: 10px;
-    left: 55%;
+    right: calc(1056px - 33.2%);
   }
   // 배송 및 수량 정보
   .description {
@@ -293,91 +294,94 @@
       }
     }
   }
+}
+.delivery-section {
+  @include contentSize;
   .vip-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 560px;
-    padding: 24px;
-    background: #f8f8f8;
-    margin-bottom: 24px; 
-    border-radius: 4px;   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 53.03%;
+  padding: 24px;
+  background: #f8f8f8;
+  margin-bottom: 24px; 
+  border-radius: 4px;   
+  text-align: center;
+  p {
+    float: left;
+    font-size: $size-14;
+  }
+  .vip-boxEm {
+    font-weight: bold;
+  }
+  .vib-clubBtn {
+    display: inline-block;
+    padding: 8px 29px;
+    border-radius: 4px;
+    border: 1px solid $orange-font;
+    background-color: $bg-white;
+    color: $orange-font;
     text-align: center;
-    p {
-      float: left;
-      font-size: $size-14;
-    }
-    .vip-boxEm {
+    margin-right: 15px;
+  }
+}
+.delivery-graph-box {
+  width: 560px;
+  padding: 24px;
+  margin-bottom: 24px;
+  .delivery-graph-tit {
+    display: block;
+    margin-bottom: 24px;
+    font-size: $size-16;
+    text-align: center;
+    em {
       font-weight: bold;
     }
-    .vib-clubBtn {
-      display: inline-block;
-      padding: 8px 29px;
-      border-radius: 4px;
-      border: 1px solid $orange-font;
-      background-color: $bg-white;
+  }
+  .delivery-description {
+    margin: 8px 0;
+    position: relative;
+    .txt {
+      float: left;
+    }
+    .txt-highlight.txt,
+    .txt-detail.highlight {
       color: $orange-font;
-      text-align: center;
-      margin-right: 15px;
+    }
+    .delivery-graph {
+      position: absolute;
+      width: 417px;
+      height: 6px;
+      margin: 0 0 0 58px;
+      top: 4px;
+      border-radius: 3px;
+      background-color: $gray-bgc;
+      .delivery-value {
+        float: left;
+        height: 6px;
+        background-color: #acacac;
+        border-radius: 3px;
+      }
+      .delivery-value.highlight {
+        background-color: $orange-font;
+      }
+    }
+    
+    .txt-detail {
+      float: right;
     }
   }
-  .delivery-graph-box {
-    width: 560px;
-    padding: 24px;
-    margin-bottom: 24px;
-    .delivery-graph-tit {
-      display: block;
-      margin-bottom: 24px;
-      font-size: $size-16;
-      text-align: center;
-      em {
-        font-weight: bold;
-      }
-    }
-    .delivery-description {
-      margin: 8px 0;
-      position: relative;
-      .txt {
-        float: left;
-      }
-      .txt-highlight.txt,
-      .txt-detail.highlight {
-        color: $orange-font;
-      }
-      .delivery-graph {
-        position: absolute;
-        width: 417px;
-        height: 6px;
-        margin: 0 0 0 58px;
-        top: 4px;
-        border-radius: 3px;
-        background-color: $gray-bgc;
-        .delivery-value {
-          float: left;
-          height: 6px;
-          background-color: #acacac;
-          border-radius: 3px;
-        }
-        .delivery-value.highlight {
-          background-color: $orange-font;
-        }
-      }
-      
-      .txt-detail {
-        float: right;
-      }
-    }
-    .delivery-description::after {
-      display: block;
-      content: '';
-      clear: both;
-    }
-    .delivery-total {
-      display: block;
-      margin-top: 12px;
-      text-align: center;
-      color: $light-gray-font;
-    }
+  .delivery-description::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  .delivery-total {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    color: $light-gray-font;
+  }
   }
 }
 
@@ -710,20 +714,16 @@
   };
 
 .artist-question {
-  @include move-btn(90px); 
+  @include move-btn(127px); 
     img {
       width: 34px;
     };
 }
 
-.artist-question.up {
-  bottom: 127px;
-}
-
 
 // 미디어 쿼리
 
-@media all and (max-width: 719px) {
+@media all and (max-width: 1024px) {
   .advertisement,
   .main-header,
   footer {
@@ -737,48 +737,56 @@
     padding: 0;
   }
   .content {
-    .content-img {
-      padding-top: 0;
-      padding-bottom: 12px;
-      .slide-img {
-        width: 100%;
-        
-      }
-    }
-    .content-info {
+    .content-info.fixed,
+    .content-info{
       width: 100%;
+      position: static;
       padding: 12px 12px 20px 12px;
       z-index: 0;
-      left: 100%;
-      position: static;
       .artist-card {
         display: block;
         display: flex;
         .artist-cardLabel {
         font-size: $size-14;
+        }
       }
+    .content-img {
+      padding-top: 0;
+      padding-bottom: 12px;
+      .slide-img {
+        width: 100%;
       }
-      
-      .product-tit {
-         .product-title {
+    }
+    .product-tit {
+      .product-title {
+        position: relative;
+        margin: 10px 0 10px;
         font-size: $size-20;
+      }
+      .price-label {
+        margin-top: 50px;
+      }
+      .mark-txt {
+        display: inline-block;
+        position: absolute;
+        margin: 0;
+        left: 0;
+        bottom: 45px;
+        font-size: $size-14;
+      }
+      .product-mark {
+        .like-btn-box {
+          display: none;
         }
-        .product-mark {
-          .like-btn-box {
-            display: none;
-          }
-          .share-btn {
-            display: none;
-          }
-        }
-        .mark-txt {
-          float: left;
+        .share-btn {
+          display: none;
         }
       }
-      .product-selected {
-        position: fixed;
-        bottom: 10px;
-      }
+    }
+    .product-selected {
+      position: fixed;
+      bottom: 10px;
+    }
     }
   }
   .other-product {
@@ -790,9 +798,5 @@
   }
   .move-top {
     display: none;
-
   }
-
-
-
 }
