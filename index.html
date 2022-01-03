@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Idus</title>
+  <title>아이디어스 - 핸드메이드, 수공예, 수제 먹거리</title>
   <link rel="icon" href="./images/icons/favicon_32.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style/reset.css">
   <link rel="stylesheet" href="./style/main-page/style.css">
+  <script async src="/js/main/main.js"></script>
 </head>
 <body>
   <h1 class="text-hide">아이디어스 홈페이지</h1>
@@ -19,6 +20,14 @@
     <div class="inner">
       <a href="#none" class="ad_banner">
         <img src="https://image.idus.com/static/signup/web_benefit_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
+      </a>
+      <button type="button" class="btn-closeAd">광고 닫기</button>
+    </div>
+  </div>
+  <div class="advertisement-mobile">
+    <div class="inner">
+      <a href="#none" class="ad_banner">
+        <img src="https://image.idus.com/static/signup/web_benefit_mobile_banner-welcome-deal-2.png" alt="첫 구매라면 누구나 인기 작품이 100원 부터 광고">
       </a>
       <button type="button" class="btn-closeAd">광고 닫기</button>
     </div>
@@ -53,8 +62,8 @@
           </article>
         </div>
         <div class="register-wrap">
-          <a href="#none" class="btn-nav">로그인</a>
-          <a href="#none" class="btn-nav">회원가입</a>
+          <a href="./detailPages/login.html" class="btn-nav">로그인</a>
+          <a href="./detailPages/join.html" class="btn-nav">회원가입</a>
           <div class="ui-dropdown">
             <button type="button" class="btn-dropdown">고객센터</button>
             <ul class="customer-center show-ui">
@@ -83,11 +92,68 @@
             <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
           </label>
         </form>
-        <div class="ui-dropdown">
+        <div class="ui-dropdown move-list">
           <ol class="ranking-product">
             <!-- hover 적용 및 리스트 바뀌는 것 구현 -->
             <li class="ranking-item">
-              <a href="#none" class="link-item">1<em>꾸덕쿠키</em></a>
+              <em>1</em><a href="#none" class="link-item">꾸덕쿠키</a>
+            </li>
+            <li class="ranking-item">
+              <em>2</em><a href="#none" class="link-item">무드등</a>
+            </li>
+            <li class="ranking-item">
+              <em>3</em><a href="#none" class="link-item">네일팁</a>
+            </li>
+            <li class="ranking-item">
+              <em>4</em><a href="#none" class="link-item">용돈박스</a>
+            </li>
+            <li class="ranking-item">
+              <em>5</em><a href="#none" class="link-item">크리스마스 비누</a>
+            </li>
+            <li class="ranking-item">
+              <em>6</em><a href="#none" class="link-item">귀도리</a>
+            </li>
+            <li class="ranking-item">
+              <em>7</em><a href="#none" class="link-item">머리띠</a>
+            </li>
+            <li class="ranking-item">
+              <em>8</em><a href="#none" class="link-item">퇴사선물</a>
+            </li>
+            <li class="ranking-item">
+              <em>9</em><a href="#none" class="link-item">도장</a>
+            </li>
+            <li class="ranking-item">
+              <em>10</em><a href="#none" class="link-item">장갑</a>
+            </li>
+            <li class="ranking-item">
+              <em>11</em><a href="#none" class="link-item">드로잉</a>
+            </li>
+            <li class="ranking-item">
+              <em>12</em><a href="#none" class="link-item">14K목걸이</a>
+            </li>
+            <li class="ranking-item">
+              <em>13</em><a href="#none" class="link-item">비누</a>
+            </li>
+            <li class="ranking-item">
+              <em>14</em><a href="#none" class="link-item">휘낭시에</a>
+            </li>
+            <li class="ranking-item">
+              <em>15</em><a href="#none" class="link-item">생일케이크</a>
+            </li>
+            <li class="ranking-item">
+              <em>16</em><a href="#none" class="link-item">포춘쿠키</a>
+            </li>
+            <li class="ranking-item">
+              <em>17</em><a href="#none" class="link-item">와인</a>
+            </li>
+            <li class="ranking-item">
+              <em>18</em><a href="#none" class="link-item">일러스트</a>
+            </li>
+            <li class="ranking-item">
+              <em>19</em><a href="#none" class="link-item">머랭쿠키</a>
+            </li>
+            <li class="ranking-item">
+              <em>20</em><a href="#none" class="link-item">편지지</a>
             </li>
           </ol>
           <div class="hide-ranking show-ui">
@@ -97,30 +163,70 @@
             </div>
             <!-- on class 추가 시 위의 btn에도 on class 추가 -->
             <ul class="realtime-list on">
-              <li class="keyword-item up"><em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a></li>
-              <li class="keyword-item down"><em>2</em><a href="#none" class="keyword ellipsis">무드등</a></li>
-              <li class="keyword-item keep"><em>3</em><a href="#none" class="keyword ellipsis">네일팁</a></li>
-              <li class="keyword-item up"><em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a></li>
-              <li class="keyword-item keep"><em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a></li>
-              <li class="keyword-item up"><em>6</em><a href="#none" class="keyword ellipsis">귀도리</a></li>
-              <li class="keyword-item down"><em>7</em><a href="#none" class="keyword ellipsis">머리띠</a></li>
-              <li class="keyword-item up"><em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a></li>
-              <li class="keyword-item up"><em>9</em><a href="#none" class="keyword ellipsis">도장</a></li>
-              <li class="keyword-item down"><em>10</em><a href="#none" class="keyword ellipsis">장갑</a></li>
-              <li class="keyword-item up"><em>11</em><a href="#none" class="keyword ellipsis">드로잉</a></li>
-              <li class="keyword-item keep"><em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a></li>
-              <li class="keyword-item up"><em>13</em><a href="#none" class="keyword ellipsis">비누</a></li>
-              <li class="keyword-item down"><em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a></li>
-              <li class="keyword-item keep"><em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a></li>
-              <li class="keyword-item up"><em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a></li>
-              <li class="keyword-item keep"><em>17</em><a href="#none" class="keyword ellipsis">와인</a></li>
-              <li class="keyword-item up"><em>18</em><a href="#none" class="keyword ellipsis">일러스트</a></li>
-              <li class="keyword-item down"><em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a></li>
-              <li class="keyword-item up"><em>20</em><a href="#none" class="keyword ellipsis">편지지</a></li>
+              <li class="keyword-item up">
+                <em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a>
+              </li>
+              <li class="keyword-item down">
+                <em>2</em><a href="#none" class="keyword ellipsis">무드등</a>
+              </li>
+              <li class="keyword-item keep">
+                <em>3</em><a href="#none" class="keyword ellipsis">네일팁</a>
+              </li>
+              <li class="keyword-item up">
+                <em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a>
+              </li>
+              <li class="keyword-item keep">
+                <em>5</em><a href="#none" class="keyword ellipsis">크리스마스 비누</a>
+              </li>
+              <li class="keyword-item up">
+                <em>6</em><a href="#none" class="keyword ellipsis">귀도리</a>
+              </li>
+              <li class="keyword-item down">
+                <em>7</em><a href="#none" class="keyword ellipsis">머리띠</a>
+              </li>
+              <li class="keyword-item up">
+                <em>8</em><a href="#none" class="keyword ellipsis">퇴사선물</a>
+              </li>
+              <li class="keyword-item up">
+                <em>9</em><a href="#none" class="keyword ellipsis">도장</a>
+              </li>
+              <li class="keyword-item down">
+                <em>10</em><a href="#none" class="keyword ellipsis">장갑</a>
+              </li>
+              <li class="keyword-item up">
+                <em>11</em><a href="#none" class="keyword ellipsis">드로잉</a>
+              </li>
+              <li class="keyword-item keep">
+                <em>12</em><a href="#none" class="keyword ellipsis">14K목걸이</a>
+              </li>
+              <li class="keyword-item up">
+                <em>13</em><a href="#none" class="keyword ellipsis">비누</a>
+              </li>
+              <li class="keyword-item down">
+                <em>14</em><a href="#none" class="keyword ellipsis">휘낭시에</a>
+              </li>
+              <li class="keyword-item keep">
+                <em>15</em><a href="#none" class="keyword ellipsis">생일케이크</a>
+              </li>
+              <li class="keyword-item up">
+                <em>16</em><a href="#none" class="keyword ellipsis">포춘쿠키</a>
+              </li>
+              <li class="keyword-item keep">
+                <em>17</em><a href="#none" class="keyword ellipsis">와인</a>
+              </li>
+              <li class="keyword-item up">
+                <em>18</em><a href="#none" class="keyword ellipsis">일러스트</a>
+              </li>
+              <li class="keyword-item down">
+                <em>19</em><a href="#none" class="keyword ellipsis">머랭쿠키</a>
+              </li>
+              <li class="keyword-item up">
+                <em>20</em><a href="#none" class="keyword ellipsis">편지지</a>
+              </li>
             </ul>
             <!-- on class 추가 시 위의 btn에도 on class 추가 -->
             <ul class="popular-list">
-              <li class="keyword-item"><em>1</em><a href="#none" class="keyword ellipsis">연말선물</a></li>
+              <li class="keyword-item"><em>1</em><a href="#none" class="keyword ellipsis">꾸덕쿠키</a></li>
               <li class="keyword-item"><em>2</em><a href="#none" class="keyword ellipsis">무드등</a></li>
               <li class="keyword-item"><em>3</em><a href="#none" class="keyword ellipsis">네일팁</a></li>
               <li class="keyword-item"><em>4</em><a href="#none" class="keyword ellipsis">용돈박스</a></li>
@@ -144,8 +250,20 @@
           </div>
         </div>
         <nav class="wrap-profile">
-          <a href="./my-info.html" class="link-profile">내 정보</a>
-          <a href="./shopping-basket.html" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+          <a href="./detailPages/my-info.html" class="link-profile">내 정보</a>
+          <a href="./detailPages/shopping-basket.html" class="link-myBasket">장바구니<span class="basket-count">0</span></a>
+        </nav>
+      </div>
+      <div class="inner-top-search-mobile">
+        <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+        <form method="get" class="search-form">
+          <input type="text" class="search-text" placeholder="크리스마스를 검색하세요">
+          <label for="search-item">
+            <button type="submit" id="search-item" class="search-btn">검색 버튼</button>
+          </label>
+        </form>
+        <nav class="wrap-profile">
+          <a href="./shopping-basket.html" class="link-myBasket"><span class="basket-count">0</span></a>
         </nav>
       </div>
     </section>
@@ -219,6 +337,14 @@
           <li><a href="#none" class="btn-gnb">소담상회</a></li>
         </ul>
       </nav>
+    <button class="show-category-btn mobile"></button>
+    <!-- <nav class="hide-category">
+      추천 메뉴
+      <ul class="category-wrap">
+        <li class="item on"><a href="#none">홈</a></li>
+      </ul>
+    </nav> -->
+
     </section>
     <!-- // 상품 관련 모든 카테고리 link 탭 -->
   </header>
@@ -226,12 +352,13 @@
   <main>
     <!-- 메인 슬라이드 배너 -->
     <section class="container-banner">
-    <h2 class="text-hide">메인 슬라이드 배너</h2>
+      <h2 class="text-hide">메인 슬라이드 배너</h2>
       <ul class="banner-wrap">
         <!-- hover 시 배너 이동 없음, 배너 이동 구현 -->
         <li class="showroom-banner list-item">
           <a href="#none" class="link-banner">
             <img src="https://image.idus.com/image/files/94b746fa61264513bf004a475f578530.png" alt="banner" class="banner-img">
+            <img src="https://image.idus.com/image/files/04ad62f443f34e8a925bbcf641ae0f08.jpg" alt="banner" class="banner-img mobile">
           </a>
         </li>
         <li class="showroom-banner">
@@ -240,12 +367,12 @@
           </a>
         </li>
       </ul>
-      <fieldset class="ui-control">
+      <div class="ui-control">
         <!-- 버튼들은 가상 요소로 만들고 텍스트는 숨기기 -->
         <button type="button" class="btn-slice prev">이전 슬라이드</button>
         <span class="slice-numbers"><em class="curr_num">1</em>/11</span>
         <button type="button" class="btn-slice next">다음 슬라이드</button>
-      </fieldset>
+      </div>
     </section>
     <!-- // 메인 슬라이드 배너 -->
     <section class="product-list product-list__welcome-deal">
@@ -271,7 +398,7 @@
         <li class="content">
           <ul class="item-list">
             <li class="item">
-              <a href="./product-detail.html" target="_blank">
+              <a href="./detailPages/product-detail.html" target="_blank">
                 <div class="item__thumb">
                   <img src="./images/image/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
                   <img src="./images/image/main-thumb-1.jpeg" alt="" class="item__main-img">
@@ -324,7 +451,7 @@
               <a href="#none" target="_blank">
                 <div class="item__thumb">
                   <img src="./images/image/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
-                  <img src="./images/image/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <img src="https://image.idus.com/image/files/d683c8ba278b4f67ba7df9ccf99123cb_512.jpg" alt="" class="item__main-img">
                   <button class="item__heart">
                   </button>
                 </div>
@@ -374,7 +501,7 @@
               <a href="#none" target="_blank">
                 <div class="item__thumb">
                   <img src="./images/image/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
-                  <img src="./images/image/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <img src="https://image.idus.com/image/files/e66a3f2f76994830ac45b57288726c25_512.jpg" alt="" class="item__main-img">
                   <button class="item__heart">
                   </button>
                 </div>
@@ -424,7 +551,7 @@
               <a href="#none" target="_blank">
                 <div class="item__thumb">
                   <img src="./images/image/badge_welcomedeal.png" alt="웰컴딜100원" class="item__welcome-badge">
-                  <img src="./images/image/main-thumb-1.jpeg" alt="" class="item__main-img">
+                  <img src="https://image.idus.com/image/files/51c5c90384484d6a8d48ec5fa7a968e2_512.jpg" alt="" class="item__main-img">
                   <button class="item__heart">
                   </button>
                 </div>
@@ -1968,6 +2095,9 @@
       </section>
       <!-- 메인 리뷰 끝 -->
   </main>
+  <a class="move-top" href="#">
+    <img src="./images/icons/go-to-top-image.png" alt="">
+  </a>
   <footer>
     <div class="f-cont">
       <a class="f-1" href="#">이용약관</a>
@@ -2044,8 +2174,5 @@
       <button class="content5">내 정보</button>
     </div>
   </footer>
-  <!-- <a class="move-top" href="#" ></a> -->
-
-
 </body>
 </html>

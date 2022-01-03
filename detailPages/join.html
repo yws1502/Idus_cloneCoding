@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/register/join.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 쿠폰 광고 -->
+    <h1 class="text-hide">아이디어스 회원가입 페이지</h1>
+    <section class="join-coupon">
+      <h2 class="company-title"><a href="/index.html"><img src="https://www.idus.com/resources/dist/images/logo.svg" alt="idus" class="company-logo"></a></h2>
+      <img src="https://image.idus.com/static/signup/web_benefit_signup.png" alt="회원가입 쿠폰 총 3만원, 지금 회원가입하시면 총 3만원 쿠폰을 즉시 지급해 드려요!" class="coupon-image">
+    </section>
+    <!-- //상단 쿠폰 광고 -->
+    <!-- sns로 회원가입 -->
+    <section class="container-join">
+      <h2 class="join-title">정말 간단한 회원가입하기</h2>
+      <div class="join-process">
+        <span class="one on">1</span>
+        <span class="two">2</span>
+      </div>
+      <strong>회원가입 방법 선택하기</strong>
+      <a href="#none" class="kakao-join">카카오톡으로 가입하기</a>
+      <button type="button" class="other-join">다른 방법으로 가입하기</button>
+      <ul class="other-wrap">
+        <li class="naver"><a href="#none" class="naver-join">네이버로 가입하기</a></li>
+        <li class="facebook"><a href="#none" class="facebook-join">페이스북으로 가입하기</a></li>
+        <li class="twitter"><a href="#none" class="twitter-join">트위터로 가입하기</a></li>
+        <li class="email"><a href="./signup.html" class="email-join">이메일로 가입하기</a></li>
+      </ul>
+      <p class="go-login">이미 가입하셨다면 <a href="./login.html">바로 로그인하기</a></p>
+    </section>
+    <!-- //sns로 회원가입 -->
+    <script>
+      const showBtn = document.querySelector(".other-join")
+      showBtn.addEventListener("click", () => {
+        const otherSns = document.querySelector(".other-wrap");
+        otherSns.style.display = "block";
+        showBtn.style.display = "none";
+      });
+    </script>
+  </div>
+</body>
+</html>

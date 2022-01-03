@@ -16,16 +16,23 @@ button {
   padding: 0;
 }
 
-[class^="inner"] {
-  max-width: 1000px;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .ui-dropdown {
   display: inline-block;
   // 아래에서 hover 적용
 }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// mobile 친구들
+// .hide-category,
+[class$="mobile"] {
+  display: none
+}
+
 
 // hover시 보여지는 친구
 .show-ui {
@@ -55,7 +62,8 @@ button {
   background-color: #000;
   .inner {
     position: relative;
-    width: 1056px;
+    width: 1000px;
+    margin: 0 auto;
   }
   .btn-closeAd {
     position: absolute;
@@ -86,12 +94,14 @@ button {
 }
 .inner-top-nav {
   position: relative;
+  width: 1000px;
   display: flex;
   justify-content: space-between;
   color: $gray-font;
   align-items: center;
+  margin: 0 auto;
   [class^="btn"] {
-    @include font-module(12px, $color:$gray-font);
+    @include font-module(12px, $height:9px, $color:$gray-font);
     padding: 12px
   }
   .ui-dropdown:hover .container-install,
@@ -199,6 +209,8 @@ button {
 
 .inner-top-search {
   position: relative;
+  width: 1000px;
+  margin: 0 auto;
   padding: 10px 0;
 }
 
@@ -212,7 +224,7 @@ button {
   padding: 0 27px;
   .company-logo {
     width: 73px;
-    vertical-align: baseline;
+    vertical-align: -3px;
   }
 }
 
@@ -226,7 +238,7 @@ button {
     color: $orange-font;
   }
   .class-tip {
-    @include font-module(1px, $height:19px, $color:#fff);
+    @include font-module(10px, $height:19px, $color:#fff);
     background-image: linear-gradient(to bottom, #a527e7, #8c36ed 100%);
     position: absolute;
     left: 150px;
@@ -300,18 +312,60 @@ button {
 }
 
 // 제품 순위 리스트
-.ranking-product {
-  display: inline-block;
-  .ranking-item {
-    .link-item{
-      @include font-module(13px, 550);
+.ui-dropdown.move-list {
+  position: relative;
+  height: 23px;
+  width: 200px;
+  overflow: hidden;
+  vertical-align: -5px;
+  &:hover {
+    overflow: visible;
+    .ranking-product {
+      animation: none;
+    }
+  }
+  .ranking-product {
+    position: absolute;
+    top: 23px;
+    display: inline-block;
+    animation: moveTop 40s infinite;
+    .ranking-item {
+      margin: 5px 0;
       em {
+        @include font-module(13px, 700);
+        vertical-align: 3px;
+      }
+      .link-item{
         @include font-module(13px, $color: $gray-font);
         margin-left: 10px;
       }
     }
   }
 }
+@keyframes moveTop {
+    0% {transform: translateY(0);}
+    5% {transform: translateY(-5%);}
+    10% {transform: translateY(-10%);}
+    15% {transform: translateY(-15%);}
+    20% {transform: translateY(-20%);}
+    25% {transform: translateY(-25%);}
+    30% {transform: translateY(-30%);}
+    35% {transform: translateY(-35%);}
+    40% {transform: translateY(-40%);}
+    45% {transform: translateY(-45%);}
+    50% {transform: translateY(-50%);}
+    55% {transform: translateY(-55%);}
+    60% {transform: translateY(-60%);}
+    65% {transform: translateY(-65%);}
+    70% {transform: translateY(-70%);}
+    75% {transform: translateY(-75%);}
+    80% {transform: translateY(-80%);}
+    85% {transform: translateY(-85%);}
+    90% {transform: translateY(-90%);} 
+    95% {transform: translateY(-95%);} 
+    100% {transform: translateY(-100%);}
+}
+
 
 // ranking hover show
 .ui-dropdown:hover .hide-ranking {
@@ -321,7 +375,7 @@ button {
 .hide-ranking {
   @include border-module(1px, $line-division, 5px);
   display: none;
-  top: 18px;
+  top: -8px;
   padding: 15px 15px;
   width: 300px;
   &::before,
@@ -444,7 +498,7 @@ button {
 // 내정보, 장바구니
 .wrap-profile {
   position: relative;
-  bottom: -26px;
+  bottom: -28px;
   float: right;
   & > * {
     @include font-module(10px, $color:$gray-font);
@@ -492,24 +546,29 @@ button {
   width: 100vw;
 }
 .gnb {
-  .nav-wrap {
+  nav {
     position: relative;
     z-index: 30;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     box-shadow: 0 4px 2px -1px rgba(0,0,0,0.2);
-    .btn-gnb {
-      @include font-module(13px, $color:$gray-font);
-      display: inline-block;
-      padding: 10px 8px;
-      &:hover {
-        color: $orange-font;
+    .nav-wrap {
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      .btn-gnb {
+        @include font-module(13px, $color:$gray-font);
+        display: inline-block;
+        padding: 10px 8px;
+        &:hover {
+          color: $orange-font;
+        }
       }
-    }
-    .on .btn-gnb {
-      display: inline-block;
-      color: $orange-font;
-      border-bottom: 2px solid $orange-font;
+      .on .btn-gnb {
+        display: inline-block;
+        color: $orange-font;
+        border-bottom: 2px solid $orange-font;
+      }
     }
   }
 }
@@ -572,74 +631,104 @@ button {
     }
   }
 }
-// 슬라이드 배너
-.container-banner {
-  overflow: hidden;
-  position: relative;
-}
 
-.banner-wrap {
-  width: 100000px;
-
-  .showroom-banner {
+@media screen and (max-width: 719px) {
+  .advertisement,
+  .inner-top-search,
+  .top-navigation {
     display: none;
+  }
+  [class$="mobile"] {
+    display: block;
+  }
+
+  .advertisement-mobile {
+    background-color: #000;
     position: relative;
-    float: left;
-    width: 100vw;
-    height: 480px;
-    background-color: #b39272;
-    .link-banner {
-      display: block;
-      height: 100%;
-      width: 100%;
-      .banner-img {
+    .inner {
+      text-align: center;
+      img {
+        width: 320px;
+      }
+    }
+    .btn-closeAd {
+      text-indent: -9999px;
+      &::after {
+        content: "";
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1920px;
-        height: 100%;
+        top: 27px;
+        right: 20px;
+        background-color: #fff;
+        background-image: url(../../images/icons/close_icon.svg);
+        background-position: center;
+        background-size: 12px;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        width: 15px;
+        height: 15px;
       }
     }
   }
-  .showroom-banner.list-item {
-    display: block;
-  }
-}
 
-// 슬라이드 배너 컨드롤러
-.ui-control {
-  .btn-slice {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1px;
-    text-indent: -9999px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 25px;
-    height: 25px;
-    &.prev {
-      background-image: url(../../ges/icons/prev_icon.svg);
-      right: 50%;
-      margin-right: 530px;
+  .inner-top-search-mobile {
+    padding: 10px 0;
+
+    .company-title {
+      padding: 0 10px;
     }
-    &.next {
-      background-image: url(../../ges/icons/next_icon.svg);
-      left: 50%;
-      margin-left: 530px;
+
+    .search-form {
+      width: calc(100% - 165px);
+      margin: 0;
+      .search-text {
+        width: calc(100% - 20px);
+      }
+      .search-btn::before {
+          right: -9px;
+        }
+    }
+
+    .link-myBasket::before {
+      top: -26px;
+    }
+    .basket-count {
+      top: -27px;
     }
   }
-  .slice-numbers {
-    position: absolute;
-    bottom: 20px;
-    right: 50%;
-    background-color: #00000080;
-    color: #ccc;
-    border-radius: 15px;
-    margin-right: -500px;
-    padding: 2px 11px;
-    .curr_num {
-      color: #fff;
+  
+  .gnb {
+    position: relative;
+    nav .nav-wrap {
+      justify-content: left;
+      .category-link .btn-gnb {
+        display: none;
+      } 
     }
+    .show-category-btn {
+      position: absolute;
+      z-index: 100;
+      top: -1px;
+      right: 0;
+      width: 39px;
+      height: 39px;
+      border: 1px solid $line-division;
+      background-color: #fff;
+      background-image: url(../../images/icons/arrow-bottom.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .5s;
+    }
+    // .hide-category {
+    //   @include font-module(16px, $color:$gray-font);
+    //   position: absolute;
+    //   text-align: center;
+    //   top: 0;
+    //   bottom: 0;
+    //   .category-wrap {
+    //     position: absolute;
+    //     bottom: -20px;
+
+    //   }
+    // }
   }
 }

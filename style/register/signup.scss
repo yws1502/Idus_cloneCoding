@@ -1,0 +1,212 @@
+@import "../common/font";
+@import "../common/variables";
+@import "../common/mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'NanumBarunGothic', sans-serif;
+}
+
+.container {
+  width: 384px;
+  margin: 50px auto 200px;
+}
+
+.join-coupon {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .company-title {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+  .coupon-image {
+    width: 380px;
+  }
+}
+
+.container-join {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $gray-font;
+    z-index: -10;
+  }
+}
+.join-title {
+  @include font-module(14px, $height:2px, $color:$gray-font);
+  background-color: #fff;
+  text-align: center;
+  width: 170px;
+  margin: 0 auto 40px;
+}
+.join-process {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  .one::after {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background-color: $light-gray-font;
+    z-index: -10;
+  }
+  .one,
+  .two {
+    @include border-module(1px, $light-gray-font, 100%);
+    @include font-module(15px, $color:$light-gray-font);
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    width: 30px;
+    height: 30px;
+    margin: 0 30px;
+    &.on {
+      background-color: $orange-font;
+      border-color: $orange-font;
+      color: #fff;
+    }
+  }
+}
+
+strong {
+  @include font-module(16px, 600, $color:#000);
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  margin: 30px 0;
+}
+
+.text-wrap {
+  margin-bottom: 25px;
+  font-size: 14px;
+  label {
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    &[class="required"]::before {
+      content: "*";
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      color: $orange-font;
+    }
+  }
+  input {
+    @include border-module(1px, $light-gray-font, 2px);
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin: 8px 0;
+    padding: 0 8px;
+    &.error {@include border-module(1px, red, 2px);}
+  }
+  #phone {
+    width: 70%;
+    display: inline-block;
+  }
+  .text-btn-wrap {
+    padding: 8px 0;
+    input {
+      margin: 0;
+    }
+    .phoneCheck-btn {
+      @include border-module(1px, $orange-font, 2px);
+      @include font-module(16px, $color:#fff);
+      background-color: $orange-font;
+      width: 29%;
+      height: 42px;
+    }
+  }
+}
+
+// check box custom
+.totalCheck-wrap,
+.check-wrap {
+  input {
+    margin-right: 8px;
+    &::before {
+      @include border-module(1px, $light-gray-font, 2px);
+      content: "";
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-color: #fff;
+    }
+    &:checked::before {
+      background-image: url(../../images/icons/check_white_icon.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: $orange-font;
+      border-color: $orange-font;
+    }
+  }
+}
+
+// total check button
+.totalCheck-wrap {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+// check box
+.check-wrap {
+  // check box input
+  font-size: 14px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  li {
+    margin: 5px 0;
+    .agree-link {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .adText {
+      color: $light-gray-font;
+    }
+  }
+}
+.submit-btn {
+  @include font-module(16px, 550, $color:#fff);
+  background-color: $orange-font;
+  width: 100%;
+  height: 48px;
+}
+
+.form-error {
+  @include font-module(12px, $color:red);
+  display: none;
+  text-align: left;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 718px)  {
+  .container  {
+    width: 90%;
+    #phone {
+      width: 80%;
+      display: inline-block;
+    }
+    .text-btn-wrap .phoneCheck-btn {
+      width: 19%;
+    }
+  }
+}

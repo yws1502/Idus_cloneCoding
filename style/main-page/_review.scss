@@ -64,7 +64,7 @@
   background: $bg-light-gray;
   border-radius: 4px;
   font-size: 12px;
-  // box-shadow: 0 1px 3px 0 hsl(0deg 0% 86% / 30%);
+  box-shadow: 0 1px 3px 0 #dcdcdc4d;
     .contetn-linkimg {
       display: block;
       width: 207px;
@@ -101,7 +101,7 @@
     line-height: 1.5;
   }
   .content-price-box {
-    margin: 10px 0 20px;
+    margin: 10px 0 10px;
   }
   .content-price-box {
     color: $light-gray-font;
@@ -158,5 +158,5 @@
   border: 1px solid $line-division;
   color: $dark-gray-font;
   cursor: pointer;
-  // box-shadow: 0 1px 3px 0 hsl(0deg 0% 86% / 30%);
+  box-shadow: 0 1px 3px 0 #dcdcdc4d;
 }

@@ -1,4 +1,5 @@
 @import "../common";
+@import "../main-page/module_main";
 @import "module_my-info";
 
 .my-info {
@@ -12,14 +13,14 @@
   .my-info__main {
     width: 852px;
     margin-left: 24px;
-    .purchased-item {
-      height: 216px;
-    }
     .product-list__showMoreBtn {
       width: 235px;
       font-size: 13px;
       padding: 0 24px;
       line-height: 46px;
+      &:hover {
+        background-color: #F5F5F5;
+      }
     }
     .cont-messageAndNotice {
       display: flex;
@@ -48,3 +49,10 @@
     }
   }
 }
+
+.move-top {
+  @include move-btn(62px);
+    img {
+      width: 36px;
+    };
+  };
